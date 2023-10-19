@@ -12,12 +12,14 @@ struct Personatge{
     double vel;
     bool moviment;
 }
-public class Caminar : MonoBehaviour
+public class ControlPersonatge : MonoBehaviour
 {
+    private Rigidbody rigidbody;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbody = GetComponent<rigidbody>();
     }
 
     // Update is called once per frame
@@ -60,6 +62,19 @@ public class Caminar : MonoBehaviour
         if (moviment)
         {
             Update_position(Personatge.dir * Personatge.vel);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (esPetit)
+            {
+                //salta més
+                rigidbody.AddForce();
+            }
+            else
+            {
+                //salta menys
+                rigidbody.AddForce();
+            }
         }
     }
 }
