@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-const vel_caminar;
-const vel_correr;
+const double vel_caminar=0.1;
+const double vel_correr=0.4;
 
 //vec Direcció --> És un vector normalitzat que indica cap a on mira el personatge
-struct Personatge{
-    vector dir = new Vector3(0,1,0);
+Personatge{
+    Vector3 dir = new Vector3(0,1,0);
     double vel;
     bool moviment;
 }
@@ -27,21 +27,21 @@ public class ControlPersonatge : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.DKey))
         {
-            Personetge.dir = Personate.dir + [0, 1, 0];
+            Personatge.dir = Personate.dir + Vector3(0, 1, 0);
             Personatge.dir.normalize();
             Personatge.vel = vel_caminar;
             moviment = true;
         }
         else if (Input.GetKey(KeyCode.AKey))
         {
-            Personetge.dir = Personate.dir + [0, -1, 0];
+            Personatge.dir = Personate.dir + Vector3(0, -1, 0);
             Personatge.dir.normalize();
             Personatge.vel = vel_caminar;
             moviment = true;
         }
         else if (Input.GetKey(KeyCode.Skey))
         {
-            Personetge.dir = Personate.dir + [ -1,0, 0];
+            Personatge.dir = Personate.dir + Vector3(-1, 0, 0);
             Personatge.dir.normalize();
             Personatge.vel = vel_caminar;
             moviment = true;
@@ -49,11 +49,12 @@ public class ControlPersonatge : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.WKey))
         {
-            Personetge.dir = Personate.dir + [1, 0, 0];
+            Personatge.dir = Personate.dir + Vector3(1, 0, 0);
             Personatge.dir.normalize();
             Personatge.vel = vel_caminar;
             moviment = true;
         }
+        else moviment = false;
         if (Input.GetKey(KeyCode.Shiftkey))
         {
             Personatge.vel = vel_correr;
