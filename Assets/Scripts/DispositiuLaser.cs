@@ -33,10 +33,10 @@ public class DispositiuLaser : MonoBehaviour
     void Update()
     {
         a += 0.02f;
-        if(a>3) Dispara(_target.position); 
+        if(a>3) Shoot(_target.position); 
     }
 
-    public void Dispara(Vector3 target)
+    public void Shoot(Vector3 target)
     {
         StartCoroutine(turnAndPointToTarget(target));
 
