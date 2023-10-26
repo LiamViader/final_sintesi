@@ -15,8 +15,11 @@ using UnityEngine;
 }*/
 public class ControlPersonatge : MonoBehaviour
 {
-    private Rigidbody rb;
     public float forceSaltar = 5.0f;
+    private Rigidbody rb;
+    private bool saltant = false;
+   
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,18 +69,19 @@ public class ControlPersonatge : MonoBehaviour
         {
             Update_position(Personatge.dir * Personatge.vel);
         }*/
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !saltant)
         {
             rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
+            saltant = true;
             /*if (esPetit)
             {
                 //salta m�s
-                rigidbody.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
+                rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
             }
             else
             {
                 //salta menys
-                rigidbody.AddForce();
+                rb.AddForce();
             }*/
         }
     }
