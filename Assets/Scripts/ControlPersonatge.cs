@@ -3,29 +3,31 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-const double vel_caminar=0.1;
-const double vel_correr=0.4;
+//const double vel_caminar=0.1;
+//const double vel_correr=0.4;
 
-//vec Direcció --> És un vector normalitzat que indica cap a on mira el personatge
-Personatge{
+
+//vec Direcciï¿½ --> ï¿½s un vector normalitzat que indica cap a on mira el personatge
+/*Personatge{
     Vector3 dir = new Vector3(0,1,0);
     double vel;
     bool moviment;
-}
+}*/
 public class ControlPersonatge : MonoBehaviour
 {
-    private Rigidbody rigidbody;
+    private Rigidbody rb;
+    public float forceSaltar = 5.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.DKey))
+        /*if (Input.GetKey(KeyCode.DKey))
         {
             Personatge.dir = Personate.dir + Vector3(0, 1, 0);
             Personatge.dir.normalize();
@@ -63,19 +65,20 @@ public class ControlPersonatge : MonoBehaviour
         if (moviment)
         {
             Update_position(Personatge.dir * Personatge.vel);
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (esPetit)
+            rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
+            /*if (esPetit)
             {
-                //salta més
-                rigidbody.AddForce();
+                //salta mï¿½s
+                rigidbody.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
             }
             else
             {
                 //salta menys
                 rigidbody.AddForce();
-            }
+            }*/
         }
     }
 }
