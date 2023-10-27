@@ -1251,10 +1251,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210278400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc909c7b270eab4094e966acfad4bde, type: 3}
+  m_Script: {fileID: 11500000, guid: bad0cf57a89adca40871a4fef8ca8171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   forceSaltar: 5
+  velCaminar: 10
+  _Camera: {fileID: 0}
+  TempsSmooth: 0.1
 --- !u!4 &1282375157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1864740628597940677, guid: d700bf0b8f3be5b4fb3a37e704a1eede, type: 3}

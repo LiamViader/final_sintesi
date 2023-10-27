@@ -3,72 +3,75 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-//const double vel_caminar=0.1;
-//const double vel_correr=0.4;
 
-
-//vec Direcci� --> �s un vector normalitzat que indica cap a on mira el personatge
-/*Personatge{
-    Vector3 dir = new Vector3(0,1,0);
-    double vel;
-    bool moviment;
-}*/
 public class ControlPersonatge : MonoBehaviour
 {
+    //public CharacterController jugador;
+    
     public float forceSaltar = 5.0f;
+    public float velCaminar = 10.0f;
+ 
+    public Transform _Camera;
+
+    public float TempsSmooth = 0.1f;
+    float VelSmooth;
+
+    float horitzontalInput;
+    float verticalInput;
+
+    Vector3 Direccio;
+
+    
+
     private Rigidbody rb;
+
     private bool saltant = false;
    
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+      //  if (_Camera == null) _Camera = GameObjects.FindGameObjectWithTag("MainCamera");
         rb = GetComponent<Rigidbody>();
     }
+   
+    //agafar els valors de control
+    private void Control()
+    {   
+        //dreta esquerra , valoe entre -1 i 1
+        horitzontalInput = Input.GetAxisRaw("Horizontal");
+        //endavant darere valor entre -1 i 1
+        verticalInput = Input.GetAxisRaw("Vertical");
+    }
+
+    //Moviemnt, canviar direcció personatge aplicar velocitat i 
+    private void Moviment()
+    {
+        Direccio = new Vector3(horitzontalInput, 0, verticalInput).normalized; //* orientacio.forward;
+        //movDir.normalized;
+        if (Direccio.magnitude >= 0.1)
+        {
+            float gir = Mathf.Atan2(Direccio.x, Direccio.z) * Mathf.Rad2Deg + _Camera.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, gir, ref VelSmooth, TempsSmooth);
+            transform.rotation = Quaternion.Euler(0, angle, 0);
+            
+            Vector3 movDir = Quaternion.Euler(0,gir,0)* Vector3.forward;
+            rb.velocity = movDir.normalized * velCaminar * Time.deltaTime;
+        }
+       
+        //orientacio.transform = movDir;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKey(KeyCode.DKey))
-        {
-            Personatge.dir = Personate.dir + Vector3(0, 1, 0);
-            Personatge.dir.normalize();
-            Personatge.vel = vel_caminar;
-            moviment = true;
-        }
-        else if (Input.GetKey(KeyCode.AKey))
-        {
-            Personatge.dir = Personate.dir + Vector3(0, -1, 0);
-            Personatge.dir.normalize();
-            Personatge.vel = vel_caminar;
-            moviment = true;
-        }
-        else if (Input.GetKey(KeyCode.Skey))
-        {
-            Personatge.dir = Personate.dir + Vector3(-1, 0, 0);
-            Personatge.dir.normalize();
-            Personatge.vel = vel_caminar;
-            moviment = true;
-
-        }
-        else if (Input.GetKey(KeyCode.WKey))
-        {
-            Personatge.dir = Personate.dir + Vector3(1, 0, 0);
-            Personatge.dir.normalize();
-            Personatge.vel = vel_caminar;
-            moviment = true;
-        }
-        else moviment = false;
-        if (Input.GetKey(KeyCode.Shiftkey))
-        {
-            Personatge.vel = vel_correr;
-            moviment = true;
-        }
-        if (moviment)
-        {
-            Update_position(Personatge.dir * Personatge.vel);
-        }*/
+       // _Camera.LookAt(rb);
+        Control();
+        Moviment();
         if (Input.GetKeyDown(KeyCode.Space) && !saltant)
         {
             rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
