@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class ControlPersonatge : MonoBehaviour
@@ -9,7 +10,8 @@ public class ControlPersonatge : MonoBehaviour
     //public CharacterController jugador;
     
     public float forceSaltar = 5.0f;
-    public float velCaminar = 10.0f;
+    public float velCaminar = 7.0f;
+    public float velCorrer = 12.0f;
  
     public Transform _Camera;
 
@@ -21,11 +23,13 @@ public class ControlPersonatge : MonoBehaviour
 
     Vector3 Direccio;
 
+    private Text text;
     
 
     private Rigidbody rb;
 
     private bool saltant = false;
+    private bool correr = false;
    
 
 
@@ -36,6 +40,7 @@ public class ControlPersonatge : MonoBehaviour
     {
       //  if (_Camera == null) _Camera = GameObjects.FindGameObjectWithTag("MainCamera");
         rb = GetComponent<Rigidbody>();
+        text = GameObject.FindWithTag("Vel display").GetComponent<Text>();
     }
    
     //agafar els valors de control
@@ -45,6 +50,8 @@ public class ControlPersonatge : MonoBehaviour
         horitzontalInput = Input.GetAxisRaw("Horizontal");
         //endavant darere valor entre -1 i 1
         verticalInput = Input.GetAxisRaw("Vertical");
+        if (Input.GetKey(KeyCode.LeftShift)) correr = true;
+        else correr = false;
     }
 
     //Moviemnt, canviar direcció personatge aplicar velocitat i 
@@ -54,24 +61,47 @@ public class ControlPersonatge : MonoBehaviour
         //movDir.normalized;
         if (Direccio.magnitude >= 0.1)
         {
-            float gir = Mathf.Atan2(Direccio.x, Direccio.z) * Mathf.Rad2Deg + _Camera.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, gir, ref VelSmooth, TempsSmooth);
+            float gir = Mathf.Atan2(Direccio.x, Direccio.z) * Mathf.Rad2Deg + _Camera.eulerAngles.y; //influeix la pos de camera
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, gir, ref VelSmooth, TempsSmooth); //gir del personatge suau
             transform.rotation = Quaternion.Euler(0, angle, 0);
             
             Vector3 movDir = Quaternion.Euler(0,gir,0)* Vector3.forward;
-            rb.velocity = movDir.normalized * velCaminar * Time.deltaTime;
+            if(correr) rb.AddForce(movDir.normalized * velCorrer, ForceMode.VelocityChange);
+            else rb.AddForce(movDir.normalized * velCaminar, ForceMode.VelocityChange);
         }
        
         //orientacio.transform = movDir;
     }
 
+    //Actualitzacio independenment del frame-rete per a fisiques
+    private void FixedUpdate()
+    {
+        Moviment();
+    }
+
+    //el personatge accelera molt, 
+    private void ControlVelocitat()
+    {
+        Vector3 Vel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        Vector3 VelLimitada = Vel;
+        if (Vel.magnitude > velCaminar && !correr)
+        {
+            VelLimitada = Vel.normalized * velCaminar; 
+        }
+        else if (Vel.magnitude > velCorrer && correr)
+        {   
+            VelLimitada = Vel.normalized * velCorrer;
+        }
+        rb.velocity = new Vector3(VelLimitada.x, rb.velocity.y, VelLimitada.z);
+    }
 
     // Update is called once per frame
     void Update()
     {
        // _Camera.LookAt(rb);
         Control();
-        Moviment();
+        ControlVelocitat();
+        text.text = rb.velocity.ToString();
         if (Input.GetKeyDown(KeyCode.Space) && !saltant)
         {
             rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
