@@ -28,7 +28,7 @@ public class ControlPersonatge : MonoBehaviour
 
     private Rigidbody rb;
 
-    private bool saltant = false;
+    private bool contacteTerra = false;
     private bool correr = false;
    
 
@@ -95,6 +95,16 @@ public class ControlPersonatge : MonoBehaviour
         rb.velocity = new Vector3(VelLimitada.x, rb.velocity.y, VelLimitada.z);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        contacteTerra = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        contacteTerra = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -102,10 +112,10 @@ public class ControlPersonatge : MonoBehaviour
         Control();
         ControlVelocitat();
         text.text = rb.velocity.ToString();
-        if (Input.GetKeyDown(KeyCode.Space) && !saltant)
+        if (Input.GetKeyDown(KeyCode.Space) && contacteTerra)
         {
             rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
-            saltant = true;
+            contacteTerra = false;
             /*if (esPetit)
             {
                 //salta m�s
