@@ -9,7 +9,7 @@ public class DispositiuLaser : MonoBehaviour
     private Transform _target;
     [SerializeField]
     private List<MultiAimConstraint> _aimConstraints;
-    private List<float> _aimWeights = new List<float>() { 0.8f, 1f};
+    private List<float> _aimWeights = new List<float>() {0.4f,0.6f,0.8f, 1f};
     [SerializeField]
     private ChainIKConstraint _pointingConstraint;
     private float _pointingWeight = 1f;
@@ -33,19 +33,19 @@ public class DispositiuLaser : MonoBehaviour
     void Update()
     {
         a += 0.02f;
-        if(a>3) Shoot(_target.position); 
+        if(a>3) Shoot(_target); 
     }
 
-    public void Shoot(Vector3 target)
+    public void Shoot(Transform target)
     {
         StartCoroutine(turnAndPointToTarget(target));
 
 
     }
 
-    private IEnumerator turnAndPointToTarget(Vector3 target)
+    private IEnumerator turnAndPointToTarget(Transform target)
     {
-        _target.position = target;
+        _target= target;
         float time_elapsed = 0;
         while (time_elapsed < _timeToTurn)
         {
