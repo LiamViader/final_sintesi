@@ -15,6 +15,7 @@ public class ControlPersonatge : MonoBehaviour
  
     public Transform _Camera;
 
+
     public float TempsSmooth = 0.1f;
     float VelSmooth;
 
@@ -30,8 +31,9 @@ public class ControlPersonatge : MonoBehaviour
 
     private bool contacteTerra = false;
     private bool correr = false;
-   
 
+    [SerializeField]
+    private DispositiuLaser _dispositiu;
 
 
 
@@ -42,16 +44,17 @@ public class ControlPersonatge : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         text = GameObject.FindWithTag("Vel display").GetComponent<Text>();
     }
-   
+
     //agafar els valors de control
     private void Control()
-    {   
+    {
         //dreta esquerra , valoe entre -1 i 1
         horitzontalInput = Input.GetAxisRaw("Horizontal");
         //endavant darere valor entre -1 i 1
         verticalInput = Input.GetAxisRaw("Vertical");
         if (Input.GetKey(KeyCode.LeftShift)) correr = true;
         else correr = false;
+
     }
 
     //Moviemnt, canviar direcció personatge aplicar velocitat i 
