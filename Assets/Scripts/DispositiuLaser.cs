@@ -59,7 +59,7 @@ public class DispositiuLaser : MonoBehaviour
         }
     }
 
-    public void Shoot(Transform target)
+    public void Shoot(Transform target) //EL target ha de ser l'aparença
     {
         if(!_turning && !_shooting)  _onGoingCoroutine =StartCoroutine(TurnAndPointToTarget(target));
 
