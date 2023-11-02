@@ -437,13 +437,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4155355737140364577}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.022603352, y: -0.026437972, z: -0.09411605, w: 0.9949534}
-  m_LocalPosition: {x: 0.028299946, y: 0.01850003, z: -0.0062998645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7656671728210374521}
-  m_LocalEulerAnglesHint: {x: -2.863, y: -2.775, z: -10.738}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1942121905931376871
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ Transform:
   m_GameObject: {fileID: 7021651508092736337}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.016, y: 0.117, z: -0.04}
+  m_LocalPosition: {x: -0.016, y: 0.1235, z: -0.0405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -562,6 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c976b32d4d8427c4981f4d7bd47c1e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _laserPrefab: {fileID: 2342094905357932928, guid: eb51b42b548b58f4b998c1088bfb19ff, type: 3}
   _target: {fileID: 8068446626211495138}
   _aimConstraints:
   - {fileID: 8419557475487049277}

@@ -6,6 +6,8 @@ using UnityEngine;
 public class DispositiuLaser : MonoBehaviour
 {
     [SerializeField]
+    private GameObject _laserPrefab;
+    [SerializeField]
     private Transform _target;
     [SerializeField]
     private List<MultiAimConstraint> _aimConstraints;
@@ -14,9 +16,13 @@ public class DispositiuLaser : MonoBehaviour
     private ChainIKConstraint _pointingConstraint;
     private float _pointingWeight = 1f;
     private float _timeToTurn=0.4f;
-    private bool _turning=false;
+    private float _timeToStop = 0.2f;
+    private float _timeShooting = 10.5f;
+    private bool _shooting=false;
+    private bool _turning = false;
+    private Coroutine _onGoingCoroutine=null;
+    private Laser _laser;
 
-    float a = 0;
 
 
     // Start is called before the first frame update
@@ -27,25 +33,65 @@ public class DispositiuLaser : MonoBehaviour
             constraint.weight = 0;
         }
         _pointingConstraint.weight = 0;
+        Shoot(_target);
     }
 
     // Update is called once per frame
     void Update()
     {
-        a += 0.02f;
-        if(a>3) Shoot(_target); 
+
+    }
+
+    private void FixedUpdate()
+    {
+        if (_laser != null && _target!=null)
+        {
+            Vector3 dir = _target.position - transform.position;
+            Vector3 norm = Vector3.Normalize(dir);
+            _laser.UpdateDirection(norm);
+        }
+        else if(_shooting && _laser==null)
+        {
+            StopShooting();
+        }
     }
 
     public void Shoot(Transform target)
     {
-        StartCoroutine(turnAndPointToTarget(target));
+        _onGoingCoroutine =StartCoroutine(TurnAndPointToTarget(target));
 
 
     }
 
-    private IEnumerator turnAndPointToTarget(Transform target)
+    public void StopShooting()
     {
-        _target= target;
+        _onGoingCoroutine = StartCoroutine(StopPointingAndFacing());
+    }
+
+    private IEnumerator StopPointingAndFacing()
+    {
+        _turning = true;
+        float time_elapsed = 0;
+        while (time_elapsed < _timeToStop)
+        {
+            time_elapsed += Time.deltaTime;
+            float coef = 1-Mathf.Clamp(time_elapsed / _timeToStop, 0, 1);
+            for (int i = 0; i < _aimConstraints.Count; i++)
+            {
+                _aimConstraints[i].weight = Mathf.Lerp(0, _aimWeights[i], coef);
+            }
+            _pointingConstraint.weight = Mathf.Lerp(0, _pointingWeight, coef);
+            yield return null;
+        }
+        _turning = false;
+        _shooting = false;
+        _target = null;
+    }
+
+    private IEnumerator TurnAndPointToTarget(Transform target)
+    {
+        _turning = true;
+        _target = target;
         float time_elapsed = 0;
         while (time_elapsed < _timeToTurn)
         {
@@ -58,6 +104,14 @@ public class DispositiuLaser : MonoBehaviour
             _pointingConstraint.weight = Mathf.Lerp(0, _pointingWeight, coef);
             yield return null;
         }
+        _turning = false;
+        GameObject instance = Instantiate(_laserPrefab);
+        _laser = instance.GetComponent<Laser>();
+        Vector3 dir = target.position - transform.position;
+        Vector3 norm = Vector3.Normalize(dir);
+        _laser.Init(transform, norm, _timeShooting);
+        _shooting = true;
     }
+
 
 }
