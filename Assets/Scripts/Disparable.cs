@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Encongible : MonoBehaviour
+public class Disparable : MonoBehaviour
 {
     [SerializeField]
     private bool _petit = false;
     [SerializeField]
     private float _coefTamany = 0.5f;
-    [SerializeField]
-    private Transform _aparença;
+    public Transform _aparença;
     private float _tempsCanvi = 3f;
     private bool _canviant = false;
     private float _tempsCancelacio = 0.1f;

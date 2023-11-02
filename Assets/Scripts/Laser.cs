@@ -43,8 +43,8 @@ public class Laser : MonoBehaviour
                 length = (posHit - _source.position).magnitude;
                 if (!_finished)
                 {
-                    Encongible enc;
-                    if (hit.collider.TryGetComponent<Encongible>(out enc))
+                    Disparable enc;
+                    if (hit.collider.TryGetComponent<Disparable>(out enc))
                     {
                         if (enc.TocatPelLaser(this)) Finish();
                     }
