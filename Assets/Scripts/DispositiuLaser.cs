@@ -6,6 +6,8 @@ using UnityEngine;
 public class DispositiuLaser : MonoBehaviour
 {
     [SerializeField]
+    private Transform _invisibleTarget;
+    [SerializeField]
     private GameObject _laserPrefab;
     [SerializeField]
     private Transform _target;
@@ -46,6 +48,7 @@ public class DispositiuLaser : MonoBehaviour
     {
         if (_laser != null && _target!=null)
         {
+            _invisibleTarget.position = _target.position;
             Vector3 dir = _target.position - transform.position;
             Vector3 norm = Vector3.Normalize(dir);
             _laser.UpdateDirection(norm);
@@ -58,7 +61,7 @@ public class DispositiuLaser : MonoBehaviour
 
     public void Shoot(Transform target)
     {
-        _onGoingCoroutine =StartCoroutine(TurnAndPointToTarget(target));
+        if(!_turning && !_shooting)  _onGoingCoroutine =StartCoroutine(TurnAndPointToTarget(target));
 
 
     }
@@ -92,6 +95,7 @@ public class DispositiuLaser : MonoBehaviour
     {
         _turning = true;
         _target = target;
+        _invisibleTarget.position = target.position;
         float time_elapsed = 0;
         while (time_elapsed < _timeToTurn)
         {

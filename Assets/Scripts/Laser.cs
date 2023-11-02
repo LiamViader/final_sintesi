@@ -28,8 +28,8 @@ public class Laser : MonoBehaviour
     {
         if (_timeLeft <= 0 + _animTime && !_finished)
         {
-            _finished = true;
-            StartCoroutine(EndAnimation());
+            Finish();
+           
         }
         if (_initialized && _timeLeft>0)
         {
@@ -41,6 +41,15 @@ public class Laser : MonoBehaviour
             {
                 Vector3 posHit = hit.transform.position;
                 length = (posHit - _source.position).magnitude;
+                if (!_finished)
+                {
+                    Encongible enc;
+                    if (hit.collider.TryGetComponent<Encongible>(out enc))
+                    {
+                        if (enc.TocatPelLaser(this)) Finish();
+                    }
+                }
+
             }
             Vector3 scale = new Vector3(_width, _width, length / 2) * _animCoef;
             Vector3 pos = _source.position + (_direction*length / 2)*_animCoef;
@@ -63,6 +72,12 @@ public class Laser : MonoBehaviour
     public void UpdateDirection(Vector3 direction)
     {
         _direction = direction;
+    }
+
+    public void Finish()
+    {
+        _finished = true;
+        StartCoroutine(EndAnimation());
     }
 
     private IEnumerator StartAnimation()
