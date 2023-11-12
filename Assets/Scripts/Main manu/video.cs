@@ -7,12 +7,19 @@ using UnityEngine.Video;
 
 public class video : MonoBehaviour
 {
-    public VideoPlayer VP;
+    private VideoPlayer VP;
 
-    public VideoSource clip1;
-    public VideoSource clip2; 
+    public VideoClip clip2; 
     
     bool canviat = false;   
+
+    void Awake(){
+        VP = GetComponent<VideoPlayer> ();
+    }
+
+    void ChangeLoopClip(){
+        VP.clip = clip2;
+    }
 
     void Start(){
         VP.loopPointReached += EndReached;
@@ -20,10 +27,10 @@ public class video : MonoBehaviour
 
      void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
-        if(!canviat){
-            VP.source=clip2;
+        if(!canviat && VP.isPrepared){
+            ChangeLoopClip();
             canviat =true;
+            VP.isLooping = true;
         }
-        VP.playbackSpeed = VP.playbackSpeed / 10.0F;
     }
 }
