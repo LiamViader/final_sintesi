@@ -63,8 +63,12 @@ public class Laser : MonoBehaviour
 
     public void Init(Transform source, Vector3 direction, float duration)
     {
-        if (duration < 0) _timeLimitless = true;
-        _timeLeft = 10000f;
+        if (duration < 0)
+        {
+            _timeLimitless = true;
+            _timeLeft = 10000f;
+        }
+        else _timeLeft = duration;
         _source = source;
         _direction = direction;
         _initialized = true;

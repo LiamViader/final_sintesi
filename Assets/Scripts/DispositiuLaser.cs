@@ -19,7 +19,7 @@ public class DispositiuLaser : MonoBehaviour
     private float _pointingWeight = 1f;
     private float _timeToTurn=0.4f;
     private float _timeToStop = 0.2f;
-    private float _timeShooting = 10.5f;
+    private float _timeShooting = 5.5f;
     private bool _shooting=false;
     private bool _turning = false;
     private Coroutine _onGoingCoroutine=null;

@@ -99,6 +99,7 @@ MonoBehaviour:
   _coefTamany: 0.5
   _outline: {fileID: 1435767134196455544}
   "_aparen\xE7a": {fileID: 1039691405229672788}
+  _canviReal: {fileID: 5399288908272341212}
 --- !u!1 &6661795113913823717
 GameObject:
   m_ObjectHideFlags: 0

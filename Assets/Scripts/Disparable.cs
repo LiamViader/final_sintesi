@@ -10,8 +10,14 @@ public class Disparable : MonoBehaviour
     private float _coefTamany = 0.5f;
     [SerializeField]
     private Outline _outline;
+
     [SerializeField]
+    [Tooltip("Aqui va el transform del objecte que anirà canviant de tamany durant l'animació de canvi")]
     private Transform _aparença;
+
+    [SerializeField]
+    [Tooltip("Aqui va el transform del objecte que quedarà canviat de tamany un cop el canvi estigui completat")]
+    private Transform _canviReal;
     private float _tempsCanvi = 3f;
     private bool _canviant = false;
     private float _tempsCancelacio = 0.1f;
@@ -77,12 +83,12 @@ public class Disparable : MonoBehaviour
         _canviant = false;
         _aparença.localScale = _aparençaInicial;
         if (!_petit) {
-            transform.localScale = transform.localScale * _coefTamany;
+            _canviReal.transform.localScale = _canviReal.transform.localScale * _coefTamany;
             _petit = true;
         }
         else
         {
-            transform.localScale = transform.localScale * 1/_coefTamany;
+            _canviReal.transform.localScale = _canviReal.transform.localScale * 1/_coefTamany;
             _petit = false;
         }
     }
