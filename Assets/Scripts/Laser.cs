@@ -9,6 +9,7 @@ public class Laser : MonoBehaviour
     private Transform _source;
     private Vector3 _direction;
     private float _timeLeft;
+    private bool _timeLimitless = false;
     private float _width = 0.05f;
     private bool _finished = false;
 
@@ -33,7 +34,7 @@ public class Laser : MonoBehaviour
         }
         if (_initialized && _timeLeft>0)
         {
-            _timeLeft -= Time.fixedDeltaTime;
+            if(!_timeLimitless)_timeLeft -= Time.fixedDeltaTime;
 
             RaycastHit hit;
             float length=MAXDIST;
@@ -62,7 +63,8 @@ public class Laser : MonoBehaviour
 
     public void Init(Transform source, Vector3 direction, float duration)
     {
-        _timeLeft = duration;
+        if (duration < 0) _timeLimitless = true;
+        _timeLeft = 10000f;
         _source = source;
         _direction = direction;
         _initialized = true;

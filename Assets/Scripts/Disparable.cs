@@ -8,7 +8,10 @@ public class Disparable : MonoBehaviour
     private bool _petit = false;
     [SerializeField]
     private float _coefTamany = 0.5f;
-    public Transform _aparença;
+    [SerializeField]
+    private Outline _outline;
+    [SerializeField]
+    private Transform _aparença;
     private float _tempsCanvi = 3f;
     private bool _canviant = false;
     private float _tempsCancelacio = 0.1f;
@@ -16,6 +19,11 @@ public class Disparable : MonoBehaviour
     private float _tempsCanviant = 0f;
     private Vector3 _aparençaInicial;
 
+
+    private void Awake()
+    {
+        _outline.enabled = false;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -85,5 +93,15 @@ public class Disparable : MonoBehaviour
         _canviant = false;
         _tempsCanviant = 0f;
         _tempsUltimHit = 0f;
+    }
+
+    public Transform Aparença()
+    {
+        return _aparença;
+    }
+
+    public Outline GetOutline()
+    {
+        return _outline;
     }
 }

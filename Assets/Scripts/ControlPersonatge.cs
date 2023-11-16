@@ -34,6 +34,7 @@ public class ControlPersonatge : MonoBehaviour
 
     [SerializeField]
     private DispositiuLaser _dispositiu;
+    private Outline _outlined=null;
 
 
 
@@ -117,8 +118,27 @@ public class ControlPersonatge : MonoBehaviour
             Disparable target;
             if (hitInfo.collider.TryGetComponent<Disparable>(out target))
             {
-                
+                if (target.GetOutline() != _outlined)
+                {
+                    if (_outlined != null)
+                    {
+                        _outlined.enabled = false;
+                    }
+                    _outlined = target.GetOutline();
+                    _outlined.enabled = true;
+                }
+
             }
+            else if(_outlined!=null)
+            {
+                _outlined.enabled = false;
+                _outlined=null;
+            }
+        }
+        else if (_outlined!=null)
+        {
+            _outlined.enabled = false;
+            _outlined = null;
         }
     }
     private void DispararLaser()
@@ -132,7 +152,7 @@ public class ControlPersonatge : MonoBehaviour
                 Disparable target;
                 if(hitInfo.collider.TryGetComponent<Disparable>(out target))
                 {
-                    _dispositiu?.Shoot(target._aparença);
+                    _dispositiu?.Shoot(target.Aparença());
                 }
             }
         }
