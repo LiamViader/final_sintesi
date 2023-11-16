@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 2805383236465032309}
   - component: {fileID: 7718184588912126115}
   - component: {fileID: 9148045639598018165}
-  - component: {fileID: 8765821503612473041}
+  - component: {fileID: 6820382376778910210}
   m_Layer: 0
   m_Name: Pantalla
   m_TagString: Untagged
@@ -229,16 +229,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8765821503612473041
+--- !u!114 &6820382376778910210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5128982466484168944}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
+  m_Script: {fileID: 11500000, guid: ec792806b14e31446ac3107b924fe790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _petit: 0
@@ -246,6 +246,7 @@ MonoBehaviour:
   _outline: {fileID: 7580940662075147714}
   "_aparen\xE7a": {fileID: 3681091290274504506}
   _canviReal: {fileID: 3681091290274504506}
+  _laserPrefab: {fileID: 2342094905357932928, guid: eb51b42b548b58f4b998c1088bfb19ff, type: 3}
 --- !u!1 &6784729459993901906
 GameObject:
   m_ObjectHideFlags: 0

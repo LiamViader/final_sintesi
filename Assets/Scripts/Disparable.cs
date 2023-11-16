@@ -5,19 +5,20 @@ using UnityEngine;
 public class Disparable : MonoBehaviour
 {
     [SerializeField]
-    private bool _petit = false;
+    protected bool _petit = false;
     [SerializeField]
-    private float _coefTamany = 0.5f;
+    protected float _coefTamany = 0.5f;
     [SerializeField]
-    private Outline _outline;
+    protected Outline _outline;
 
     [SerializeField]
     [Tooltip("Aqui va el transform del objecte que anirà canviant de tamany durant l'animació de canvi")]
-    private Transform _aparença;
+    protected Transform _aparença;
 
     [SerializeField]
     [Tooltip("Aqui va el transform del objecte que quedarà canviat de tamany un cop el canvi estigui completat")]
-    private Transform _canviReal;
+    protected Transform _canviReal;
+
     private float _tempsCanvi = 3f;
     private bool _canviant = false;
     private float _tempsCancelacio = 0.1f;
@@ -26,7 +27,7 @@ public class Disparable : MonoBehaviour
     private Vector3 _aparençaInicial;
 
 
-    private void Awake()
+    protected void Awake()
     {
         _outline.enabled = false;
     }
@@ -38,7 +39,7 @@ public class Disparable : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (_canviant)
         {
@@ -61,7 +62,7 @@ public class Disparable : MonoBehaviour
     }
 
     //retorna 1 si amb aquest hit ha acabat de canviar de tamany, 0 si no;
-    public bool TocatPelLaser(Laser laser)
+    public virtual bool TocatPelLaser(Laser laser,Vector3 pos_impacte)
     {
         if (!_canviant)
         {

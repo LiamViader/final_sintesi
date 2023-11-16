@@ -50,7 +50,7 @@ public class DispositiuLaser : MonoBehaviour
             _invisibleTarget.position = _target.position;
             Vector3 dir = _target.position - transform.position;
             Vector3 norm = Vector3.Normalize(dir);
-            _laser.UpdateDirection(norm);
+            _laser.UpdateDirection(norm,transform.position);
         }
         else if(_shooting && _laser==null && !_turning)
         {
@@ -115,7 +115,7 @@ public class DispositiuLaser : MonoBehaviour
         _laser = instance.GetComponent<Laser>();
         Vector3 dir = target.position - transform.position;
         Vector3 norm = Vector3.Normalize(dir);
-        _laser.Init(transform, norm, _timeShooting);
+        _laser.Init(transform.position, norm, _timeShooting);
         _shooting = true;
     }
 
