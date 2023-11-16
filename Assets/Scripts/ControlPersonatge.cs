@@ -107,6 +107,37 @@ public class ControlPersonatge : MonoBehaviour
     {
         contacteTerra = false;
     }
+   
+    private void HighLightDisparable()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hitInfo;
+        if (Physics.Raycast(ray, out hitInfo))
+        {
+            Disparable target;
+            if (hitInfo.collider.TryGetComponent<Disparable>(out target))
+            {
+                
+            }
+        }
+    }
+    private void DispararLaser()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo))
+            {
+                Disparable target;
+                if(hitInfo.collider.TryGetComponent<Disparable>(out target))
+                {
+                    _dispositiu?.Shoot(target._aparença);
+                }
+            }
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -114,6 +145,8 @@ public class ControlPersonatge : MonoBehaviour
        // _Camera.LookAt(rb);
         Control();
         ControlVelocitat();
+        HighLightDisparable();
+        DispararLaser();
         text.text = rb.velocity.ToString();
         if (Input.GetKeyDown(KeyCode.Space) && contacteTerra)
         {

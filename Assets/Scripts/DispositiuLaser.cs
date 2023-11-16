@@ -35,7 +35,6 @@ public class DispositiuLaser : MonoBehaviour
             constraint.weight = 0;
         }
         _pointingConstraint.weight = 0;
-        Shoot(_target);
     }
 
     // Update is called once per frame
@@ -53,7 +52,7 @@ public class DispositiuLaser : MonoBehaviour
             Vector3 norm = Vector3.Normalize(dir);
             _laser.UpdateDirection(norm);
         }
-        else if(_shooting && _laser==null)
+        else if(_shooting && _laser==null && !_turning)
         {
             StopShooting();
         }
@@ -61,7 +60,11 @@ public class DispositiuLaser : MonoBehaviour
 
     public void Shoot(Transform target) //EL target ha de ser l'aparença
     {
-        if(!_turning && !_shooting)  _onGoingCoroutine =StartCoroutine(TurnAndPointToTarget(target));
+        if (!_turning && !_shooting && _target==null)
+        {
+            _turning = true;
+            _onGoingCoroutine = StartCoroutine(TurnAndPointToTarget(target));
+        }
 
 
     }
@@ -93,7 +96,6 @@ public class DispositiuLaser : MonoBehaviour
 
     private IEnumerator TurnAndPointToTarget(Transform target)
     {
-        _turning = true;
         _target = target;
         _invisibleTarget.position = target.position;
         float time_elapsed = 0;
