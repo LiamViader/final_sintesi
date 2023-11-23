@@ -27,6 +27,7 @@ public class DispositiuLaser : MonoBehaviour
 
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,10 +52,6 @@ public class DispositiuLaser : MonoBehaviour
             Vector3 dir = _target.position - transform.position;
             Vector3 norm = Vector3.Normalize(dir);
             _laser.UpdateDirection(norm,transform.position);
-        }
-        else if(_shooting && _laser==null && !_turning)
-        {
-            StopShooting();
         }
     }
 
@@ -116,8 +113,13 @@ public class DispositiuLaser : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Vector3 norm = Vector3.Normalize(dir);
         _laser.Init(transform.position, norm, _timeShooting);
+        _laser.Subscribe(OnLaserDestroy);
         _shooting = true;
     }
 
-
+    private void OnLaserDestroy(Laser laser)
+    {
+        laser.Unsubscribe(OnLaserDestroy);
+        StopShooting();
+    }
 }

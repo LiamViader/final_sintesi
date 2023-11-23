@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1426325, y: 1.7889856, z: 0.22118743}
+  m_LocalScale: {x: 1.1426325, y: 2.2283604, z: 0.22118743}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3681091290274504506}
@@ -153,7 +153,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.146}
-  m_LocalScale: {x: 1, y: 1.667513, z: 0.08942825}
+  m_LocalScale: {x: 1, y: 2.0770543, z: 0.08942825}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3681091290274504506}
@@ -247,6 +247,7 @@ MonoBehaviour:
   "_aparen\xE7a": {fileID: 3681091290274504506}
   _canviReal: {fileID: 3681091290274504506}
   _laserPrefab: {fileID: 2342094905357932928, guid: eb51b42b548b58f4b998c1088bfb19ff, type: 3}
+  _name: 
 --- !u!1 &6784729459993901906
 GameObject:
   m_ObjectHideFlags: 0

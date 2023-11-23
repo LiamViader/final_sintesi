@@ -5,10 +5,11 @@ using System.Linq;
 
 public class MirallDisparable : Disparable
 {
-    private Dictionary<Laser, KeyValuePair<Laser,bool>> _lasers; //mapa de laser entrada/sortida, bool"tocat ultim frame s/n"
+    private Dictionary<Laser, KeyValuePair<Laser,bool>> _lasers= new Dictionary<Laser, KeyValuePair<Laser, bool>>(); //mapa de laser entrada/sortida, bool"tocat ultim frame s/n"
     private const int _maxLasers = 6;
     [SerializeField]
     private GameObject _laserPrefab;
+    public string _name;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +19,25 @@ public class MirallDisparable : Disparable
     // Update is called once per frame
     protected override void FixedUpdate()
     {
-        foreach (var clave in _lasers.Keys.ToList())
+
+        foreach (Laser clave in _lasers.Keys.ToList())
         {
-            // Verificar si el objeto asociado a la clave aún existe
-            if (clave != null)
+
+            if (_lasers.ContainsKey(clave))
             {
-                // Acceder al componente o realizar acciones adicionales
-                // ...
-                if (!_lasers[clave].Value) {
-                    _lasers[clave].Key.FinishImmediately();
-                    _lasers.Remove(clave);
+                if (!_lasers[clave].Value)
+                { //si no ha sigut tocat l'ultim frame pel laser clave
+
+                    if (_lasers[clave].Key != null)
+                    {
+                        _lasers[clave].Key.Unsubscribe(OnLaserImageDestroy);
+                        _lasers[clave].Key.FinishImmediately();
+                    }
+                    if (_lasers.ContainsKey(clave))
+                    {
+                        _lasers.Remove(clave);
+                        clave.Unsubscribe(OnLaserSourceDestroy);
+                    }
                 }
                 else
                 {
@@ -36,10 +46,9 @@ public class MirallDisparable : Disparable
             }
             else
             {
-                // El objeto asociado a la clave ha sido destruido, puedes manejarlo aquí
-                _lasers.Remove(clave); // O realizar otras acciones
             }
         }
+
     }
 
     public override bool TocatPelLaser(Laser laser, Vector3 pos_impacte)
@@ -58,13 +67,15 @@ public class MirallDisparable : Disparable
 
     private void AddNewLaser(Laser laser, Vector3 pos_impacte)
     {
-        if (_lasers.Count < 6)
+        if (_lasers.Count < _maxLasers)
         {
             GameObject instance = Instantiate(_laserPrefab);
             Laser newLaser = instance.GetComponent<Laser>();
             Vector3 dir = ComputeNewDirection(laser);
             Vector3 norm = Vector3.Normalize(dir);
-            newLaser.Init(pos_impacte, norm, -1,laser); 
+            laser.Subscribe(OnLaserSourceDestroy);
+            newLaser.Init(pos_impacte, norm, -1);
+            newLaser.Subscribe(OnLaserImageDestroy);
             _lasers[laser] = new KeyValuePair<Laser, bool>(newLaser, true);
         }
     }
@@ -77,5 +88,39 @@ public class MirallDisparable : Disparable
     private Vector3 ComputeNewDirection(Laser laser)
     {
         return Vector3.Reflect(laser.Direction(), transform.forward);
+    }
+
+    private void OnLaserSourceDestroy(Laser laser)
+    {
+        laser.Unsubscribe(OnLaserSourceDestroy);
+        if (_lasers.ContainsKey(laser))
+        {
+            Laser image = _lasers[laser].Key;
+            image.Unsubscribe(OnLaserImageDestroy);
+            image.FinishImmediately();
+            _lasers.Remove(laser);
+        }
+    }
+
+    private void OnLaserImageDestroy(Laser laser)
+    {
+        laser.Unsubscribe(OnLaserImageDestroy);
+        if(_lasers.ContainsValue(new KeyValuePair<Laser, bool>(laser, true)) || _lasers.ContainsValue(new KeyValuePair<Laser, bool>(laser, true)))
+        {
+            foreach (Laser source in _lasers.Keys.ToList())
+            {
+
+                if (_lasers.ContainsKey(source))
+                {
+                    if (_lasers[source].Key == laser)
+                    {
+                        source.Unsubscribe(OnLaserSourceDestroy);
+                        _lasers.Remove(source);
+                        source.FinishImmediately();
+                    }
+                }
+
+            }
+        }
     }
 }

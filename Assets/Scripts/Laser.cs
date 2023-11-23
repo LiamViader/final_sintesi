@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Laser : MonoBehaviour
 {
     public delegate void HandlerDestruccion();
-    private event HandlerDestruccion _OnDestruccion;
-
 
 
     private const float MAXDIST = 100f;
@@ -20,6 +19,8 @@ public class Laser : MonoBehaviour
 
     private float _animCoef = 0;
     private float _animTime = 0.3f;
+
+    public event Action<Laser> _OnLaserRemoved;
 
     // Start is called before the first frame update
     void Start()
@@ -80,20 +81,6 @@ public class Laser : MonoBehaviour
         StartCoroutine(StartAnimation());
     }
 
-    public void Init(Vector3 source, Vector3 direction, float duration, Laser dependance)
-    {
-        if (duration < 0)
-        {
-            _timeLimitless = true;
-            _timeLeft = 10000f;
-        }
-        else _timeLeft = duration;
-        _source = source;
-        _direction = direction;
-        _initialized = true;
-        dependance.SubscribeToDestruccion(FinishImmediately);
-        StartCoroutine(StartAnimation());
-    }
 
     public void UpdateDirection(Vector3 direction, Vector3 source)
     {
@@ -104,7 +91,6 @@ public class Laser : MonoBehaviour
     public void Finish()
     {
         _finished = true;
-        _OnDestruccion?.Invoke();
         StartCoroutine(EndAnimation());
     }
 
@@ -128,7 +114,7 @@ public class Laser : MonoBehaviour
             _animCoef = 1-(time_elapsed / _animTime);
             yield return null;
         }
-        Destroy(gameObject);
+        FinishImmediately();
     }
 
 
@@ -137,14 +123,19 @@ public class Laser : MonoBehaviour
         return _direction;
     }
 
-    public void SubscribeToDestruccion(HandlerDestruccion func)
-    {
-        _OnDestruccion += func;
-    }
-
     public void FinishImmediately()
     {
-        _OnDestruccion?.Invoke();
+        _OnLaserRemoved?.Invoke(this);
         Destroy(gameObject);
+    }
+
+    public void Unsubscribe(Action<Laser> WantsToUnsubscribe)
+    {
+        _OnLaserRemoved -= WantsToUnsubscribe;
+    }
+
+    public void Subscribe(Action<Laser> WantsToUnsubscribe)
+    {
+        _OnLaserRemoved += WantsToUnsubscribe;
     }
 }
