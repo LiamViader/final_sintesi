@@ -1,74 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Minijoc1 : MonoBehaviour
 {
-    bool[] interruptors = new bool[] { false, false, false, false };
+    bool Resolt = false;
+    static bool Resolt1 = false;
+    static bool Resolt2 = false;
+    static bool[] interruptors = new bool[] { false, false, false, false };
+    bool[] llums = new bool[] { true, false, true, true };
+    static int[] bloc = new int[] { 0, 0, 0 };
+    int[] enllaç = new int[] { 0, 1, 2 };
+
     private void OnMouseDown()
     {
         if (gameObject.CompareTag("Interruptor"))
         {
-            if (gameObject.name == "Interruptor0")
+            int interruptorIndex = int.Parse(gameObject.name.Substring("Interruptor".Length));
+            interruptors[interruptorIndex] = !interruptors[interruptorIndex];
+
+            Transform transformCubo = gameObject.GetComponent<Transform>();
+            Vector3 nuevaPosicion = transformCubo.position;
+            nuevaPosicion.y = interruptors[interruptorIndex] ? 0.28f : 0.25f;
+            transformCubo.position = nuevaPosicion;
+
+            if (interruptors.SequenceEqual(llums))
             {
-                interruptors[0] = !interruptors[0];
-                Transform transformCubo = GetComponent<Transform>();
-                Vector3 nuevaPosicion = transformCubo.position;
-                if(interruptors[0] == true)
-                {
-                    nuevaPosicion.y = 0.28f;
-                }
-                else
-                {
-                    nuevaPosicion.y = 0.25f;
-                }
-                transformCubo.position = nuevaPosicion;
+                Resolt1 = true;
+                Debug.Log("RESOLT 1");
             }
-            else if (gameObject.name == "Interruptor1")
+        }
+        if (gameObject.CompareTag("Bloc"))
+        {
+            int blocIndex = int.Parse(gameObject.name.Substring("Bloc".Length));
+            if (bloc[blocIndex] == 2)
             {
-                interruptors[1] = !interruptors[1];
-                Transform transformCubo = GetComponent<Transform>();
-                Vector3 nuevaPosicion = transformCubo.position;
-                if (interruptors[1] == true)
-                {
-                    nuevaPosicion.y = 0.28f;
-                }
-                else
-                {
-                    nuevaPosicion.y = 0.25f;
-                }
-                transformCubo.position = nuevaPosicion;
-            }
-            else if (gameObject.name == "Interruptor2")
-            {
-                interruptors[2] = !interruptors[2];
-                Transform transformCubo = GetComponent<Transform>();
-                Vector3 nuevaPosicion = transformCubo.position;
-                if (interruptors[2] == true)
-                {
-                    nuevaPosicion.y = 0.28f;
-                }
-                else
-                {
-                    nuevaPosicion.y = 0.25f;
-                }
-                transformCubo.position = nuevaPosicion;
+                bloc[blocIndex] = 0;
+                //CANVIAR ASSETS AQUÍ
             }
             else
             {
-                interruptors[3] = !interruptors[3];
-                Transform transformCubo = GetComponent<Transform>();
-                Vector3 nuevaPosicion = transformCubo.position;
-                if (interruptors[3] == true)
-                {
-                    nuevaPosicion.y = 0.28f;
-                }
-                else
-                {
-                    nuevaPosicion.y = 0.25f;
-                }
-                transformCubo.position = nuevaPosicion;
+                bloc[blocIndex] = bloc[blocIndex]+1;
+                //CANVIAR ASSETS AQUÍ
             }
+
+            if (bloc.SequenceEqual(enllaç))
+            {
+                Resolt2 = true;
+                Debug.Log("RESOLT 2");
+            }
+        }
+        if (Resolt1 && Resolt2)
+        {
+            Resolt = true;
+            Debug.Log("RESOLT MINIJOC");
         }
     }
 }
