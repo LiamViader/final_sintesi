@@ -19,11 +19,12 @@ public class DispositiuLaser : MonoBehaviour
     private float _pointingWeight = 1f;
     private float _timeToTurn=0.4f;
     private float _timeToStop = 0.2f;
-    private float _timeShooting = 10.5f;
+    private float _timeShooting = 5.5f;
     private bool _shooting=false;
     private bool _turning = false;
     private Coroutine _onGoingCoroutine=null;
     private Laser _laser;
+
 
 
 
@@ -35,7 +36,6 @@ public class DispositiuLaser : MonoBehaviour
             constraint.weight = 0;
         }
         _pointingConstraint.weight = 0;
-        Shoot(_target);
     }
 
     // Update is called once per frame
@@ -51,17 +51,17 @@ public class DispositiuLaser : MonoBehaviour
             _invisibleTarget.position = _target.position;
             Vector3 dir = _target.position - transform.position;
             Vector3 norm = Vector3.Normalize(dir);
-            _laser.UpdateDirection(norm);
-        }
-        else if(_shooting && _laser==null)
-        {
-            StopShooting();
+            _laser.UpdateDirection(norm,transform.position);
         }
     }
 
     public void Shoot(Transform target) //EL target ha de ser l'aparença
     {
-        if(!_turning && !_shooting)  _onGoingCoroutine =StartCoroutine(TurnAndPointToTarget(target));
+        if (!_turning && !_shooting && _target==null)
+        {
+            _turning = true;
+            _onGoingCoroutine = StartCoroutine(TurnAndPointToTarget(target));
+        }
 
 
     }
@@ -93,7 +93,6 @@ public class DispositiuLaser : MonoBehaviour
 
     private IEnumerator TurnAndPointToTarget(Transform target)
     {
-        _turning = true;
         _target = target;
         _invisibleTarget.position = target.position;
         float time_elapsed = 0;
@@ -113,9 +112,14 @@ public class DispositiuLaser : MonoBehaviour
         _laser = instance.GetComponent<Laser>();
         Vector3 dir = target.position - transform.position;
         Vector3 norm = Vector3.Normalize(dir);
-        _laser.Init(transform, norm, _timeShooting);
+        _laser.Init(transform.position, norm, _timeShooting);
+        _laser.Subscribe(OnLaserDestroy);
         _shooting = true;
     }
 
-
+    private void OnLaserDestroy(Laser laser)
+    {
+        laser.Unsubscribe(OnLaserDestroy);
+        StopShooting();
+    }
 }

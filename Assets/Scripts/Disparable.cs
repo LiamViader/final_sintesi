@@ -5,10 +5,20 @@ using UnityEngine;
 public class Disparable : MonoBehaviour
 {
     [SerializeField]
-    private bool _petit = false;
+    protected bool _petit = false;
     [SerializeField]
-    private float _coefTamany = 0.5f;
-    public Transform _aparença;
+    protected float _coefTamany = 0.5f;
+    [SerializeField]
+    protected Outline _outline;
+
+    [SerializeField]
+    [Tooltip("Aqui va el transform del objecte que anirà canviant de tamany durant l'animació de canvi")]
+    protected Transform _aparença;
+
+    [SerializeField]
+    [Tooltip("Aqui va el transform del objecte que quedarà canviat de tamany un cop el canvi estigui completat")]
+    protected Transform _canviReal;
+
     private float _tempsCanvi = 3f;
     private bool _canviant = false;
     private float _tempsCancelacio = 0.1f;
@@ -17,6 +27,11 @@ public class Disparable : MonoBehaviour
     private Vector3 _aparençaInicial;
 
 
+    protected void Awake()
+    {
+        _outline.enabled = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +39,7 @@ public class Disparable : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (_canviant)
         {
@@ -47,7 +62,7 @@ public class Disparable : MonoBehaviour
     }
 
     //retorna 1 si amb aquest hit ha acabat de canviar de tamany, 0 si no;
-    public bool TocatPelLaser(Laser laser)
+    public virtual bool TocatPelLaser(Laser laser,Vector3 pos_impacte)
     {
         if (!_canviant)
         {
@@ -69,12 +84,12 @@ public class Disparable : MonoBehaviour
         _canviant = false;
         _aparença.localScale = _aparençaInicial;
         if (!_petit) {
-            transform.localScale = transform.localScale * _coefTamany;
+            _canviReal.transform.localScale = _canviReal.transform.localScale * _coefTamany;
             _petit = true;
         }
         else
         {
-            transform.localScale = transform.localScale * 1/_coefTamany;
+            _canviReal.transform.localScale = _canviReal.transform.localScale * 1/_coefTamany;
             _petit = false;
         }
     }
@@ -85,5 +100,15 @@ public class Disparable : MonoBehaviour
         _canviant = false;
         _tempsCanviant = 0f;
         _tempsUltimHit = 0f;
+    }
+
+    public Transform Aparença()
+    {
+        return _aparença;
+    }
+
+    public Outline GetOutline()
+    {
+        return _outline;
     }
 }

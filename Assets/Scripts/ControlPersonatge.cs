@@ -34,6 +34,7 @@ public class ControlPersonatge : MonoBehaviour
 
     [SerializeField]
     private DispositiuLaser _dispositiu;
+    private Outline _outlined=null;
 
 
 
@@ -107,6 +108,56 @@ public class ControlPersonatge : MonoBehaviour
     {
         contacteTerra = false;
     }
+   
+    private void HighLightDisparable()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hitInfo;
+        if (Physics.Raycast(ray, out hitInfo))
+        {
+            Disparable target;
+            if (hitInfo.collider.TryGetComponent<Disparable>(out target))
+            {
+                if (target.GetOutline() != _outlined)
+                {
+                    if (_outlined != null)
+                    {
+                        _outlined.enabled = false;
+                    }
+                    _outlined = target.GetOutline();
+                    _outlined.enabled = true;
+                }
+
+            }
+            else if(_outlined!=null)
+            {
+                _outlined.enabled = false;
+                _outlined=null;
+            }
+        }
+        else if (_outlined!=null)
+        {
+            _outlined.enabled = false;
+            _outlined = null;
+        }
+    }
+    private void DispararLaser()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo))
+            {
+                Disparable target;
+                if(hitInfo.collider.TryGetComponent<Disparable>(out target))
+                {
+                    _dispositiu?.Shoot(target.Aparença());
+                }
+            }
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -114,6 +165,8 @@ public class ControlPersonatge : MonoBehaviour
        // _Camera.LookAt(rb);
         Control();
         ControlVelocitat();
+        HighLightDisparable();
+        DispararLaser();
         text.text = rb.velocity.ToString();
         if (Input.GetKeyDown(KeyCode.Space) && contacteTerra)
         {

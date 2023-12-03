@@ -1,19 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Laser : MonoBehaviour
 {
+    public delegate void HandlerDestruccion();
+
+
     private const float MAXDIST = 100f;
     private bool _initialized = false;
-    private Transform _source;
+    private Vector3 _source;
     private Vector3 _direction;
     private float _timeLeft;
+    private bool _timeLimitless = false;
     private float _width = 0.05f;
     private bool _finished = false;
 
     private float _animCoef = 0;
     private float _animTime = 0.3f;
+
+    public event Action<Laser> _OnLaserRemoved;
 
     // Start is called before the first frame update
     void Start()
@@ -33,45 +40,52 @@ public class Laser : MonoBehaviour
         }
         if (_initialized && _timeLeft>0)
         {
-            _timeLeft -= Time.fixedDeltaTime;
+            if(!_timeLimitless)_timeLeft -= Time.fixedDeltaTime;
 
             RaycastHit hit;
             float length=MAXDIST;
-            if (Physics.Raycast(_source.position, _direction, out hit, MAXDIST))
+            if (Physics.Raycast(_source, _direction, out hit, MAXDIST))
             {
-                Vector3 posHit = hit.transform.position;
-                length = (posHit - _source.position).magnitude;
+                Vector3 posHit = hit.point;
+                length = (posHit - _source).magnitude;
                 if (!_finished)
                 {
                     Disparable enc;
                     if (hit.collider.TryGetComponent<Disparable>(out enc))
                     {
-                        if (enc.TocatPelLaser(this)) Finish();
+                        if (enc.TocatPelLaser(this,posHit)) Finish();
                     }
                 }
 
             }
             Vector3 scale = new Vector3(_width, _width, length / 2) * _animCoef;
-            Vector3 pos = _source.position + (_direction*length / 2)*_animCoef;
+            Vector3 pos = _source + (_direction*length / 2)*_animCoef;
 
             transform.localScale = scale;
             transform.position = pos;
-            transform.LookAt(_source.position + _direction);
+            transform.LookAt(_source + _direction);
         }
     }
 
-    public void Init(Transform source, Vector3 direction, float duration)
+    public void Init(Vector3 source, Vector3 direction, float duration)
     {
-        _timeLeft = duration;
+        if (duration < 0)
+        {
+            _timeLimitless = true;
+            _timeLeft = 10000f;
+        }
+        else _timeLeft = duration;
         _source = source;
         _direction = direction;
         _initialized = true;
         StartCoroutine(StartAnimation());
     }
 
-    public void UpdateDirection(Vector3 direction)
+
+    public void UpdateDirection(Vector3 direction, Vector3 source)
     {
         _direction = direction;
+        _source = source;
     }
 
     public void Finish()
@@ -100,8 +114,28 @@ public class Laser : MonoBehaviour
             _animCoef = 1-(time_elapsed / _animTime);
             yield return null;
         }
-        Destroy(gameObject);
+        FinishImmediately();
     }
 
 
+    public Vector3 Direction()
+    {
+        return _direction;
+    }
+
+    public void FinishImmediately()
+    {
+        _OnLaserRemoved?.Invoke(this);
+        Destroy(gameObject);
+    }
+
+    public void Unsubscribe(Action<Laser> WantsToUnsubscribe)
+    {
+        _OnLaserRemoved -= WantsToUnsubscribe;
+    }
+
+    public void Subscribe(Action<Laser> WantsToUnsubscribe)
+    {
+        _OnLaserRemoved += WantsToUnsubscribe;
+    }
 }
