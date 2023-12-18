@@ -36,6 +36,8 @@ public class ControlPersonatge : MonoBehaviour
     private DispositiuLaser _dispositiu;
     private Outline _outlined=null;
 
+    //Animacions personatge
+    Animator animator;
 
 
     // Start is called before the first frame update
@@ -44,6 +46,7 @@ public class ControlPersonatge : MonoBehaviour
       //  if (_Camera == null) _Camera = GameObjects.FindGameObjectWithTag("MainCamera");
         rb = GetComponent<Rigidbody>();
         text = GameObject.FindWithTag("Vel display").GetComponent<Text>();
+        animator = GetComponent<Animator>();
     }
 
     //agafar els valors de control
@@ -68,12 +71,17 @@ public class ControlPersonatge : MonoBehaviour
             float gir = Mathf.Atan2(Direccio.x, Direccio.z) * Mathf.Rad2Deg + _Camera.eulerAngles.y; //influeix la pos de camera
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, gir, ref VelSmooth, TempsSmooth); //gir del personatge suau
             transform.rotation = Quaternion.Euler(0, angle, 0);
-            
+            //animacio de caminar
+            animator.SetBool("IsWalking", true);
             Vector3 movDir = Quaternion.Euler(0,gir,0)* Vector3.forward;
-            if(correr) rb.AddForce(movDir.normalized * velCorrer, ForceMode.VelocityChange);
+            if(correr){
+                rb.AddForce(movDir.normalized * velCorrer, ForceMode.VelocityChange);
+            }
             else rb.AddForce(movDir.normalized * velCaminar, ForceMode.VelocityChange);
         }
-       
+        //deixa de caminar
+        else animator.SetBool("IsWalking", false);
+
         //orientacio.transform = movDir;
     }
 
