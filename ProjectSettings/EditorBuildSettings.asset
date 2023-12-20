@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 9720def90151f524c84b48a20bc0a4c3
   - enabled: 1
-    path: Assets/Scenes/Joc.unity
+    path: Assets/Scenes/EscenaHabitacioAlba.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
