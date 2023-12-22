@@ -5,13 +5,9 @@ using TMPro;
 public class PlayerInteractUI : MonoBehaviour
 {
     [SerializeField] private GameObject containerGameObject;
-    private playerInteract player_interact;
+    [SerializeField] private playerInteract player_interact;
     [SerializeField] private TextMeshProUGUI interactTextMeshProGUI;
 
-    private void Start()
-    {
-        player_interact = ControlPersonatge._instance.gameObject.GetComponent<playerInteract>();
-    }
     private void Update(){
         if (player_interact.GetInteractuableObject() != null)
         {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserAgafable : MeshInteractuable
 {
+    public ControlPersonatge _personatge;
     public Disparable disparable;
     public ControlLaserQuiet _controlLaser;
 
@@ -23,13 +24,13 @@ public class LaserAgafable : MeshInteractuable
     {
         if (disparable.Petit() && !disparable.Canviant())
         {
-            ControlPersonatge._instance.AgafarDispositiu();
+            _personatge.AgafarDispositiu();
             _controlLaser.FinalitzarLaser();
             Destroy(_controlLaser.gameObject);
         }
         else
         {
-            UiControllerSingleton._instance._missatge.Mostrar("El dispositiu és massa gran per a ser agafat", 1.5f);
+            UiControllerSingleton._instance._missatgeError.Mostrar("El dispositiu és massa gran per a ser agafat", 1.5f);
         }
     }
 
