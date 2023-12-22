@@ -189,7 +189,6 @@ public class ControlPersonatge : MonoBehaviour
         text.text = rb.velocity.ToString();
         if (Input.GetKeyDown(KeyCode.Space) && contacteTerra)
         {
-            animator.SetTrigger("Jump");
             rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
             contacteTerra = false;
             /*if (esPetit)
