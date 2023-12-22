@@ -39,6 +39,8 @@ public class ControlPersonatge : MonoBehaviour
     private Outline _outlined=null;
     private bool _teDispositiu = false;
 
+    [SerializeField] private AudioSource jumpSoundEffect;
+
     //Animacions personatge
     Animator animator;
 
@@ -74,6 +76,11 @@ public class ControlPersonatge : MonoBehaviour
             float gir = Mathf.Atan2(Direccio.x, Direccio.z) * Mathf.Rad2Deg + _Camera.eulerAngles.y; //influeix la pos de camera
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, gir, ref VelSmooth, TempsSmooth); //gir del personatge suau
             transform.rotation = Quaternion.Euler(0, angle, 0);
+            //efecte caminar
+            if (!jumpSoundEffect.isPlaying)
+            {
+                jumpSoundEffect.Play();
+            }
             //animacio de caminar
             animator.SetBool("IsWalking", true);
             Vector3 movDir = Quaternion.Euler(0,gir,0)* Vector3.forward;
@@ -83,7 +90,13 @@ public class ControlPersonatge : MonoBehaviour
             else rb.AddForce(movDir.normalized * velCaminar, ForceMode.VelocityChange);
         }
         //deixa de caminar
-        else animator.SetBool("IsWalking", false);
+        else
+        {
+            jumpSoundEffect.Stop();
+            animator.SetBool("IsWalking", false);
+        }
+            
+
 
         //orientacio.transform = movDir;
     }
