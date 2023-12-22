@@ -9,7 +9,7 @@ public class MeshInteractuable : MonoBehaviour
     [SerializeField] private string interactText;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
     
-    public void Interact() {
+    public virtual void Interact() {
         cinemachineVirtualCamera.m_Priority = 9;
     }
 
