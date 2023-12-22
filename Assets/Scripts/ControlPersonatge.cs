@@ -126,7 +126,7 @@ public class ControlPersonatge : MonoBehaviour
             Disparable target;
             if (hitInfo.collider.TryGetComponent<Disparable>(out target))
             {
-                if (target.GetOutline() != _outlined)
+                if (target.GetOutline() != _outlined && target.GetOutline()!=null)
                 {
                     if (_outlined != null)
                     {

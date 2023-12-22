@@ -11,6 +11,8 @@ public class Disparable : MonoBehaviour
     [SerializeField]
     protected Outline _outline;
 
+    public bool _hasOutline = true;
+
     [SerializeField]
     [Tooltip("Aqui va el transform del objecte que anirà canviant de tamany durant l'animació de canvi")]
     protected Transform _aparença;
@@ -29,7 +31,7 @@ public class Disparable : MonoBehaviour
 
     protected void Awake()
     {
-        _outline.enabled = false;
+        if(_hasOutline) _outline.enabled = false;
     }
 
     // Start is called before the first frame update
@@ -109,6 +111,7 @@ public class Disparable : MonoBehaviour
 
     public Outline GetOutline()
     {
-        return _outline;
+        if (_hasOutline) return _outline;
+        else return null;
     }
 }
