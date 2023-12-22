@@ -235,6 +235,14 @@ PrefabInstance:
       propertyPath: m_Effectors.Array.data[0].m_Style.color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4185457712101287875, guid: a96e3a81d95af2d45b2e4e80cf5368a5, type: 3}
+      propertyPath: forceSaltar
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555550639605993880, guid: a96e3a81d95af2d45b2e4e80cf5368a5, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
