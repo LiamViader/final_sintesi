@@ -52,6 +52,7 @@ public class ControlPersonatge : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         text = GameObject.FindWithTag("Vel display").GetComponent<Text>();
         animator = GetComponent<Animator>();
+        AgafarDispositiu();
     }
 
     //agafar els valors de control
