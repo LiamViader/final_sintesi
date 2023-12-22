@@ -491,7 +491,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Desbloquejar codi
-  cinemachineVirtualCamera: {fileID: 0}
 --- !u!1001 &150587847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1422,7 +1421,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Desbloquejar el codi de seguretat
-  cinemachineVirtualCamera: {fileID: 1617338057}
 --- !u!4 &442382687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7621463442920724631, guid: 0ef87058d11dd764abf30aefa470c526, type: 3}

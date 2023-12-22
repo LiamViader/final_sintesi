@@ -22,9 +22,9 @@ public class Rotate : MeshInteractuable
         
     }
 
-    public override void Interact()
-    {
-        Vector3 rotation=new Vector3(_xAxis ? 1 : 0, _yAxis ? 1 : 0, _zAxis ? 1 : 0);
-        _objecteQueRota.Rotate(rotation,_amout/2);
-    }
+    // public override void Interact()
+    // {
+    //     Vector3 rotation=new Vector3(_xAxis ? 1 : 0, _yAxis ? 1 : 0, _zAxis ? 1 : 0);
+    //     _objecteQueRota.Rotate(rotation,_amout/2);
+    // }
 }

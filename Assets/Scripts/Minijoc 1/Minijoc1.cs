@@ -12,6 +12,7 @@ public class Minijoc1 : MonoBehaviour
     bool[] llums = new bool[] { true, false, true, true };
     static int[] bloc = new int[] { 0, 0, 0 };
     int[] enllaç = new int[] { 0, 1, 2 };
+    public Material[] textures;
 
     private void OnMouseDown()
     {
@@ -21,9 +22,9 @@ public class Minijoc1 : MonoBehaviour
             interruptors[interruptorIndex] = !interruptors[interruptorIndex];
 
             Transform transformCubo = gameObject.GetComponent<Transform>();
-            Vector3 nuevaPosicion = transformCubo.position;
-            nuevaPosicion.y = interruptors[interruptorIndex] ? 0.28f : 0.25f;
-            transformCubo.position = nuevaPosicion;
+            Vector3 nuevaRotacion = transformCubo.eulerAngles;
+            nuevaRotacion.x = interruptors[interruptorIndex] ? 11.3f : -11.3f;
+            transformCubo.eulerAngles = nuevaRotacion;
 
             if (interruptors.SequenceEqual(llums))
             {
@@ -34,15 +35,21 @@ public class Minijoc1 : MonoBehaviour
         if (gameObject.CompareTag("Bloc"))
         {
             int blocIndex = int.Parse(gameObject.name.Substring("Bloc".Length));
+            Renderer renderer = gameObject.GetComponent<Renderer>();
             if (bloc[blocIndex] == 2)
             {
                 bloc[blocIndex] = 0;
-                //CANVIAR ASSETS AQUÍ
+                renderer.material = textures[0];
+            }
+            else if (bloc[blocIndex] == 0)
+            {
+                bloc[blocIndex] = 1;
+                renderer.material = textures[1];
             }
             else
             {
-                bloc[blocIndex] = bloc[blocIndex]+1;
-                //CANVIAR ASSETS AQUÍ
+                bloc[blocIndex] = 2;
+                renderer.material = textures[2];
             }
 
             if (bloc.SequenceEqual(enllaç))
