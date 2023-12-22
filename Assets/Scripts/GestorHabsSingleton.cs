@@ -6,6 +6,8 @@ public class GestorHabsSingleton : MonoBehaviour
 {
     public static GestorHabsSingleton _instance;
     private CameresHabitacio _HabAct;
+    [SerializeField]
+    private Camera _cam;
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -38,5 +40,10 @@ public class GestorHabsSingleton : MonoBehaviour
         _HabAct?.Desactivar();
         _HabAct = hab;
         _HabAct.Activar();
+    }
+
+    public Camera Camera()
+    {
+        return _cam;
     }
 }

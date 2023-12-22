@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 6802187228943393683}
   - component: {fileID: 5306203167421923013}
   m_Layer: 5
-  m_Name: MissatgeError
+  m_Name: Missatge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerInteract: {fileID: 8261224409042780037}
-  _missatgeError: {fileID: 5306203167421923013}
+  _missatge: {fileID: 0}
 --- !u!1 &7493352311505262891
 GameObject:
   m_ObjectHideFlags: 0

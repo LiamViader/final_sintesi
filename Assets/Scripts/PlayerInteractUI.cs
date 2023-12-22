@@ -8,6 +8,11 @@ public class PlayerInteractUI : MonoBehaviour
     [SerializeField] private playerInteract player_interact;
     [SerializeField] private TextMeshProUGUI interactTextMeshProGUI;
 
+    private void Start()
+    {
+        player_interact = ControlPersonatge._instance.GetComponent<playerInteract>();
+    }
+
     private void Update(){
         if (player_interact.GetInteractuableObject() != null)
         {
