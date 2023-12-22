@@ -944,7 +944,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textures:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e810e0a509743574982794192eca4938, type: 2}
+  - {fileID: 2100000, guid: d29df7778fb2d4e4ba62d6667a61cb6b, type: 2}
+  - {fileID: 2100000, guid: b4249ac32701a9045b43d8f4d0dd7fae, type: 2}
 --- !u!65 &1092972797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -986,7 +988,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 50c030315893bf043b605b94dbc6c5be, type: 2}
+  - {fileID: 2100000, guid: e810e0a509743574982794192eca4938, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1227,7 +1229,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e810e0a509743574982794192eca4938, type: 2}
+  - {fileID: 2100000, guid: 50c030315893bf043b605b94dbc6c5be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1502,7 +1504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textures:
   - {fileID: 2100000, guid: e810e0a509743574982794192eca4938, type: 2}
-  - {fileID: 2100000, guid: e810e0a509743574982794192eca4938, type: 2}
+  - {fileID: 2100000, guid: d29df7778fb2d4e4ba62d6667a61cb6b, type: 2}
+  - {fileID: 2100000, guid: b4249ac32701a9045b43d8f4d0dd7fae, type: 2}
 --- !u!65 &1721632009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1544,7 +1547,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 50c030315893bf043b605b94dbc6c5be, type: 2}
+  - {fileID: 2100000, guid: e810e0a509743574982794192eca4938, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
