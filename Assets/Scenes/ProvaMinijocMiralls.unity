@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Desbloquejar codi
+  cinemachineVirtualCamera: {fileID: 0}
 --- !u!1 &145416193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2440975913761748167, guid: 70919b377178e7e4994c507de6920136, type: 3}
@@ -407,9 +408,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: 
+  cinemachineVirtualCamera: {fileID: 0}
   _personatge: {fileID: 0}
   disparable: {fileID: 0}
-  ui: {fileID: 0}
+  _controlLaser: {fileID: 0}
+--- !u!114 &145416198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2040746936463253189, guid: 70919b377178e7e4994c507de6920136, type: 3}
+  m_PrefabInstance: {fileID: 3452750236845369746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145416193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959dabf8d7e5f9d47ae7167f88d6c531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &150587847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -687,6 +700,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1299184777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &263614962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3283657842032414653, guid: 70919b377178e7e4994c507de6920136, type: 3}
+  m_PrefabInstance: {fileID: 3452750236845369746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &263614964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263614962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e884fed0c05823141b9f3b2b83a14f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Agafar Laser
+  cinemachineVirtualCamera: {fileID: 0}
+  _personatge: {fileID: 1069832596}
+  disparable: {fileID: 263614965}
+  _controlLaser: {fileID: 145416198}
+--- !u!114 &263614965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8264180722328045348, guid: 70919b377178e7e4994c507de6920136, type: 3}
+  m_PrefabInstance: {fileID: 3452750236845369746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263614962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &288995357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -945,6 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Desbloquejar codi
+  cinemachineVirtualCamera: {fileID: 0}
 --- !u!4 &437699249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8521215856708190465, guid: 70919b377178e7e4994c507de6920136, type: 3}
@@ -2670,6 +2717,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4221800912347577949, guid: 642302e12fb64374ba0af122c6d56f93, type: 3}
   m_PrefabInstance: {fileID: 3725195884128595336}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1069832596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4043672127354906706, guid: 642302e12fb64374ba0af122c6d56f93, type: 3}
+  m_PrefabInstance: {fileID: 3725195884128595336}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad0cf57a89adca40871a4fef8ca8171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1139053083
 GameObject:
   m_ObjectHideFlags: 0
@@ -4223,7 +4281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8c8eb039dd16041ab1c9d6f125a2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: RotarMirall
+  interactText: Rotar Mirall
+  cinemachineVirtualCamera: {fileID: 0}
   _xAxis: 0
   _yAxis: 1
   _zAxis: 0
@@ -4664,6 +4723,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2440975913761748167, guid: 70919b377178e7e4994c507de6920136, type: 3}
       insertIndex: -1
       addedObject: {fileID: 145416196}
+    - targetCorrespondingSourceObject: {fileID: 3283657842032414653, guid: 70919b377178e7e4994c507de6920136, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 263614964}
   m_SourcePrefab: {fileID: 100100000, guid: 70919b377178e7e4994c507de6920136, type: 3}
 --- !u!1001 &3725195884128595336
 PrefabInstance:
@@ -4723,6 +4785,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4221800912347577949, guid: 642302e12fb64374ba0af122c6d56f93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241356999228657476, guid: 642302e12fb64374ba0af122c6d56f93, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
