@@ -3708,6 +3708,7 @@ MonoBehaviour:
   _petit: 0
   _coefTamany: 0.5
   _outline: {fileID: 1427954684}
+  _hasOutline: 1
   "_aparen\xE7a": {fileID: 1427954678}
   _canviReal: {fileID: 1427954678}
 --- !u!114 &1427954684
@@ -4870,6 +4871,7 @@ MonoBehaviour:
   _petit: 0
   _coefTamany: 0.5
   _outline: {fileID: 2013637734}
+  _hasOutline: 1
   "_aparen\xE7a": {fileID: 444155842}
   _canviReal: {fileID: 444155842}
 --- !u!114 &2013637734

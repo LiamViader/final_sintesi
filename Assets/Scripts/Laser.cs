@@ -14,6 +14,7 @@ public class Laser : MonoBehaviour
     private Vector3 _direction;
     private float _timeLeft;
     private bool _timeLimitless = false;
+    private float width_coef = 0.5f;
     private float _width = 1f;
     private bool _finished = false;
     private bool _destruirControlatPerDisparable = true;
@@ -70,7 +71,7 @@ public class Laser : MonoBehaviour
 
     public void Init(Vector3 source, Vector3 direction, float duration, float width) // destruirContolatPerDisparable=true per defecte
     {
-        _width =width*0.5f;
+        _width = width*width_coef;
         if (duration < 0)
         {
             _timeLimitless = true;
@@ -85,7 +86,7 @@ public class Laser : MonoBehaviour
 
     public void Init(Vector3 source, Vector3 direction, float duration, float width, bool destruirControlatPerDisparable)
     {
-        _width = width*0.5f;
+        _width = width*width_coef;
         _destruirControlatPerDisparable = destruirControlatPerDisparable;
         if (duration < 0)
         {
@@ -102,7 +103,7 @@ public class Laser : MonoBehaviour
 
     public void UpdateDirection(Vector3 direction, Vector3 source, float width)
     {
-        _width = width*0.5f;
+        _width = width*width_coef;
         _direction = direction;
         _source = source;
     }
@@ -165,6 +166,6 @@ public class Laser : MonoBehaviour
 
     public float Width()
     {
-        return _width;
+        return _width/width_coef;
     }
 }
