@@ -5,7 +5,7 @@ using UnityEngine;
 public class UiControllerSingleton : MonoBehaviour
 {
     public PlayerInteractUI _playerInteract;
-    public UiMissatgeError _missatgeError;
+    public UiMissatgeError _missatge;
     public static UiControllerSingleton _instance;
 
     private void Awake()
