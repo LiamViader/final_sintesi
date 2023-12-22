@@ -558,8 +558,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5400940021968079077, guid: 2bbd4998d3a714f47ab51ab12d1dfa68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4039498436989584563}
   m_SourcePrefab: {fileID: 100100000, guid: 2bbd4998d3a714f47ab51ab12d1dfa68, type: 3}
+--- !u!114 &2040746936463253189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8876642949862414749, guid: 2bbd4998d3a714f47ab51ab12d1dfa68, type: 3}
+  m_PrefabInstance: {fileID: 7449546683519436632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959dabf8d7e5f9d47ae7167f88d6c531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &3283657842032414653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5400940021968079077, guid: 2bbd4998d3a714f47ab51ab12d1dfa68, type: 3}
+  m_PrefabInstance: {fileID: 7449546683519436632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4039498436989584563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283657842032414653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e884fed0c05823141b9f3b2b83a14f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Agafar Dispositiu
+  cinemachineVirtualCamera: {fileID: 0}
+  _personatge: {fileID: 0}
+  disparable: {fileID: 8264180722328045348}
+  _controlLaser: {fileID: 2040746936463253189}
+--- !u!114 &8264180722328045348 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1572424401929044092, guid: 2bbd4998d3a714f47ab51ab12d1dfa68, type: 3}
+  m_PrefabInstance: {fileID: 7449546683519436632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283657842032414653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8771385858349457006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2222565768242944310, guid: 2bbd4998d3a714f47ab51ab12d1dfa68, type: 3}

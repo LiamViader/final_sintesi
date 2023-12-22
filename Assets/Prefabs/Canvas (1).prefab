@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerInteract: {fileID: 8261224409042780037}
-  _missatgeError: {fileID: 5306203167421923013}
+  _missatge: {fileID: 5306203167421923013}
 --- !u!1 &7493352311505262891
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,9 @@ using UnityEngine.Animations.Rigging;
 public class ControlPersonatge : MonoBehaviour
 {
     //public CharacterController jugador;
-    
+
+    public static ControlPersonatge _instance;
+
     public float forceSaltar = 5.0f;
     public float velCaminar = 7.0f;
     public float velCorrer = 12.0f;
@@ -26,7 +28,6 @@ public class ControlPersonatge : MonoBehaviour
 
     Vector3 Direccio;
 
-    private Text text;
     
 
     private Rigidbody rb;
@@ -45,13 +46,26 @@ public class ControlPersonatge : MonoBehaviour
     Animator animator;
 
 
+    private void Awake()
+    {
+        // If there is an instance, and it's not me, delete myself.
+
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            _instance = this;
+            rb = GetComponent<Rigidbody>();
+            animator = GetComponent<Animator>();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
       //  if (_Camera == null) _Camera = GameObjects.FindGameObjectWithTag("MainCamera");
-        rb = GetComponent<Rigidbody>();
-        text = GameObject.FindWithTag("Vel display").GetComponent<Text>();
-        animator = GetComponent<Animator>();
     }
 
     //agafar els valors de control
@@ -199,7 +213,6 @@ public class ControlPersonatge : MonoBehaviour
         ControlVelocitat();
         HighLightDisparable();
         DispararLaser();
-        text.text = rb.velocity.ToString();
         if (Input.GetKeyDown(KeyCode.Space) && contacteTerra)
         {
             rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
