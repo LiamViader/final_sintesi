@@ -26,4 +26,8 @@ public class ControlLaserQuiet : MonoBehaviour
         laser.Unsubscribe(OnLaserDestroy);
     }
 
+    public void FinalitzarLaser()
+    {
+        _laser.FinishImmediately();
+    }
 }

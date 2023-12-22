@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Animations;
+using UnityEngine.Animations.Rigging;
 
 
 public class ControlPersonatge : MonoBehaviour
@@ -35,6 +37,7 @@ public class ControlPersonatge : MonoBehaviour
     [SerializeField]
     private DispositiuLaser _dispositiu;
     private Outline _outlined=null;
+    private bool _teDispositiu = false;
 
     //Animacions personatge
     Animator animator;
@@ -119,6 +122,7 @@ public class ControlPersonatge : MonoBehaviour
    
     private void HighLightDisparable()
     {
+        if (!_teDispositiu) return;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
         if (Physics.Raycast(ray, out hitInfo))
@@ -151,6 +155,7 @@ public class ControlPersonatge : MonoBehaviour
     }
     private void DispararLaser()
     {
+        if (!_teDispositiu) return;
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -166,6 +171,12 @@ public class ControlPersonatge : MonoBehaviour
         }
     }
 
+    public void AgafarDispositiu()
+    {
+        _teDispositiu = true;
+        _dispositiu.gameObject.SetActive(true);
+        GetComponent<RigBuilder>().enabled = true;
+    }
 
     // Update is called once per frame
     void Update()

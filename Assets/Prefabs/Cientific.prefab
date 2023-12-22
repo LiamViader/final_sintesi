@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3593038125088498919}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
   m_Name: 
@@ -2994,6 +2994,10 @@ PrefabInstance:
     - target: {fileID: 2097039188444947820, guid: a64ae13fc0d0fd342bfa163e30847ef9, type: 3}
       propertyPath: m_Name
       value: DispositiuLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097039188444947820, guid: a64ae13fc0d0fd342bfa163e30847ef9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8664816835616690947, guid: a64ae13fc0d0fd342bfa163e30847ef9, type: 3}
       propertyPath: _invisibleTarget

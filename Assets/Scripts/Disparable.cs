@@ -122,4 +122,14 @@ public class Disparable : MonoBehaviour
         if (_hasOutline) return _outline;
         else return null;
     }
+
+    public bool Petit()
+    {
+        return _petit;
+    }
+
+    public bool Canviant()
+    {
+        return _canviant;
+    }
 }

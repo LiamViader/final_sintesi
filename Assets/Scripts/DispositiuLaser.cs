@@ -122,4 +122,6 @@ public class DispositiuLaser : MonoBehaviour
         laser.Unsubscribe(OnLaserDestroy);
         StopShooting();
     }
+
+
 }
