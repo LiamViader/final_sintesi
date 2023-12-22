@@ -1421,6 +1421,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Desbloquejar codi
+--- !u!4 &437699249 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8521215856708190465, guid: 70919b377178e7e4994c507de6920136, type: 3}
+  m_PrefabInstance: {fileID: 3452750236845369746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &442382687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7621463442920724631, guid: 0ef87058d11dd764abf30aefa470c526, type: 3}
@@ -4715,6 +4720,29 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964e3fd2e5ff9014ea2a3ce4b682e2c1, type: 3}
+--- !u!1 &1982263137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 178283380077688523, guid: 70919b377178e7e4994c507de6920136, type: 3}
+  m_PrefabInstance: {fileID: 3452750236845369746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1982263143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982263137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8c8eb039dd16041ab1c9d6f125a2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: RotarMirall
+  _xAxis: 0
+  _yAxis: 1
+  _zAxis: 0
+  _amout: 90
+  _objecteQueRota: {fileID: 437699249}
 --- !u!1001 &1997653037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5143,7 +5171,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 178283380077688523, guid: 70919b377178e7e4994c507de6920136, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1982263143}
   m_SourcePrefab: {fileID: 100100000, guid: 70919b377178e7e4994c507de6920136, type: 3}
 --- !u!1001 &3725195884128595336
 PrefabInstance:
