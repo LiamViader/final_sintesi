@@ -21,9 +21,11 @@ public class Disparable : MonoBehaviour
     [Tooltip("Aqui va el transform del objecte que quedarà canviat de tamany un cop el canvi estigui completat")]
     protected Transform _canviReal;
 
-    private float _tempsCanvi = 3f;
+    private float _tempsCanvi = 1.5f;
+    private bool _tocatUltimFrame = false;
+    private bool _interrupcioDesdeUltimCanviComplet = true;
     private bool _canviant = false;
-    private float _tempsCancelacio = 0.1f;
+    private float _tempsCancelacio = 0.05f;
     private float _tempsUltimHit = 0f;
     private float _tempsCanviant = 0f;
     private Vector3 _aparençaInicial;
@@ -43,6 +45,7 @@ public class Disparable : MonoBehaviour
     // Update is called once per frame
     protected virtual void FixedUpdate()
     {
+        if (!_tocatUltimFrame) _interrupcioDesdeUltimCanviComplet = true;
         if (_canviant)
         {
             _tempsUltimHit += Time.fixedDeltaTime;
@@ -60,23 +63,27 @@ public class Disparable : MonoBehaviour
                 _aparença.localScale = Vector3.Lerp(_aparençaInicial, _aparençaInicial * grau, percentatgeCanvi);
             }
         }
-
+        _tocatUltimFrame = false;
     }
 
     //retorna 1 si amb aquest hit ha acabat de canviar de tamany, 0 si no;
     public virtual bool TocatPelLaser(Laser laser,Vector3 pos_impacte)
     {
-        if (!_canviant)
+        _tocatUltimFrame = true;
+        if (_interrupcioDesdeUltimCanviComplet)
         {
-            _aparençaInicial = _aparença.localScale;
-            _canviant = true;
-            _tempsCanviant = 0f;
-        }
-        _tempsUltimHit = 0f;
-        if (_tempsCanviant >= _tempsCanvi)
-        {
-            CanviarTamanyObjecte();
-            return true;
+            if (!_canviant)
+            {
+                _aparençaInicial = _aparença.localScale;
+                _canviant = true;
+                _tempsCanviant = 0f;
+            }
+            _tempsUltimHit = 0f;
+            if (_tempsCanviant >= _tempsCanvi)
+            {
+                CanviarTamanyObjecte();
+                return true;
+            }
         }
         return false;
     }
@@ -94,6 +101,7 @@ public class Disparable : MonoBehaviour
             _canviReal.transform.localScale = _canviReal.transform.localScale * 1/_coefTamany;
             _petit = false;
         }
+        _interrupcioDesdeUltimCanviComplet = false;
     }
 
     private void ResetCanvi()

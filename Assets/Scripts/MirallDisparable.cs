@@ -74,7 +74,7 @@ public class MirallDisparable : Disparable
             Vector3 dir = ComputeNewDirection(laser);
             Vector3 norm = Vector3.Normalize(dir);
             laser.Subscribe(OnLaserSourceDestroy);
-            newLaser.Init(pos_impacte, norm, -1);
+            newLaser.Init(pos_impacte, norm, -1,laser.Width(),laser.DestruitControlatPerDisparable());
             newLaser.Subscribe(OnLaserImageDestroy);
             _lasers[laser] = new KeyValuePair<Laser, bool>(newLaser, true);
         }
@@ -82,7 +82,7 @@ public class MirallDisparable : Disparable
 
     private void UpdateLaser(Laser laser_in, Laser laser_out, Vector3 pos_impacte)
     {
-        laser_out.UpdateDirection(ComputeNewDirection(laser_in), pos_impacte);
+        laser_out.UpdateDirection(ComputeNewDirection(laser_in), pos_impacte, laser_in.Width());
     }
 
     private Vector3 ComputeNewDirection(Laser laser)

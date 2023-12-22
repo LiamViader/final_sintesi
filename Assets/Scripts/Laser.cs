@@ -14,8 +14,9 @@ public class Laser : MonoBehaviour
     private Vector3 _direction;
     private float _timeLeft;
     private bool _timeLimitless = false;
-    private float _width = 0.05f;
+    private float _width = 1f;
     private bool _finished = false;
+    private bool _destruirControlatPerDisparable = true;
 
     private float _animCoef = 0;
     private float _animTime = 0.3f;
@@ -53,7 +54,7 @@ public class Laser : MonoBehaviour
                     Disparable enc;
                     if (hit.collider.TryGetComponent<Disparable>(out enc))
                     {
-                        if (enc.TocatPelLaser(this,posHit)) Finish();
+                        if (enc.TocatPelLaser(this,posHit) && _destruirControlatPerDisparable) Finish();
                     }
                 }
 
@@ -67,8 +68,25 @@ public class Laser : MonoBehaviour
         }
     }
 
-    public void Init(Vector3 source, Vector3 direction, float duration)
+    public void Init(Vector3 source, Vector3 direction, float duration, float width) // destruirContolatPerDisparable=true per defecte
     {
+        _width =width*0.5f;
+        if (duration < 0)
+        {
+            _timeLimitless = true;
+            _timeLeft = 10000f;
+        }
+        else _timeLeft = duration;
+        _source = source;
+        _direction = direction;
+        _initialized = true;
+        StartCoroutine(StartAnimation());
+    }
+
+    public void Init(Vector3 source, Vector3 direction, float duration, float width, bool destruirControlatPerDisparable)
+    {
+        _width = width*0.5f;
+        _destruirControlatPerDisparable = destruirControlatPerDisparable;
         if (duration < 0)
         {
             _timeLimitless = true;
@@ -82,8 +100,9 @@ public class Laser : MonoBehaviour
     }
 
 
-    public void UpdateDirection(Vector3 direction, Vector3 source)
+    public void UpdateDirection(Vector3 direction, Vector3 source, float width)
     {
+        _width = width*0.5f;
         _direction = direction;
         _source = source;
     }
@@ -137,5 +156,15 @@ public class Laser : MonoBehaviour
     public void Subscribe(Action<Laser> WantsToUnsubscribe)
     {
         _OnLaserRemoved += WantsToUnsubscribe;
+    }
+
+    public bool DestruitControlatPerDisparable()
+    {
+        return _destruirControlatPerDisparable;
+    }
+
+    public float Width()
+    {
+        return _width;
     }
 }

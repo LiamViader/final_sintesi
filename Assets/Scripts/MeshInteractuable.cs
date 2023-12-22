@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MeshInteractuable : MonoBehaviour
 {
     [SerializeField] private string interactText;
-    public void Interact() {
+    public virtual void Interact() {
         SceneManager.LoadScene("Scenes/Minijocs/Minijoc 1");
     }
 

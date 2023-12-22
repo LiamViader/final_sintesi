@@ -121,6 +121,7 @@ MonoBehaviour:
   _petit: 0
   _coefTamany: 0.5
   _outline: {fileID: 7580940662075147714}
+  _hasOutline: 1
   "_aparen\xE7a": {fileID: 3681091290274504506}
   _canviReal: {fileID: 3681091290274504506}
 --- !u!1 &5128982466484168944
@@ -244,6 +245,7 @@ MonoBehaviour:
   _petit: 0
   _coefTamany: 0.5
   _outline: {fileID: 7580940662075147714}
+  _hasOutline: 1
   "_aparen\xE7a": {fileID: 3681091290274504506}
   _canviReal: {fileID: 3681091290274504506}
   _laserPrefab: {fileID: 2342094905357932928, guid: eb51b42b548b58f4b998c1088bfb19ff, type: 3}
@@ -295,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 1
-  outlineColor: {r: 0.7830189, g: 0.09233712, b: 0.55485487, a: 0.7294118}
+  outlineColor: {r: 1, g: 1, b: 1, a: 0.7294118}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
