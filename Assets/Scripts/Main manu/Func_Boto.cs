@@ -10,11 +10,12 @@ public class Func_Boto : MonoBehaviour
     void Start()
     {
         Debug.Log("LoadScene");
+        Carpeta = AssetBundle.LoadFromFile("Assets/Escenes");
     }
 
     public void LoadA(string scenename)
     {
-        SceneManager.LoadScene("Scenes/EscenaHabitacioAlba");
+        SceneManager.LoadScene(scenename);
         Debug.Log("sceneName to load: " + scenename);
         
     }
