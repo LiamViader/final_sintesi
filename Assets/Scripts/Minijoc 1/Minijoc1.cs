@@ -14,6 +14,8 @@ public class Minijoc1 : MonoBehaviour
     int[] enllaç = new int[] { 0, 1, 2 };
     public Material[] textures;
 
+    public Porta portaAObrir;
+
     [SerializeField] private GameObject llumsGameObj;
     [SerializeField] private GameObject llumGameObj;
     [SerializeField] private CinemachineVirtualCamera camera;
@@ -71,6 +73,7 @@ public class Minijoc1 : MonoBehaviour
             camera.gameObject.SetActive(false);
             camera2.gameObject.SetActive(true);
             Debug.Log("RESOLT MINIJOC");
+            portaAObrir.Obrir();
         }
     }
 }
