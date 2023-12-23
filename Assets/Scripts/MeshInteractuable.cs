@@ -16,7 +16,7 @@ public class MeshInteractuable : MonoBehaviour
         gameObj1.SetActive(false);
         gameObj2.SetActive(true);
         cinemachineVirtualCamera.gameObject.SetActive(true);
-        cinemachineVirtualCamera.gameObject.SetActive(false);
+        cinemachineVirtualCamera2.gameObject.SetActive(false);
     }
 
     public string returnInteractText(){
