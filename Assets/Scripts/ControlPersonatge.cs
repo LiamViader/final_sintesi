@@ -18,7 +18,7 @@ public class ControlPersonatge : MonoBehaviour
     public float velCorrer = 12.0f;
  
     public Transform _Camera;
-    public Transform _peus;
+    public CapsuleCollider _collider;
 
     public float TempsSmooth = 0.1f;
     float VelSmooth;
@@ -205,9 +205,11 @@ public class ControlPersonatge : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Ray ray = new Ray(_peus.position, transform.TransformDirection(Vector3.down));
+            Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height *0.5f, _collider.center.z);
+            Vector3 posGlobal = transform.TransformPoint(pos);
+            Ray ray = new Ray(posGlobal, Vector3.down);
             RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, 0.3f))
+            if (Physics.Raycast(ray, out hitInfo, 0.05f))
             { // si esta tocant el terra
                 animator.SetTrigger("Jump");
             }
