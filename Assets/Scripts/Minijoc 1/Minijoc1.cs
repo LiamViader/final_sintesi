@@ -15,7 +15,7 @@ public class Minijoc1 : MonoBehaviour
     public Material[] textures;
 
     [SerializeField] private GameObject llumsGameObj;
-
+    [SerializeField] private GameObject llumGameObj;
     [SerializeField] private CinemachineVirtualCamera camera;
     [SerializeField] private CinemachineVirtualCamera camera2;
 
@@ -67,6 +67,7 @@ public class Minijoc1 : MonoBehaviour
         {
             Resolt = true;
             llumsGameObj.SetActive(true);
+            llumGameObj.SetActive(false);
             camera.gameObject.SetActive(false);
             camera2.gameObject.SetActive(true);
             Debug.Log("RESOLT MINIJOC");
