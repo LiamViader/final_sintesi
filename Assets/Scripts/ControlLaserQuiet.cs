@@ -11,14 +11,14 @@ public class ControlLaserQuiet : MonoBehaviour
     {
         GameObject instance = Instantiate(_laserPrefab);
         _laser = instance.GetComponent<Laser>();
-        _laser.Init(transform.position, transform.forward, -1, transform.localScale.magnitude*0.1f, false);
+        _laser.Init(transform.position, transform.forward, -1, transform.localScale.magnitude*0.05f, false);
         _laser.Subscribe(OnLaserDestroy);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        _laser.UpdateDirection(transform.forward, transform.position, transform.localScale.magnitude * 0.3f);
+        _laser.UpdateDirection(transform.forward, transform.position, transform.localScale.magnitude * 0.15f);
     }
 
     private void OnLaserDestroy(Laser laser)

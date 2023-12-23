@@ -8,7 +8,7 @@ public class Rotate : MeshInteractuable
     public bool _yAxis = false;
     public bool _zAxis = false;
     public float _amout = 90;
-    public Transform _objecteQueRota = null;
+    public Transform _objecteQueRota;
 
     // Start is called before the first frame update
     void Start()

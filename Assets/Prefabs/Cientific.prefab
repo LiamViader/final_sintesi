@@ -1257,8 +1257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceSaltar: 5
-  velCaminar: 2
-  velCorrer: 5
+  velCaminar: 4
+  velCorrer: 6
   _Camera: {fileID: 0}
   _collider: {fileID: 7917839147370066650}
   TempsSmooth: 0.1
