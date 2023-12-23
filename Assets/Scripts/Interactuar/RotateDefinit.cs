@@ -27,8 +27,6 @@ public class RotateDefinit : MeshInteractuable
 
     private void SeguentPos()
     {
-        Debug.Log(act);
-        Debug.Log(_rotacions.Count - 1);
         if (act >= _rotacions.Count-1) act = 0;
         else act++;
         _objecteQueRota.transform.rotation = Quaternion.Euler(_rotacions[act]);
