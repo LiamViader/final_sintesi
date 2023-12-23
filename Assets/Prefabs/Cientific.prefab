@@ -1260,8 +1260,10 @@ MonoBehaviour:
   velCaminar: 2
   velCorrer: 5
   _Camera: {fileID: 0}
+  _peus: {fileID: 3849822978199683018}
   TempsSmooth: 0.1
   _dispositiu: {fileID: 97888265943939371}
+  jumpSoundEffect: {fileID: 0}
 --- !u!114 &2586529606454407023
 MonoBehaviour:
   m_ObjectHideFlags: 0

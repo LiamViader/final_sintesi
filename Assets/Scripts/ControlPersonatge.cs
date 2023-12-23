@@ -12,13 +12,13 @@ public class ControlPersonatge : MonoBehaviour
     //public CharacterController jugador;
 
     public static ControlPersonatge _instance;
-    
+
     public float forceSaltar = 5.0f;
     public float velCaminar = 7.0f;
     public float velCorrer = 12.0f;
  
     public Transform _Camera;
-
+    public Transform _peus;
 
     public float TempsSmooth = 0.1f;
     float VelSmooth;
@@ -32,7 +32,6 @@ public class ControlPersonatge : MonoBehaviour
 
     private Rigidbody rb;
 
-    private bool contacteTerra = false;
     private bool correr = false;
 
     [SerializeField]
@@ -136,15 +135,6 @@ public class ControlPersonatge : MonoBehaviour
         rb.velocity = new Vector3(VelLimitada.x, rb.velocity.y, VelLimitada.z);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        contacteTerra = true;
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        contacteTerra = false;
-    }
    
     private void HighLightDisparable()
     {
@@ -212,11 +202,15 @@ public class ControlPersonatge : MonoBehaviour
         ControlVelocitat();
         HighLightDisparable();
         DispararLaser();
-        if (Input.GetKeyDown(KeyCode.Space) && contacteTerra)
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetTrigger("Jump");
-            rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
-            contacteTerra = false;
+            Ray ray = new Ray(_peus.position, transform.TransformDirection(Vector3.down));
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo, 0.3f))
+            { // si esta tocant el terra
+                animator.SetTrigger("Jump");
+            }
             /*if (esPetit)
             {
                 //salta m�s

@@ -50,7 +50,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containerGameObject: {fileID: 7493352311505262891}
-  player_interact: {fileID: 0}
   interactTextMeshProGUI: {fileID: 3988602302255396411}
 --- !u!1 &1016536511693937342
 GameObject:
@@ -638,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerInteract: {fileID: 8261224409042780037}
-  _missatge: {fileID: 0}
+  _missatge: {fileID: 5306203167421923013}
 --- !u!1 &7493352311505262891
 GameObject:
   m_ObjectHideFlags: 0

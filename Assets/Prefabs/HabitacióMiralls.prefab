@@ -673,13 +673,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5128982466484168944, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3122556086950817859}
   m_SourcePrefab: {fileID: 100100000, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
 --- !u!4 &2023269471092893677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
   m_PrefabInstance: {fileID: 3387205940422572247}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7506387579894501415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5128982466484168944, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+  m_PrefabInstance: {fileID: 3387205940422572247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3122556086950817859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506387579894501415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8c8eb039dd16041ab1c9d6f125a2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Rotar
+  cinemachineVirtualCamera: {fileID: 0}
+  _xAxis: 0
+  _yAxis: 1
+  _zAxis: 0
+  _amout: 90
+  _objecteQueRota: {fileID: 2023269471092893677}
 --- !u!1001 &3527518740043005222
 PrefabInstance:
   m_ObjectHideFlags: 0

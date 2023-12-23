@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class UiMissatgeError : MonoBehaviour
+public class UiMissatge : MonoBehaviour
 {
     [SerializeField] private GameObject containerGameObject;
     [SerializeField] private TextMeshProUGUI interactTextMeshProGUI;
