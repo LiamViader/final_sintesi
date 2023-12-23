@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44518882, g: 0.49480665, b: 0.5738535, a: 1}
+  m_IndirectSpecularColor: {r: 0.4451887, g: 0.49480623, b: 0.5738527, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -208,8 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Obrir cuadre de llums
-  cinemachineVirtualCamera: {fileID: 2006234218}
-  cinemachineVirtualCamera2: {fileID: 0}
+  cinemachineVirtualCamera: {fileID: 743031587}
+  cinemachineVirtualCamera2: {fileID: 2006234218}
   gameObj1: {fileID: 396012782}
   gameObj2: {fileID: 659364925}
 --- !u!1001 &530868769
@@ -1005,6 +1005,10 @@ PrefabInstance:
       propertyPath: llumsGameObj
       value: 
       objectReference: {fileID: 8909864275538045803}
+    - target: {fileID: 9128551283158094472, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1410,7 +1414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1845327950
 Transform:
   m_ObjectHideFlags: 0
@@ -1641,19 +1645,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7041542
-      objectReference: {fileID: 0}
-    - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.06455107
-      objectReference: {fileID: 0}
-    - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
-      propertyPath: m_LocalRotation.y
       value: 0.70415425
       objectReference: {fileID: 0}
     - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.06455106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7041542
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06455107
+      value: -0.064551055
       objectReference: {fileID: 0}
     - target: {fileID: 1871569409204501903, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_IsActive
@@ -1703,6 +1707,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2752458293429762099, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2945156088209841962, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1751,6 +1759,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1069832595}
+    - target: {fileID: 7311069975982939490, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7947845097128833927, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: _cameres.Array.size
       value: 3
@@ -1767,7 +1779,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.17
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1669090580747371015, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8836408568659099948, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
     m_AddedGameObjects:
