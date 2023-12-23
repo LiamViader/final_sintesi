@@ -29,7 +29,7 @@ public class LaserAgafable : MeshInteractuable
         }
         else
         {
-            UiControllerSingleton._instance._missatge.Mostrar("El dispositiu és massa gran per a ser agafat", 1.5f);
+            UiControllerSingleton._instance._missatge.Mostrar("El dispositiu ha de ser més petit per poder agafar-lo", 1.5f);
         }
     }
 
