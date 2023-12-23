@@ -1234,9 +1234,9 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0d4b2b3426640f94eaaa64a75ab8a082, type: 3}
   m_Controller: {fileID: 9100000, guid: 0a087bf46ae490e4f886915402f8cd72, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1260,8 +1260,10 @@ MonoBehaviour:
   velCaminar: 2
   velCorrer: 5
   _Camera: {fileID: 0}
+  _peus: {fileID: 3849822978199683018}
   TempsSmooth: 0.1
   _dispositiu: {fileID: 97888265943939371}
+  jumpSoundEffect: {fileID: 0}
 --- !u!114 &2586529606454407023
 MonoBehaviour:
   m_ObjectHideFlags: 0

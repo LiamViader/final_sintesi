@@ -10,8 +10,9 @@ public class PlayerInteractUI : MonoBehaviour
 
     private void Start()
     {
-        player_interact = ControlPersonatge._instance.gameObject.GetComponent<playerInteract>();
+        player_interact = ControlPersonatge._instance.GetComponent<playerInteract>();
     }
+
     private void Update(){
         if (player_interact.GetInteractuableObject() != null)
         {

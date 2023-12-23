@@ -5,12 +5,11 @@ using UnityEngine;
 public class UiControllerSingleton : MonoBehaviour
 {
     public PlayerInteractUI _playerInteract;
-    public UiMissatgeError _missatge;
+    public UiMissatge _missatge;
     public static UiControllerSingleton _instance;
 
     private void Awake()
     {
-        // If there is an instance, and it's not me, delete myself.
 
         if (_instance != null && _instance != this)
         {
@@ -29,7 +28,7 @@ public class UiControllerSingleton : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void  Update()
     {
         
     }

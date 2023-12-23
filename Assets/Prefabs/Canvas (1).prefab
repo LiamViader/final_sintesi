@@ -50,7 +50,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containerGameObject: {fileID: 7493352311505262891}
-  player_interact: {fileID: 0}
   interactTextMeshProGUI: {fileID: 3988602302255396411}
 --- !u!1 &1016536511693937342
 GameObject:
@@ -63,7 +62,7 @@ GameObject:
   - component: {fileID: 6802187228943393683}
   - component: {fileID: 5306203167421923013}
   m_Layer: 5
-  m_Name: MissatgeError
+  m_Name: Missatge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
