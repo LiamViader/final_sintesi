@@ -1050,8 +1050,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0231169, y: 0.9501126, z: -0.07261821, w: 0.3024539}
-  m_LocalPosition: {x: -6.281044, y: 4.8503113, z: 8.174313}
+  m_LocalRotation: {x: -0.028563015, y: 0.9469184, z: -0.08783741, w: -0.3079194}
+  m_LocalPosition: {x: -9.191044, y: 3.9899998, z: -8.395687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1895,19 +1895,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7041542
-      objectReference: {fileID: 0}
-    - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.06455107
-      objectReference: {fileID: 0}
-    - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
-      propertyPath: m_LocalRotation.y
       value: 0.70415425
       objectReference: {fileID: 0}
     - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.06455106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7041542
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06455107
+      value: -0.064551055
       objectReference: {fileID: 0}
     - target: {fileID: 1871569409204501903, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_IsActive
@@ -2006,7 +2006,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1845327951}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8836408568659099948, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2472638099005871195, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       insertIndex: 4
