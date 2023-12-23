@@ -8,9 +8,13 @@ public class MeshInteractuable : MonoBehaviour
 {
     [SerializeField] private string interactText;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
-    
+    [SerializeField] private GameObject gameObj1; 
+    [SerializeField] private GameObject gameObj2; 
+
     public virtual void Interact() {
-        cinemachineVirtualCamera.m_Priority = 9;
+        gameObj1.SetActive(false);
+        gameObj2.SetActive(true);
+        cinemachineVirtualCamera.Priority = 9;
     }
 
     public string returnInteractText(){
