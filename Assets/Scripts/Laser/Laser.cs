@@ -31,7 +31,6 @@ public class Laser : MonoBehaviour
     }
 
 
-
     // Update is called once per frame
     void FixedUpdate()
     {
