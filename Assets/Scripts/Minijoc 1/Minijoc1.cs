@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+using Cinemachine;
 public class Minijoc1 : MonoBehaviour
 {
     bool Resolt = false;
@@ -11,8 +11,12 @@ public class Minijoc1 : MonoBehaviour
     static bool[] interruptors = new bool[] { false, false, false, false };
     bool[] llums = new bool[] { true, false, true, true };
     static int[] bloc = new int[] { 0, 0, 0 };
-    int[] enllaç = new int[] { 0, 1, 2 };
+    int[] enllaÃ§ = new int[] { 0, 1, 2 };
     public Material[] textures;
+
+    [SerializeField] private GameObject llumsGameObj;
+
+    [SerializeField] private CinemachineVirtualCamera camera;
 
     private void OnMouseDown()
     {
@@ -52,7 +56,7 @@ public class Minijoc1 : MonoBehaviour
                 renderer.material = textures[2];
             }
 
-            if (bloc.SequenceEqual(enllaç))
+            if (bloc.SequenceEqual(enllaÃ§))
             {
                 Resolt2 = true;
                 Debug.Log("RESOLT 2");
@@ -61,6 +65,8 @@ public class Minijoc1 : MonoBehaviour
         if (Resolt1 && Resolt2)
         {
             Resolt = true;
+            llumsGameObj.SetActive(true);
+            camera.gameObject.SetActive(false);
             Debug.Log("RESOLT MINIJOC");
         }
     }
