@@ -17,6 +17,7 @@ public class Minijoc1 : MonoBehaviour
     [SerializeField] private GameObject llumsGameObj;
 
     [SerializeField] private CinemachineVirtualCamera camera;
+    [SerializeField] private CinemachineVirtualCamera camera2;
 
     private void OnMouseDown()
     {
@@ -67,6 +68,7 @@ public class Minijoc1 : MonoBehaviour
             Resolt = true;
             llumsGameObj.SetActive(true);
             camera.gameObject.SetActive(false);
+            camera2.gameObject.SetActive(true);
             Debug.Log("RESOLT MINIJOC");
         }
     }
