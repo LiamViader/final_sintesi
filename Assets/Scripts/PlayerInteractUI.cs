@@ -5,7 +5,7 @@ using TMPro;
 public class PlayerInteractUI : MonoBehaviour
 {
     [SerializeField] private GameObject containerGameObject;
-    [SerializeField] private playerInteract player_interact;
+    private playerInteract player_interact;
     [SerializeField] private TextMeshProUGUI interactTextMeshProGUI;
 
     private void Start()
