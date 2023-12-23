@@ -942,19 +942,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.63817984
+      value: 0.6422402
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.26630226
+      value: -0.2679966
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6666513
+      value: 0.66274047
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.27818298
+      value: 0.27655104
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -962,7 +962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 92.5
+      value: 91.8
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1172,6 +1172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Agafar Dispositiu
   cinemachineVirtualCamera: {fileID: 0}
+  gameObj1: {fileID: 0}
+  gameObj2: {fileID: 0}
   disparable: {fileID: 763227714856855354}
   _controlLaser: {fileID: 7238959715796123355}
 --- !u!114 &7238959715796123355 stripped
@@ -1543,23 +1545,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.37324736
+      value: 0.3826787
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08445724
+      value: 0.001903537
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9010989
+      value: -0.9238681
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20389782
+      value: 0.0045955447
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 25.5
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 3681091290274504506, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1857,6 +1859,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Rotar Mirall
   cinemachineVirtualCamera: {fileID: 0}
+  gameObj1: {fileID: 0}
+  gameObj2: {fileID: 0}
   _objecteQueRota: {fileID: 2023269471092893677}
   _rotacions:
   - {x: -5, y: 90, z: 0}
@@ -1957,6 +1961,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Rotar Mirall
   cinemachineVirtualCamera: {fileID: 0}
+  gameObj1: {fileID: 0}
+  gameObj2: {fileID: 0}
   _xAxis: 0
   _yAxis: 1
   _zAxis: 0
@@ -2905,6 +2911,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Rotar Mirall
   cinemachineVirtualCamera: {fileID: 0}
+  gameObj1: {fileID: 0}
+  gameObj2: {fileID: 0}
   _xAxis: 0
   _yAxis: 1
   _zAxis: 0
@@ -3098,6 +3106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Rotar Mirall
   cinemachineVirtualCamera: {fileID: 0}
+  gameObj1: {fileID: 0}
+  gameObj2: {fileID: 0}
   _xAxis: 0
   _yAxis: 1
   _zAxis: 0
@@ -3212,6 +3222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Rotar Mirall
   cinemachineVirtualCamera: {fileID: 0}
+  gameObj1: {fileID: 0}
+  gameObj2: {fileID: 0}
   _objecteQueRota: {fileID: 7783059280263619876}
   _rotacions:
   - {x: 0, y: 45, z: 0}
@@ -3703,6 +3715,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Rotar Mirall
   cinemachineVirtualCamera: {fileID: 0}
+  gameObj1: {fileID: 0}
+  gameObj2: {fileID: 0}
   _xAxis: 0
   _yAxis: 1
   _zAxis: 0
