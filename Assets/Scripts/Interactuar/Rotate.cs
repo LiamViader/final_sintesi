@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Rotate : MeshInteractuable
 {
-    public bool _xAxis = false;
-    public bool _yAxis = false;
-    public bool _zAxis = false;
-    public float _amout = 90;
+    [SerializeField]
+    private bool _xAxis = false;
+    [SerializeField]
+    private bool _yAxis = false;
+    [SerializeField]
+    private bool _zAxis = false;
+    [SerializeField]
+    private float _amout = 90;
     public Transform _objecteQueRota;
 
     // Start is called before the first frame update
@@ -25,6 +29,6 @@ public class Rotate : MeshInteractuable
     public override void Interact()
     {
         Vector3 rotation=new Vector3(_xAxis ? 1 : 0, _yAxis ? 1 : 0, _zAxis ? 1 : 0);
-        _objecteQueRota.Rotate(rotation,_amout/2);
+        _objecteQueRota.Rotate(rotation,_amout);
     }
 }

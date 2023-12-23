@@ -16,4 +16,5 @@ public class MeshInteractuable : MonoBehaviour
     public string returnInteractText(){
         return interactText;
     }
+
 }

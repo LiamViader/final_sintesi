@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class playerInteract : MonoBehaviour
 {
+    private float cdInteraccio=0f;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (cdInteraccio > 0) cdInteraccio -= Time.deltaTime;
+        else
         {
-            float interactRange = 2f;
-            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
-            foreach(Collider collider in colliderArray){
-                if(collider.TryGetComponent(out MeshInteractuable meshInteractuable)){
-                    meshInteractuable.Interact();
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                float interactRange = 2f;
+                Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+                foreach (Collider collider in colliderArray)
+                {
+                    if (collider.TryGetComponent(out MeshInteractuable meshInteractuable))
+                    {
+                        meshInteractuable.Interact();
+                    }
                 }
+                cdInteraccio = 0.5f;
             }
         }
+
     }
 
-    public MeshInteractuable GetInteractuableObject(){
+
+public MeshInteractuable GetInteractuableObject(){
         List<MeshInteractuable> meshInteractuableList = new List<MeshInteractuable>();
         float interactRange = 2f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
