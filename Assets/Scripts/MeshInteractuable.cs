@@ -22,7 +22,7 @@ public class MeshInteractuable : InteractBase
         if (!_interactuant)
         {
             _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
-            GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc);
+            GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
             _aparençaMinijoc.enabled = false;
             _minijoc.SetActive(true);
             _interactuant = true;
@@ -40,7 +40,7 @@ public class MeshInteractuable : InteractBase
     public void AcabarInteractuar()
     {
         interactText = _baseInteractText;
-        GestorHabsSingleton._instance.CanviarHab(_last_hab);
+        GestorHabsSingleton._instance.CanviarHab(_last_hab, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardIn, 2));
         _aparençaMinijoc.enabled = true;
         _minijoc.SetActive(false);
         _interactuant = false;

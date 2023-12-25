@@ -25,7 +25,7 @@ public class CameresHabitacio : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GestorHabsSingleton._instance.CanviarHab(this);
+        GestorHabsSingleton._instance.CanviarHab(this, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.Cut, 1));
     }
 
     public CinemachineVirtualCamera Activar()

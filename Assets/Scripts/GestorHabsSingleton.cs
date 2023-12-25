@@ -10,6 +10,7 @@ public class GestorHabsSingleton : MonoBehaviour
     private CinemachineVirtualCamera _activeCam;
     [SerializeField]
     private Camera _cam;
+    private CinemachineBrain _brain;
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -25,7 +26,7 @@ public class GestorHabsSingleton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _brain = _cam.GetComponent<CinemachineBrain>();
     }
 
     // Update is called once per frame
@@ -33,12 +34,14 @@ public class GestorHabsSingleton : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            _activeCam=_HabAct?.SeguentCam();
+            _brain.m_DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.EaseInOut, 1);
+            _activeCam =_HabAct?.SeguentCam();
         }
     }
 
-    public void CanviarHab(CameresHabitacio hab)
+    public void CanviarHab(CameresHabitacio hab, CinemachineBlendDefinition def)
     {
+        _brain.m_DefaultBlend = def;
         _HabAct?.Desactivar();
         _HabAct = hab;
         _activeCam=_HabAct.Activar();
