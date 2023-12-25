@@ -22,7 +22,7 @@ public class PlayerInteractUI : MonoBehaviour
             Hide();
         }
     }
-    private void Show(MeshInteractuable meshInteractuable){
+    private void Show(InteractBase meshInteractuable){
         containerGameObject.SetActive(true);
         interactTextMeshProGUI.text = meshInteractuable.returnInteractText();
     }

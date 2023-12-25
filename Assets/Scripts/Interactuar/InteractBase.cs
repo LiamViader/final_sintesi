@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Examinar : InteractBase
+public abstract class InteractBase : MonoBehaviour
 {
+    [SerializeField] protected string interactText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +18,10 @@ public class Examinar : InteractBase
         
     }
 
-    public override void Interact()
+    public abstract void Interact();
+
+    public string returnInteractText()
     {
-        UiControllerSingleton._instance._missatge.Mostrar("És massa gran per sortir", 1.5f);
+        return interactText;
     }
 }

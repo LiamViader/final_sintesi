@@ -4,23 +4,46 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 
-public class MeshInteractuable : MonoBehaviour
+public class MeshInteractuable : InteractBase
 {
-    [SerializeField] private string interactText;
-    [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
-    [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera2;
-    [SerializeField] private GameObject gameObj1; 
-    [SerializeField] private GameObject gameObj2; 
+    [SerializeField] private CameresHabitacio _cameresMinijoc;
+    [SerializeField] private MeshRenderer _aparençaMinijoc; 
+    [SerializeField] private GameObject _minijoc; 
+    private CameresHabitacio _last_hab;
+    private bool _interactuant = false;
+    private string _baseInteractText;
 
-    public virtual void Interact() {
-        gameObj1.SetActive(false);
-        gameObj2.SetActive(true);
-        cinemachineVirtualCamera.gameObject.SetActive(true);
-        cinemachineVirtualCamera2.gameObject.SetActive(false);
+    void Start()
+    {
+
     }
 
-    public string returnInteractText(){
-        return interactText;
+    public override void Interact() {
+        if (!_interactuant)
+        {
+            _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
+            GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc);
+            _aparençaMinijoc.enabled = false;
+            _minijoc.SetActive(true);
+            _interactuant = true;
+            ControlPersonatge._instance.enabled = false;
+            _baseInteractText = interactText;
+            interactText = "Deixar d'interactuar";
+        }
+        else
+        { // es prem interactuar mentres s'està interactuant, és a dir es vol deixar d'interactuar
+            AcabarInteractuar();
+        }
+
     }
 
+    public void AcabarInteractuar()
+    {
+        interactText = _baseInteractText;
+        GestorHabsSingleton._instance.CanviarHab(_last_hab);
+        _aparençaMinijoc.enabled = true;
+        _minijoc.SetActive(false);
+        _interactuant = false;
+        ControlPersonatge._instance.enabled = true;
+    }
 }

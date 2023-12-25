@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class GestorHabsSingleton : MonoBehaviour
 {
     public static GestorHabsSingleton _instance;
     private CameresHabitacio _HabAct;
+    private CinemachineVirtualCamera _activeCam;
     [SerializeField]
     private Camera _cam;
     private void Awake()
@@ -31,7 +33,7 @@ public class GestorHabsSingleton : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            _HabAct?.SeguentCam();
+            _activeCam=_HabAct?.SeguentCam();
         }
     }
 
@@ -39,11 +41,21 @@ public class GestorHabsSingleton : MonoBehaviour
     {
         _HabAct?.Desactivar();
         _HabAct = hab;
-        _HabAct.Activar();
+        _activeCam=_HabAct.Activar();
     }
 
     public Camera Camera()
     {
         return _cam;
+    }
+
+    public CinemachineVirtualCamera ActiveCamera()
+    {
+        return _activeCam;
+    }
+
+    public CameresHabitacio ActiveHab()
+    {
+        return _HabAct;
     }
 }

@@ -12,7 +12,7 @@ public class CameresHabitacio : MonoBehaviour
     void Start()
     {
         _cameres.ForEach(cam => {
-            cam.LookAt = ControlPersonatge._instance.transform;
+            if(cam.LookAt==null) cam.LookAt = ControlPersonatge._instance.transform;
             cam.gameObject.SetActive(false);
         });
     }
@@ -28,10 +28,11 @@ public class CameresHabitacio : MonoBehaviour
         GestorHabsSingleton._instance.CanviarHab(this);
     }
 
-    public void Activar()
+    public CinemachineVirtualCamera Activar()
     {
         act = 0;
         _cameres[act].gameObject.SetActive(true);
+        return _cameres[act];
     }
 
     public void Desactivar()
@@ -39,19 +40,21 @@ public class CameresHabitacio : MonoBehaviour
         _cameres[act].gameObject.SetActive(false);
     }
 
-    public void SeguentCam()
+    public CinemachineVirtualCamera SeguentCam()
     {
         _cameres[act].gameObject.SetActive(false);
         act++;
         if (act >= _cameres.Count) act = 0;
         _cameres[act].gameObject.SetActive(true);
+        return _cameres[act];
     }
 
-    public void AnteriorCam()
+    public CinemachineVirtualCamera AnteriorCam()
     {
         _cameres[act].gameObject.SetActive(false);
         act--;
         if (act < 0) act = _cameres.Count-1;
         _cameres[act].gameObject.SetActive(true);
+        return _cameres[act];
     }
 }
