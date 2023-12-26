@@ -18,7 +18,7 @@ public class Minijoc1 : MonoBehaviour
 
     [SerializeField] private GameObject llumsGameObj;
     [SerializeField] private GameObject llumGameObj;
-    [SerializeField] private MeshInteractuable controladorInteraccio;
+    [SerializeField] private MinijocInteractuable controladorInteraccio;
 
     private void OnMouseDown()
     {

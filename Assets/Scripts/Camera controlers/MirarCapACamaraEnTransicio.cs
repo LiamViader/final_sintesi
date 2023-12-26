@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
-public class Camera_3aP : MonoBehaviour
+public class MirarCapACamaraEnTransicio : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,4 +16,5 @@ public class Camera_3aP : MonoBehaviour
     {
         
     }
+
 }

@@ -34,8 +34,11 @@ public class GestorHabsSingleton : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            _brain.m_DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.EaseInOut, 1);
-            _activeCam =_HabAct?.SeguentCam();
+            if (!_brain.IsBlending)
+            {
+                _brain.m_DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.EaseInOut, 1);
+                _activeCam = _HabAct?.SeguentCam();
+            }
         }
     }
 

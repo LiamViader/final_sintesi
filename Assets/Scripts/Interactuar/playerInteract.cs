@@ -16,7 +16,7 @@ public class playerInteract : MonoBehaviour
                 Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
                 foreach (Collider collider in colliderArray)
                 {
-                    if (collider.TryGetComponent(out InteractBase meshInteractuable))
+                    if (collider.TryGetComponent(out Interactuable meshInteractuable))
                     {
                         meshInteractuable.Interact();
                     }
@@ -28,17 +28,17 @@ public class playerInteract : MonoBehaviour
     }
 
 
-public InteractBase GetInteractuableObject(){
-        List<InteractBase> meshInteractuableList = new List<InteractBase>();
+public Interactuable GetInteractuableObject(){
+        List<Interactuable> meshInteractuableList = new List<Interactuable>();
         float interactRange = 2f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach(Collider collider in colliderArray){
-                if(collider.TryGetComponent(out InteractBase meshInteractuable)){
+                if(collider.TryGetComponent(out Interactuable meshInteractuable)){
                     meshInteractuableList.Add(meshInteractuable);
                 }
             }
-            InteractBase closestMesh = null;
-            foreach(InteractBase mesh in meshInteractuableList){
+            Interactuable closestMesh = null;
+            foreach(Interactuable mesh in meshInteractuableList){
                 if (closestMesh == null)
                 {
                     closestMesh = mesh;

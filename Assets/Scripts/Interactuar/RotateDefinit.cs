@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateDefinit : InteractBase
+public class RotateDefinit : Interactuable
 {
     public Transform _objecteQueRota;
     public List<Vector3> _rotacions;

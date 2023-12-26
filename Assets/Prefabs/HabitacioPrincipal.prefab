@@ -1980,7 +1980,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5475199511759776252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.34810477, y: 0.2873845, z: 0.11302257, w: 0.88513225}
   m_LocalPosition: {x: 0.961, y: 11.866, z: 2.242}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2052,7 +2052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5847348107646772588}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.015015154, y: -0.004798586, z: -0.000072060466, w: 0.9998758}
   m_LocalPosition: {x: 0.721, y: 12.097, z: -14.997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2714,7 +2714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7311069975982939490}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00085631397, y: 0.7044307, z: 0.00084987027, w: 0.70977175}
+  m_LocalRotation: {x: -0.00085631397, y: 0.7044307, z: 0.0008498703, w: 0.70977175}
   m_LocalPosition: {x: -3.07, y: 9.29, z: -2.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4439,7 +4439,7 @@ PrefabInstance:
     - target: {fileID: 1342309930150546774, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 1838600161309866494, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: llumGameObj
       value: 
@@ -4455,7 +4455,7 @@ PrefabInstance:
     - target: {fileID: 1838600161309866494, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 2168529689166934963, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.836
@@ -4511,7 +4511,7 @@ PrefabInstance:
     - target: {fileID: 3490509930285446007, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 3579264731734870123, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: llumGameObj
       value: 
@@ -4527,7 +4527,7 @@ PrefabInstance:
     - target: {fileID: 3579264731734870123, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 3671098994723443650, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: llumGameObj
       value: 
@@ -4543,7 +4543,7 @@ PrefabInstance:
     - target: {fileID: 3671098994723443650, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 4896472448578201336, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: m_Name
       value: Minijoc1
@@ -4567,7 +4567,7 @@ PrefabInstance:
     - target: {fileID: 5717945245810038872, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 6598703757566573706, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: llumGameObj
       value: 
@@ -4583,7 +4583,7 @@ PrefabInstance:
     - target: {fileID: 6598703757566573706, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 7684188561222267406, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: llumGameObj
       value: 
@@ -4599,7 +4599,7 @@ PrefabInstance:
     - target: {fileID: 7684188561222267406, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 7754274677493134327, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.024
@@ -4627,7 +4627,7 @@ PrefabInstance:
     - target: {fileID: 7778138947553084657, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 8008388336476433320, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: llumGameObj
       value: 
@@ -4643,7 +4643,7 @@ PrefabInstance:
     - target: {fileID: 8008388336476433320, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     - target: {fileID: 8741616464869092835, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: llumGameObj
       value: 
@@ -4659,7 +4659,7 @@ PrefabInstance:
     - target: {fileID: 8741616464869092835, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: controladorInteraccio
       value: 
-      objectReference: {fileID: 217990329447612574}
+      objectReference: {fileID: 3360848479869818699}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8400,6 +8400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e88bdf3fa763af4bb79022d45f99a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _validInteractKeys: 
   interactText: Examinar
 --- !u!1001 &6291262356122820549
 PrefabInstance:
@@ -9425,17 +9426,17 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5389126041217787021, guid: 62e70069d36571e41b6fa07f1eeb764b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 217990329447612574}
+      addedObject: {fileID: 3360848479869818699}
     - targetCorrespondingSourceObject: {fileID: 5389126041217787021, guid: 62e70069d36571e41b6fa07f1eeb764b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 289907702063806686}
+      addedObject: {fileID: 194045676775725108}
   m_SourcePrefab: {fileID: 100100000, guid: 62e70069d36571e41b6fa07f1eeb764b, type: 3}
 --- !u!1 &2733605835434707895 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5389126041217787021, guid: 62e70069d36571e41b6fa07f1eeb764b, type: 3}
   m_PrefabInstance: {fileID: 8009015950358785850}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &217990329447612574
+--- !u!114 &3360848479869818699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9444,14 +9445,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2733605835434707895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b135a146694ca5c40a0a1b25ffc0e04c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cfc7f8cf6d63da4bac47018446fb448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _validInteractKeys: 
   interactText: Obrir quadre de llums
-  _cameresMinijoc: {fileID: 289907702063806686}
-  "_aparen\xE7aMinijoc": {fileID: 4534918623913503330}
+  _cameresMinijoc: {fileID: 194045676775725108}
+  "_aparen\xE7aMinijocNoObert": {fileID: 4534918623913503330}
   _minijoc: {fileID: 6144267835017275596}
---- !u!114 &289907702063806686
+--- !u!114 &194045676775725108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

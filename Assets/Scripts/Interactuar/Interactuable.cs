@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class InteractBase : MonoBehaviour
+public abstract class Interactuable : MonoBehaviour
 {
     [SerializeField] protected string interactText;
 

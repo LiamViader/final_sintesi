@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 
-public class MeshInteractuable : InteractBase
+public class MinijocInteractuable : Interactuable
 {
     [SerializeField] private CameresHabitacio _cameresMinijoc;
-    [SerializeField] private MeshRenderer _aparençaMinijoc; 
+    [SerializeField] private MeshRenderer _aparençaMinijocNoObert; 
     [SerializeField] private GameObject _minijoc; 
     private CameresHabitacio _last_hab;
     private bool _interactuant = false;
@@ -23,7 +23,7 @@ public class MeshInteractuable : InteractBase
         {
             _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
             GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
-            _aparençaMinijoc.enabled = false;
+            _aparençaMinijocNoObert.enabled = false;
             _minijoc.SetActive(true);
             _interactuant = true;
             ControlPersonatge._instance.enabled = false;
@@ -41,7 +41,7 @@ public class MeshInteractuable : InteractBase
     {
         interactText = _baseInteractText;
         GestorHabsSingleton._instance.CanviarHab(_last_hab, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardIn, 2));
-        _aparençaMinijoc.enabled = true;
+        _aparençaMinijocNoObert.enabled = true;
         _minijoc.SetActive(false);
         _interactuant = false;
         ControlPersonatge._instance.enabled = true;

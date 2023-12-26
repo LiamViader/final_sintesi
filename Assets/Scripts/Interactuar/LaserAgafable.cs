@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserAgafable : InteractBase
+public class LaserAgafable : Interactuable
 {
     public Disparable disparable;
     public ControlLaserQuiet _controlLaser;

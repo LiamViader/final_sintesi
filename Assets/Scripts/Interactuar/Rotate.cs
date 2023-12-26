@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : InteractBase
+public class Rotate : Interactuable
 {
     [SerializeField]
     private bool _xAxis = false;
