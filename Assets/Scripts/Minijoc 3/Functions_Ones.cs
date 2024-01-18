@@ -18,7 +18,7 @@ public class Functions_Ones : MonoBehaviour
     void Start()
     {
         Ona = GetComponent<LineRenderer>();
-        Ona.SetWidth(0.02f,0.02f);
+        Ona.widthMultiplier = 0.4f;
     }
 
     // Update is called once per frame
