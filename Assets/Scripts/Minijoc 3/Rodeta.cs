@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rodeta : MonoBehaviour
+public class Rodeta : Subject
 {
 
 
@@ -10,10 +10,7 @@ public class Rodeta : MonoBehaviour
     private Collider col;
 
     private float AngleOff;
-    private bool change = false;
-    private bool onclic = false;
-
-    private float Rotacio;
+  
 
     private Camera cam;
 
@@ -22,7 +19,7 @@ public class Rodeta : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
+       cam = Camera.main;
        col = GetComponent<Collider>();
     }
 
@@ -32,47 +29,34 @@ public class Rodeta : MonoBehaviour
 
     void Update()
     {
-        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        
-        if (Input.GetMouseButtonDown(0))
-        {   
-            onclic = true;
-            //Debug.Log("Mouse pos:" + mousePos);
-            //Debug.Log("Centre obj:" + transform.position);
-            if (col == Physics2D.OverlapPoint(mousePos)){
-                screenPos = cam.WorldToScreenPoint(transform.position);
-                Vector3 vec3 = Input.mousePosition - screenPos;
-                
-                AngleOff = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(vec3.y, vec3.x)) * Mathf.Rad2Deg;
-                //Valors rot al fer clic
-        }
-        if (Input.GetMouseButton(0)){ 
-             if (col == Physics2D.OverlapPoint(mousePos)){
-                Vector3 vec3 = Input.mousePosition - screenPos;
-                float angle = Mathf.Atan2(vec3.y, vec3.x) * Mathf.Rad2Deg;
-                transform.eulerAngles = new Vector3(0,0, angle + AngleOff);
-             }
-        }
-        /*
-        if (change && onclic){
-            Vector3 PuntActual =  Vector3.Normalize(mousePos - transform.position);
-            //
-            float angle = Vector3.SignedAngle(PuntAnterior, PuntActual, Vector3.forward);
-            Rotacio += angle;
-          
-            //transform.Rotate(Vector3.forward,angle);
-        }
-        */
+        Vector3 mousePos = cam.transform.position;
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit raycastHit)){
+            mousePos = raycastHit.point; 
+            if (Input.GetMouseButtonDown(0)){   
+                if (col == raycastHit.collider.gameObject.GetComponent<Collider>()){
+                    screenPos = cam.WorldToScreenPoint(transform.position);
+                    Vector3 vec3 = Input.mousePosition - screenPos;
+                    
+                    AngleOff = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(vec3.y, vec3.x)) * Mathf.Rad2Deg;
+                    //Valors rot al fer clic
+                }
+            }
+            if (Input.GetMouseButton(0)){ 
+                if (col == raycastHit.collider.gameObject.GetComponent<Collider>()){
+                    Vector3 vec3 = Input.mousePosition - screenPos;
+                    float angle = Mathf.Atan2(vec3.y, vec3.x) * Mathf.Rad2Deg;
+                    transform.eulerAngles = new Vector3(0,0, angle + AngleOff);
+                    
+                }
+            }
+            if(Input.GetMouseButtonUp(0)){
+                Debug.Log(transform.eulerAngles.z);
+            }
             
+        }
+
     }
      
-    void OnMouseOver(){
-        change = true;
-    }
-
-    void OnMouseExit(){
-       change = false;
-    }
-    
-    }
+ 
 }
