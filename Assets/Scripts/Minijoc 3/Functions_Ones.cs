@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Functions_Ones : MonoBehaviour
+using UnityEngine.Events;
+public class Functions_Ones : Observer
 {
     const int punts = 120;
     const float XIni = -1;
@@ -28,7 +28,7 @@ public class Functions_Ones : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Crea_ona();
+         Crea_ona();
     }
 
     void Crea_ona(){
@@ -50,11 +50,19 @@ public class Functions_Ones : MonoBehaviour
         Fase = Random.Range(0.5f,5f);
     }
 
-    private void ActualitzaAmplitud(float value){
+    public void ActualitzaAmplitud(float value){
+         Debug.Log("Rep" + value);
         Amplitud =value * 0.00075f + 0.03f;
+        Crea_ona();
     }
 
-     private void ActualitzaFase(float value){
+     public void ActualitzaFase(float value){
+          Debug.Log("Rep" + value);
         Fase =value * 0.0125f + 0.5f;
+        Crea_ona();
     }
+
+    
+
 }
+

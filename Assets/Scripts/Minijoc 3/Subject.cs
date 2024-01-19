@@ -5,6 +5,7 @@ using UnityEngine;
 public class Subject : MonoBehaviour
 {
    private List<Observer> _observers = new List<Observer>();
+   
 
     public void AddObserver(Observer observer){
         if (! _observers.Contains(observer)){
@@ -19,9 +20,9 @@ public class Subject : MonoBehaviour
         }
          
     }
-    protected void NotifyObservers(float value, float tipe){
+    protected void NotifyObservers(float value){
         _observers.ForEach((_observer)=> {
-            _observer.OnNotify(value, tipe);
+            _observer.OnNotify(value);
         });
 
     }

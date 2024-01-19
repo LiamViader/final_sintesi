@@ -5,8 +5,10 @@ using UnityEngine.Events;
 
 public class Observer : MonoBehaviour
 {
-    public UnityEvent notify;
-    public void OnNotify(float value, float tipe){
-        notify.Invoke();
+    public class MyEvent: UnityEvent<float>{}
+
+    public MyEvent notify;
+    public void OnNotify(float value){
+        notify.Invoke(value);
     }
 }

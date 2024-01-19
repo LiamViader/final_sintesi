@@ -247,6 +247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fee4a59c23cf494a9a000e6f0e5cc8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualitza:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &465260534
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -482,21 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fc5b476e9026b41926f08f74cf2904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notify:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 548094876}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   Ona: {fileID: 548094874}
   Amplitud: 0.3
   Fase: -2
@@ -598,6 +586,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fee4a59c23cf494a9a000e6f0e5cc8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actualitza:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1183759840}
+        m_TargetAssemblyTypeName: Observer, Assembly-CSharp
+        m_MethodName: OnNotify
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &801015665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -754,13 +757,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fc5b476e9026b41926f08f74cf2904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notify:
-    m_PersistentCalls:
-      m_Calls: []
   Ona: {fileID: 1183759841}
   Amplitud: 0.3
   Fase: -2
-  Dinamic: 1
+  Dinamic: 0
 --- !u!120 &1183759841
 LineRenderer:
   serializedVersion: 2

@@ -4,21 +4,19 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class MyEvent : UnityEvent<float>
-{
-}
+public class MyEvent: UnityEvent<float>{}
+
 public class Rodeta : MonoBehaviour
 {
-    public MyEvent changed;
+
+    //public List<Observer>Observers;
+
+    public MyEvent actualitza;
 
     private Vector3 PuntClic;
     private Collider col;
-
     private float AngleOff;
-  
-
     private Camera cam;
-
     private Vector3 screenPos;
 
 
@@ -27,12 +25,12 @@ public class Rodeta : MonoBehaviour
     {
         cam = Camera.main;
         col = GetComponent<Collider>();
+        
+
     }
 
     // Update is called once per frame
-    public void OnChanged(float value){
-        changed.Invoke(value);
-    }
+  
 
     void Update()
     {
@@ -54,7 +52,7 @@ public class Rodeta : MonoBehaviour
                     Vector3 vec3 = Input.mousePosition - screenPos;
                     float angle = Mathf.Atan2(vec3.y, vec3.x) * Mathf.Rad2Deg;
                     transform.eulerAngles = new Vector3(0,0, angle + AngleOff);
-                    OnChanged(transform.eulerAngles.z);
+                    actualitza.Invoke(transform.eulerAngles.z);
                 }
             }
             if(Input.GetMouseButtonUp(0)){
@@ -65,6 +63,5 @@ public class Rodeta : MonoBehaviour
         }
 
     }
-     
  
 }
