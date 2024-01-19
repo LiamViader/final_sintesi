@@ -19,9 +19,9 @@ public class Subject : MonoBehaviour
         }
          
     }
-    protected void NotifyObservers(float value){
+    protected void NotifyObservers(float value, float tipe){
         _observers.ForEach((_observer)=> {
-            _observer.OnNotify(value);
+            _observer.OnNotify(value, tipe);
         });
 
     }

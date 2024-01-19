@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Functions_Ones : Observer
+public class Functions_Ones : MonoBehaviour
 {
     const int punts = 120;
     const float XIni = -1;
@@ -50,8 +50,11 @@ public class Functions_Ones : Observer
         Fase = Random.Range(0.5f,5f);
     }
 
-    void ActualitzaDades(float A, float F){
-        Fase = 5.0f/360.0f * F;
-        Amplitud = 0.3f/360.0f * A;
+    private void ActualitzaAmplitud(float value){
+        Amplitud =value * 0.00075f + 0.03f;
+    }
+
+     private void ActualitzaFase(float value){
+        Fase =value * 0.0125f + 0.5f;
     }
 }

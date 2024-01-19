@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Rodeta : Subject
+[System.Serializable]
+public class MyEvent : UnityEvent<float>
 {
-
+}
+public class Rodeta : MonoBehaviour
+{
+    public MyEvent changed;
 
     private Vector3 PuntClic;
     private Collider col;
@@ -16,16 +21,18 @@ public class Rodeta : Subject
 
     private Vector3 screenPos;
 
+
     // Start is called before the first frame update
     void Start()
     {
-       cam = Camera.main;
-       col = GetComponent<Collider>();
+        cam = Camera.main;
+        col = GetComponent<Collider>();
     }
 
     // Update is called once per frame
-
-    private 
+    public void OnChanged(float value){
+        changed.Invoke(value);
+    }
 
     void Update()
     {
@@ -47,10 +54,11 @@ public class Rodeta : Subject
                     Vector3 vec3 = Input.mousePosition - screenPos;
                     float angle = Mathf.Atan2(vec3.y, vec3.x) * Mathf.Rad2Deg;
                     transform.eulerAngles = new Vector3(0,0, angle + AngleOff);
-                    
+                    OnChanged(transform.eulerAngles.z);
                 }
             }
             if(Input.GetMouseButtonUp(0)){
+                
                 Debug.Log(transform.eulerAngles.z);
             }
             
