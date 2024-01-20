@@ -8,12 +8,11 @@ public class Functions_Ones : Observer
     const float XIni = -1;
     const float XFi = 1;
     public LineRenderer Ona;
-    public float Amplitud=0.3f;
-    public float Fase=1;
+    private float Amplitud=0.03f;
+    private float Fase=0.5f;
 
     public bool Dinamic = false;
 
-    private float alçada = 0.4f;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +39,6 @@ public class Functions_Ones : Observer
             float posicio = (float)PuntActual/(punts-1);
             float x = Mathf.Lerp(Inici,Final,posicio);
             float y = Amplitud* Mathf.Sin(x*Tau*Fase)+transform.position.y;
-            if (Dinamic) y += alçada;
             Ona.SetPosition(PuntActual,new Vector3(x,y,-0.7F));
         }
     }
@@ -51,18 +49,31 @@ public class Functions_Ones : Observer
     }
 
     public void ActualitzaAmplitud(float value){
-         Debug.Log("Rep" + value);
+        //Debug.Log("Rep" + value);
         Amplitud =value * 0.00075f + 0.03f;
         Crea_ona();
     }
 
      public void ActualitzaFase(float value){
-          Debug.Log("Rep" + value);
+        //Debug.Log("Rep" + value);
         Fase =value * 0.0125f + 0.5f;
         Crea_ona();
     }
 
-    
+    public bool Igual(float A, float F){ //A i F son els valors de la dinamica
+        bool same = false;
+        if (A < Amplitud+0.01 && A > Amplitud-0.01){
+            if (F < Fase+0.1 && F > Fase-0.1){
+                same = true;
+            }
+        }
+        return same; 
+    }
+
+    public void GetDades(float A, float F){
+        A = Amplitud;
+        F = Fase;
+    }
 
 }
 
