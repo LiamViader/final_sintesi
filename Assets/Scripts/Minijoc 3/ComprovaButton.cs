@@ -9,15 +9,15 @@ public class ComprovaButton : MonoBehaviour
     // Start is called before the first frame update
     private Collider col;
 
+    [SerializeField] 
     public UnityEvent correcte;
 
-    private GameObject OnaDin;
-    private GameObject OnaEst;
+    Functions_Ones OnaDin, OnaEst;
     void Start()
     {
         col = GetComponent<Collider>();   
-        OnaDin = GameObject.Find("Ona dinamica");     
-        OnaEst = GameObject.Find("Ona estatica");    
+        OnaDin = GameObject.Find("Ona dinamica").GetComponent<Functions_Ones>();     
+        OnaEst = GameObject.Find("Ona estatica").GetComponent<Functions_Ones>();    
     }
 
     // Update is called once per frame
@@ -30,8 +30,15 @@ public class ComprovaButton : MonoBehaviour
             if (Input.GetMouseButtonDown(0)){ 
                 float A = 0;
                 float F = 0;
-                OnaDin.Functions_Ones.GetDades(A,F);
+                float A2 = 0;
+                float F2 = 0;
+                Debug.Log("PREMUT");
+                OnaDin.GetDades(out A, out F);
+                OnaEst.GetDades(out A2, out F2);
+                Debug.Log ("Amplitud 1 ->>"+A + "   Fase1 -->" + F);
+                Debug.Log ("Amplitud 2 ->>"+A2 + "   Fase2 -->" + F2);
                 if (OnaEst.Igual(A,F)){
+                    Debug.Log("IGUAL");
                     correcte.Invoke();
                 }
             }

@@ -8,10 +8,14 @@ public class Functions_Ones : Observer
     const float XIni = -1;
     const float XFi = 1;
     public LineRenderer Ona;
+
     private float Amplitud=0.03f;
+
     private float Fase=0.5f;
 
     public bool Dinamic = false;
+
+    private bool Acabat = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +31,9 @@ public class Functions_Ones : Observer
     // Update is called once per frame
     void Update()
     {
-         Crea_ona();
+        if (!Acabat){
+            Crea_ona();
+        }
     }
 
     void Crea_ona(){
@@ -62,7 +68,7 @@ public class Functions_Ones : Observer
 
     public bool Igual(float A, float F){ //A i F son els valors de la dinamica
         bool same = false;
-        if (A < Amplitud+0.01 && A > Amplitud-0.01){
+        if (A < Amplitud+0.02 && A > Amplitud-0.02){
             if (F < Fase+0.1 && F > Fase-0.1){
                 same = true;
             }
@@ -70,10 +76,13 @@ public class Functions_Ones : Observer
         return same; 
     }
 
-    public void GetDades(float A, float F){
+    public void GetDades(out float A, out float F){
         A = Amplitud;
         F = Fase;
     }
 
+    public void OnAcabat(){
+        Acabat = true;
+    }
 }
 

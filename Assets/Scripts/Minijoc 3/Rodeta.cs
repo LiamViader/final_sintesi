@@ -24,15 +24,15 @@ public class Rodeta : MonoBehaviour
 
     private Vector3 PosClic;
 
-    float y , a;
+    private bool Acabat = false;
+
+    private float y , a;
 
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
         col = GetComponent<Collider>();
-        
-
     }
 
     // Update is called once per frame
@@ -40,42 +40,47 @@ public class Rodeta : MonoBehaviour
 
     void Update()
     {
-        Vector3 mousePos = cam.transform.position;
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit)){
-            mousePos = raycastHit.point; 
-            if (Input.GetMouseButtonDown(0)){   
-                if (col == raycastHit.collider.gameObject.GetComponent<Collider>()){
-                    screenPos = cam.WorldToScreenPoint(transform.position);
-                    PosClic = Input.mousePosition - screenPos;
+        if (!Acabat){
+          Vector3 mousePos = cam.transform.position;
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit raycastHit)){
+                mousePos = raycastHit.point; 
+                if (Input.GetMouseButtonDown(0)){   
+                    if (col == raycastHit.collider.gameObject.GetComponent<Collider>()){
+                        screenPos = cam.WorldToScreenPoint(transform.position);
+                        PosClic = Input.mousePosition - screenPos;
 
-                    y = Mathf.Atan2(transform.right.y, transform.right.x) * Mathf.Rad2Deg;
-                    a = Mathf.Atan2(PosClic.y, PosClic.x) * Mathf.Rad2Deg;
-                   AngleIni = transform.eulerAngles.z;
-                   AngleOff = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(PosClic.y, PosClic.x)) * Mathf.Rad2Deg;
-                    //AngleIni = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(vec3.y, vec3.x)) * Mathf.Rad2Deg ;
+                        y = Mathf.Atan2(transform.right.y, transform.right.x) * Mathf.Rad2Deg;
+                        a = Mathf.Atan2(PosClic.y, PosClic.x) * Mathf.Rad2Deg;
+                        AngleIni = transform.eulerAngles.z;
+                        AngleOff = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(PosClic.y, PosClic.x)) * Mathf.Rad2Deg;
+                        //AngleIni = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(vec3.y, vec3.x)) * Mathf.Rad2Deg ;
 
+                    }
                 }
-            }
-            if (Input.GetMouseButton(0)){ 
-                if (col == raycastHit.collider.gameObject.GetComponent<Collider>()){
-                    Vector3 vec3 = Input.mousePosition - screenPos;
-                    float angle = Mathf.Atan2(vec3.y, vec3.x) * Mathf.Rad2Deg;
+                if (Input.GetMouseButton(0)){ 
+                    if (col == raycastHit.collider.gameObject.GetComponent<Collider>()){
+                        Vector3 vec3 = Input.mousePosition - screenPos;
+                        float angle = Mathf.Atan2(vec3.y, vec3.x) * Mathf.Rad2Deg;
 
-                    //float 
-                    Debug.Log("Right : "+y+" Mouse : "+a);
-                    //Debug.Log("Inicial: "+AngleIni + "Angle: "+angle);
-                    transform.eulerAngles = new Vector3(0,0, angle + AngleOff);
-                    actualitza.Invoke(transform.eulerAngles.z);
+                        //float 
+                        //Debug.Log("Right : "+y+" Mouse : "+a);
+                        //Debug.Log("Inicial: "+AngleIni + "Angle: "+angle);
+                        transform.eulerAngles = new Vector3(0,0, angle + AngleOff);
+                        actualitza.Invoke(transform.eulerAngles.z);
+                    }
                 }
-            }
-            if(Input.GetMouseButtonUp(0)){
-                
-               Debug.Log(transform.eulerAngles.z);
-            }
-            
+                if(Input.GetMouseButtonUp(0)){
+                    
+                    Debug.Log(transform.eulerAngles.z);
+                }
+            }  
         }
-
     }
- 
+    
+    public void OnAcabat(){
+        Acabat = true;
+    }
+
 }
+
