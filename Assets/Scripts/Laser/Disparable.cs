@@ -21,6 +21,10 @@ public class Disparable : MonoBehaviour
     [Tooltip("Aqui va el transform del objecte que quedarà canviat de tamany un cop el canvi estigui completat")]
     protected Transform _canviReal;
 
+    [SerializeField]
+    [Tooltip("Aqui va el transform d'un empty que sigui fill de l'objecte i representi la posicio on disparara el cientific, si es deixa buit llavors, _PuntDeAim és l'origen de _aparença")]
+    protected Transform _PuntDeAim;
+
     private float _tempsCanvi = 1.5f;
     private bool _tocatUltimFrame = false;
     private bool _interrupcioDesdeUltimCanviComplet = true;
@@ -131,5 +135,11 @@ public class Disparable : MonoBehaviour
     public bool Canviant()
     {
         return _canviant;
+    }
+
+    public Transform AimPoint()
+    {
+        if (this._PuntDeAim == null) return this._aparença;
+        else return this._PuntDeAim;
     }
 }

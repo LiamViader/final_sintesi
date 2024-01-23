@@ -212,6 +212,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0067669763
       objectReference: {fileID: 0}
+    - target: {fileID: 4726304980626132478, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: velocitatParpelleig
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6743820767304491233, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -229,14 +233,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1201000135}
     m_Modifications:
-    - target: {fileID: 108404365535073427, guid: 70919b377178e7e4994c507de6920136, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1016097499895434609, guid: 70919b377178e7e4994c507de6920136, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2674069746970390028, guid: 70919b377178e7e4994c507de6920136, type: 3}
       propertyPath: m_Name
       value: "Habitaci\xF3Miralls"
@@ -280,10 +276,6 @@ PrefabInstance:
     - target: {fileID: 2796794579365876753, guid: 70919b377178e7e4994c507de6920136, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5209262361698271367, guid: 70919b377178e7e4994c507de6920136, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -792,8 +784,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.166044, y: 4.9193115, z: 9.082313}
+  m_LocalRotation: {x: 0.07165872, y: -0.44702917, z: 0.0359556, w: 0.89091927}
+  m_LocalPosition: {x: -13.006705, y: 10.037024, z: 42.510002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
