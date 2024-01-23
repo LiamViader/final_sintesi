@@ -2,42 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Disparable : MonoBehaviour
+public abstract class Disparable : MonoBehaviour
 {
     [SerializeField]
-    protected bool _petit = false;
-    [SerializeField]
-    protected float _coefTamany = 0.5f;
-    [SerializeField]
     protected Outline _outline;
-
-    public bool _hasOutline = true;
-
     [SerializeField]
-    [Tooltip("Aqui va el transform del objecte que anirà canviant de tamany durant l'animació de canvi")]
-    protected Transform _aparença;
-
-    [SerializeField]
-    [Tooltip("Aqui va el transform del objecte que quedarà canviat de tamany un cop el canvi estigui completat")]
-    protected Transform _canviReal;
+    protected bool _outlineOnHover = true;
 
     [SerializeField]
     [Tooltip("Aqui va el transform d'un empty que sigui fill de l'objecte i representi la posicio on disparara el cientific, si es deixa buit llavors, _PuntDeAim és l'origen de _aparença")]
     protected Transform _PuntDeAim;
 
-    private float _tempsCanvi = 1.5f;
-    private bool _tocatUltimFrame = false;
-    private bool _interrupcioDesdeUltimCanviComplet = true;
-    private bool _canviant = false;
-    private float _tempsCancelacio = 0.05f;
-    private float _tempsUltimHit = 0f;
-    private float _tempsCanviant = 0f;
-    private Vector3 _aparençaInicial;
-
 
     protected void Awake()
     {
-        if(_hasOutline) _outline.enabled = false;
+        if (_outline!=null && _outlineOnHover) _outline.enabled = false;
     }
 
     // Start is called before the first frame update
@@ -46,100 +25,18 @@ public class Disparable : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    protected virtual void FixedUpdate()
-    {
-        if (!_tocatUltimFrame) _interrupcioDesdeUltimCanviComplet = true;
-        if (_canviant)
-        {
-            _tempsUltimHit += Time.fixedDeltaTime;
-            _tempsCanviant += Time.fixedDeltaTime;
-
-            if (_tempsUltimHit > _tempsCancelacio) ResetCanvi();
-            else
-            {
-                float percentatgeCanvi = _tempsCanviant / _tempsCanvi;
-                float grau = _coefTamany;
-                if (_petit)
-                {
-                    grau = 1 / grau;
-                }
-                _aparença.localScale = Vector3.Lerp(_aparençaInicial, _aparençaInicial * grau, percentatgeCanvi);
-            }
-        }
-        _tocatUltimFrame = false;
-    }
-
-    //retorna 1 si amb aquest hit ha acabat de canviar de tamany, 0 si no;
-    public virtual bool TocatPelLaser(Laser laser,Vector3 pos_impacte)
-    {
-        _tocatUltimFrame = true;
-        if (_interrupcioDesdeUltimCanviComplet)
-        {
-            if (!_canviant)
-            {
-                _aparençaInicial = _aparença.localScale;
-                _canviant = true;
-                _tempsCanviant = 0f;
-            }
-            _tempsUltimHit = 0f;
-            if (_tempsCanviant >= _tempsCanvi)
-            {
-                CanviarTamanyObjecte();
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private void CanviarTamanyObjecte()
-    {
-        _canviant = false;
-        _aparença.localScale = _aparençaInicial;
-        if (!_petit) {
-            _canviReal.transform.localScale = _canviReal.transform.localScale * _coefTamany;
-            _petit = true;
-        }
-        else
-        {
-            _canviReal.transform.localScale = _canviReal.transform.localScale * 1/_coefTamany;
-            _petit = false;
-        }
-        _interrupcioDesdeUltimCanviComplet = false;
-    }
-
-    private void ResetCanvi()
-    {
-        _aparença.localScale = _aparençaInicial;
-        _canviant = false;
-        _tempsCanviant = 0f;
-        _tempsUltimHit = 0f;
-    }
-
-    public Transform Aparença()
-    {
-        return _aparença;
-    }
-
     public Outline GetOutline()
     {
-        if (_hasOutline) return _outline;
+        if (_outlineOnHover) return _outline;
         else return null;
     }
 
-    public bool Petit()
+    public virtual Transform AimPoint()
     {
-        return _petit;
-    }
-
-    public bool Canviant()
-    {
-        return _canviant;
-    }
-
-    public Transform AimPoint()
-    {
-        if (this._PuntDeAim == null) return this._aparença;
+        if (this._PuntDeAim == null) return this.transform;
         else return this._PuntDeAim;
     }
+
+    public abstract bool TocatPelLaser(Laser laser, Vector3 pos_impacte);
+
 }

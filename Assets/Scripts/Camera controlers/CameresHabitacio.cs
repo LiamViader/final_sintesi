@@ -25,7 +25,10 @@ public class CameresHabitacio : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GestorHabsSingleton._instance.CanviarHab(this, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.Cut, 1));
+        if (other.TryGetComponent<ControlPersonatge>(out ControlPersonatge component))
+        {
+            GestorHabsSingleton._instance.CanviarHab(this, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.Cut, 1));
+        }
     }
 
     public CinemachineVirtualCamera Activar()
@@ -56,5 +59,10 @@ public class CameresHabitacio : MonoBehaviour
         if (act < 0) act = _cameres.Count-1;
         _cameres[act].gameObject.SetActive(true);
         return _cameres[act];
+    }
+
+    public static int getIgnoreMask()
+    {
+        return ~LayerMask.GetMask("CamerasZone");
     }
 }

@@ -17,7 +17,7 @@ public class MirallDisparable : Disparable
     }
 
     // Update is called once per frame
-    protected override void FixedUpdate()
+    protected void FixedUpdate()
     {
 
         foreach (Laser clave in _lasers.Keys.ToList())

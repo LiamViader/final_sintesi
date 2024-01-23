@@ -1246,6 +1246,30 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
     m_RemovedGameObjects: []
@@ -1742,6 +1766,10 @@ PrefabInstance:
       propertyPath: _name
       value: lluny
       objectReference: {fileID: 0}
+    - target: {fileID: 6820382376778910210, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: _outlineOnHover
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1749,6 +1777,30 @@ PrefabInstance:
     - target: {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
@@ -2980,6 +3032,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2796794579365876753}
     m_Modifications:
+    - target: {fileID: 1572424401929044092, guid: 2bbd4998d3a714f47ab51ab12d1dfa68, type: 3}
+      propertyPath: _outlineOnHover
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2222565768242944310, guid: 2bbd4998d3a714f47ab51ab12d1dfa68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.96
@@ -3073,7 +3129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Agafar Dispositiu
-  disparable: {fileID: 763227714856855354}
+  encongible: {fileID: 763227714856855354}
   _controlLaser: {fileID: 7238959715796123355}
 --- !u!1 &6469374332609336537 stripped
 GameObject:
@@ -3553,6 +3609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameresHabitacio
       objectReference: {fileID: 0}
+    - target: {fileID: 4096483826893975888, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4758741512165940118, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
       propertyPath: m_Size.z
       value: 33.704033
@@ -3560,6 +3620,10 @@ PrefabInstance:
     - target: {fileID: 4758741512165940118, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
       propertyPath: m_Center.z
       value: 5.7903776
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758741512165940118, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6742513644681440796, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3706,6 +3770,30 @@ PrefabInstance:
     - target: {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
@@ -4432,6 +4520,10 @@ PrefabInstance:
       propertyPath: _hasOutline
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6820382376778910210, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: _outlineOnHover
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_Constraints
       value: 122
@@ -4474,6 +4566,10 @@ PrefabInstance:
       objectReference: {fileID: 9107494049990116179}
     - target: {fileID: 8159720564819210684, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: _hasOutline
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159720564819210684, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: _outlineOnHover
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -5606,6 +5702,30 @@ PrefabInstance:
     - target: {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
@@ -7120,6 +7240,30 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
     m_RemovedGameObjects: []
@@ -7232,6 +7376,30 @@ PrefabInstance:
     - target: {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
@@ -7497,6 +7665,30 @@ PrefabInstance:
     - target: {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
@@ -8652,6 +8844,30 @@ PrefabInstance:
     - target: {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}

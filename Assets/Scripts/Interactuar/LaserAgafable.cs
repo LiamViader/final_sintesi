@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserAgafable : Interactuable
 {
-    public Disparable disparable;
+    public Encongible encongible;
     public ControlLaserQuiet _controlLaser;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class LaserAgafable : Interactuable
 
     public override void Interact()
     {
-        if (disparable.Petit() && !disparable.Canviant())
+        if (encongible.Petit() && !encongible.Canviant())
         {
             ControlPersonatge._instance.AgafarDispositiu();
             _controlLaser.FinalitzarLaser();

@@ -141,7 +141,7 @@ public class ControlPersonatge : MonoBehaviour
         if (!_teDispositiu) return;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
-        if (Physics.Raycast(ray, out hitInfo))
+        if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity, CameresHabitacio.getIgnoreMask()))
         {
             Disparable target;
             if (hitInfo.collider.TryGetComponent<Disparable>(out target))
@@ -176,12 +176,12 @@ public class ControlPersonatge : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo))
+            if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity, CameresHabitacio.getIgnoreMask()))
             {
                 Disparable target;
                 if(hitInfo.collider.TryGetComponent<Disparable>(out target))
                 {
-                    if (target._hasOutline) _dispositiu?.Shoot(target.AimPoint());
+                    if (target.GetOutline()!=null) _dispositiu?.Shoot(target.AimPoint());
                 }
             }
         }

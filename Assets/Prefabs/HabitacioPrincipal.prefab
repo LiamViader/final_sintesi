@@ -988,13 +988,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 2790956267375374441}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 2790956267375374441}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 9033628220596591756}
   _canviReal: {fileID: 9033628220596591756}
-  _PuntDeAim: {fileID: 0}
 --- !u!114 &2790956267375374441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,13 +1390,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 3687338224854413854}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 3687338224854413854}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 7041873786490632896}
   _canviReal: {fileID: 7041873786490632896}
-  _PuntDeAim: {fileID: 0}
 --- !u!1 &4078165944121636477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,7 +3318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7311069975982939490}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00085631397, y: 0.7044307, z: 0.00084987027, w: 0.70977175}
+  m_LocalRotation: {x: -0.00085631397, y: 0.7044307, z: 0.0008498703, w: 0.70977175}
   m_LocalPosition: {x: -3.07, y: 9.29, z: -2.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4087,6 +4087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameresHabitacio
       objectReference: {fileID: 0}
+    - target: {fileID: 4096483826893975888, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4758741512165940118, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
       propertyPath: m_Size.x
       value: 19.714851
@@ -4110,6 +4114,10 @@ PrefabInstance:
     - target: {fileID: 4758741512165940118, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
       propertyPath: m_Center.z
       value: -18.541077
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758741512165940118, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6742513644681440796, guid: 5274c32d607b8f243b0e1532943ac64c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4580,13 +4588,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 2803467979661520511}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 2803467979661520511}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 5974470010059966279}
   _canviReal: {fileID: 5974470010059966279}
-  _PuntDeAim: {fileID: 0}
 --- !u!1001 &645476895826087802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6005,13 +6013,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 2287547902055655624}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 2287547902055655624}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 1942097379207867151}
   _canviReal: {fileID: 1942097379207867151}
-  _PuntDeAim: {fileID: 0}
 --- !u!114 &2287547902055655624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7095,13 +7103,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 5003800841337173459}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 2630732441668262238}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 5003800841337173459}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 1009966124971667726}
   _canviReal: {fileID: 1009966124971667726}
-  _PuntDeAim: {fileID: 2630732441668262238}
 --- !u!114 &5003800841337173459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7240,13 +7248,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 7640525126739086917}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 4064910881144324472}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 7640525126739086917}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 2332636090268828283}
   _canviReal: {fileID: 2332636090268828283}
-  _PuntDeAim: {fileID: 4064910881144324472}
 --- !u!114 &7640525126739086917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8028,13 +8036,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 3569910656614171134}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 3569910656614171134}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 3246313486134332421}
   _canviReal: {fileID: 3246313486134332421}
-  _PuntDeAim: {fileID: 0}
 --- !u!114 &3569910656614171134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8171,13 +8179,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 8102316843246468497}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 2289244350199984524}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 8102316843246468497}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 3736684219228598587}
   _canviReal: {fileID: 3736684219228598587}
-  _PuntDeAim: {fileID: 2289244350199984524}
 --- !u!4 &3736684219228598587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 465872, guid: 790e191d50e6fe249900e78369ae7986, type: 3}
@@ -8562,13 +8570,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 3123706728190816515}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 8688094976537425793}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 3123706728190816515}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 4037552159736569131}
   _canviReal: {fileID: 4037552159736569131}
-  _PuntDeAim: {fileID: 8688094976537425793}
 --- !u!114 &3123706728190816515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9118,13 +9126,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 4561502816081240749}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 4561502816081240749}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 4419248907254531878}
   _canviReal: {fileID: 4419248907254531878}
-  _PuntDeAim: {fileID: 0}
 --- !u!114 &4561502816081240749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9514,13 +9522,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 7127167585529916896}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 8044462400775203812}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 7127167585529916896}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 4772195645836450418}
   _canviReal: {fileID: 4772195645836450418}
-  _PuntDeAim: {fileID: 8044462400775203812}
 --- !u!114 &7127167585529916896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9977,13 +9985,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 1063528728974826748}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 2368192432964659837}
   _petit: 0
   _coefTamany: 0.1
-  _outline: {fileID: 1063528728974826748}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 5928634202799547525}
   _canviReal: {fileID: 5928634202799547525}
-  _PuntDeAim: {fileID: 2368192432964659837}
 --- !u!114 &1063528728974826748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11164,13 +11172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 7337941672212522687}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 7337941672212522687}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 7988597087138393367}
   _canviReal: {fileID: 7988597087138393367}
-  _PuntDeAim: {fileID: 0}
 --- !u!114 &7337941672212522687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11654,13 +11662,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 4121944168064410057}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 4121944168064410057}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 8480401312764096647}
   _canviReal: {fileID: 8480401312764096647}
-  _PuntDeAim: {fileID: 0}
 --- !u!114 &4121944168064410057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11866,13 +11874,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 8355413468685725804}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 8355413468685725804}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 8542956748178631264}
   _canviReal: {fileID: 8542956748178631264}
-  _PuntDeAim: {fileID: 0}
 --- !u!114 &8355413468685725804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11993,13 +12001,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 1824692656423695927}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 1824692656423695927}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 8714748319361189012}
   _canviReal: {fileID: 8714748319361189012}
-  _PuntDeAim: {fileID: 0}
 --- !u!114 &1824692656423695927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12195,10 +12203,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 9005663306584885780}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 9005663306584885780}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 3670378830061493821}
   _canviReal: {fileID: 3670378830061493821}
-  _PuntDeAim: {fileID: 0}
