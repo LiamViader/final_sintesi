@@ -4325,6 +4325,10 @@ PrefabInstance:
       propertyPath: _hasOutline
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: outlineMode
       value: 1
@@ -4391,7 +4395,7 @@ MonoBehaviour:
   _xAxis: 0
   _yAxis: 1
   _zAxis: 0
-  _amout: 90
+  _amout: 180
   _objecteQueRota: {fileID: 279679048086675996}
 --- !u!1001 &3528485618082501169
 PrefabInstance:
