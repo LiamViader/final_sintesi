@@ -11,6 +11,8 @@ public class ComprovaButton : MonoBehaviour
 
     [SerializeField] 
     public UnityEvent correcte;
+    [SerializeField] 
+    public UnityEvent incorrecte;
 
     Functions_Ones OnaDin, OnaEst;
     void Start()
@@ -41,6 +43,9 @@ public class ComprovaButton : MonoBehaviour
                     if (OnaEst.Igual(A,F)){
                         Debug.Log("IGUAL");
                         correcte.Invoke();
+                    }
+                    else{
+                        incorrecte.Invoke();
                     }
                 }
             }
