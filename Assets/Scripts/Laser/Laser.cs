@@ -45,7 +45,7 @@ public class Laser : MonoBehaviour
 
             RaycastHit hit;
             float length=MAXDIST;
-            if (Physics.Raycast(_source, _direction, out hit, MAXDIST))
+            if (Physics.Raycast(_source, _direction, out hit, MAXDIST,CameresHabitacio.getIgnoreMask()))
             {
                 Vector3 posHit = hit.point;
                 length = (posHit - _source).magnitude;
