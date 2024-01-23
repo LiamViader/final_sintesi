@@ -5,25 +5,41 @@ using UnityEngine.Events;
 public class Functions_Ones : Observer
 {
     const int punts = 120;
-    const float XIni = -1;
-    const float XFi = 1;
-    public LineRenderer Ona;
+    const float XIni = -0.7F;
+    const float XFi = 1.43F;
+    private LineRenderer Ona;
 
-    private float Amplitud=0.03f;
+    const float Ma = 0.2f;
+    const float Mf = 4f;
+    const float ma = 0.04f;
+    const float mf = 0.4f;
+    private float NewAmplitud;
+    private float NewFase;
 
-    private float Fase=0.5f;
+    private float Width = 0.4f;
 
     public bool Dinamic = false;
 
     private bool Acabat = false;
 
+    private GameObject radio;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        radio = this.transform.parent.gameObject;
+        Debug.Log(radio.name);
         Ona = GetComponent<LineRenderer>();
-        Ona.widthMultiplier = 0.4f;
+        Ona.widthMultiplier = Width;
+
         if (!Dinamic){
             Valors_random();
+        }
+        
+        else{
+            NewAmplitud = ma;
+            NewFase = mf;
         }
         Crea_ona(); 
     }
@@ -37,39 +53,41 @@ public class Functions_Ones : Observer
     }
 
     void Crea_ona(){
-        float Inici = XIni;
-        float Tau = 2*Mathf.PI;
-        float Final = XFi;
+        float Tau = 2*Mathf.PI; 
+        float z = transform.position.z;
+       
         Ona.positionCount = punts;
+        Ona.widthMultiplier = Width*radio.transform.localScale.y;
         for (int PuntActual = 0; PuntActual < punts; PuntActual++ ){
             float posicio = (float)PuntActual/(punts-1);
-            float x = Mathf.Lerp(Inici,Final,posicio);
-            float y = Amplitud* Mathf.Sin(x*Tau*Fase)+transform.position.y;
-            Ona.SetPosition(PuntActual,new Vector3(x,y,-0.7F));
+            float x = Mathf.Lerp(XIni,XFi,posicio);
+            float y = NewAmplitud* Mathf.Sin(x*Tau*NewFase);
+            Vector3 pos = new Vector3(x,y,z);
+            Ona.SetPosition(PuntActual,pos);
         }
     }
 
     void Valors_random(){
-        Amplitud = Random.Range(0.03f,0.3f);
-        Fase = Random.Range(0.5f,5f);
+        NewAmplitud = Random.Range(ma,Ma);
+        NewFase = Random.Range(mf,Mf);
     }
 
     public void ActualitzaAmplitud(float value){
         //Debug.Log("Rep" + value);
-        Amplitud =value * 0.00075f + 0.03f;
+        NewAmplitud = value * (Ma/360f)*0.9f + ma;
         Crea_ona();
     }
 
      public void ActualitzaFase(float value){
         //Debug.Log("Rep" + value);
-        Fase =value * 0.0125f + 0.5f;
+        NewFase =value * (Mf/360f)*0.9f + mf;
         Crea_ona();
     }
 
     public bool Igual(float A, float F){ //A i F son els valors de la dinamica
         bool same = false;
-        if (A < Amplitud+0.02 && A > Amplitud-0.02){
-            if (F < Fase+0.1 && F > Fase-0.1){
+        if (A < NewAmplitud+0.02 && A > NewAmplitud-0.02){
+            if (F < NewFase+0.1 && F > NewFase-0.1){
                 same = true;
             }
         }
@@ -77,8 +95,8 @@ public class Functions_Ones : Observer
     }
 
     public void GetDades(out float A, out float F){
-        A = Amplitud;
-        F = Fase;
+        A = NewAmplitud;
+        F = NewFase;
     }
 
     public void OnAcabat(){

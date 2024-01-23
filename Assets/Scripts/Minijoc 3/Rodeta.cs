@@ -15,7 +15,6 @@ public class Rodeta : MonoBehaviour
 
     private Vector3 PuntClic;
     private Collider col;
-    private float AngleIni;
     private float AngleOff;
 
     private float TotRot;
@@ -52,7 +51,6 @@ public class Rodeta : MonoBehaviour
 
                         y = Mathf.Atan2(transform.right.y, transform.right.x) * Mathf.Rad2Deg;
                         a = Mathf.Atan2(PosClic.y, PosClic.x) * Mathf.Rad2Deg;
-                        AngleIni = transform.eulerAngles.z;
                         AngleOff = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(PosClic.y, PosClic.x)) * Mathf.Rad2Deg;
                         //AngleIni = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(vec3.y, vec3.x)) * Mathf.Rad2Deg ;
 
@@ -62,12 +60,13 @@ public class Rodeta : MonoBehaviour
                     if (col == raycastHit.collider.gameObject.GetComponent<Collider>()){
                         Vector3 vec3 = Input.mousePosition - screenPos;
                         float angle = Mathf.Atan2(vec3.y, vec3.x) * Mathf.Rad2Deg;
-
+                        
                         //float 
                         //Debug.Log("Right : "+y+" Mouse : "+a);
                         //Debug.Log("Inicial: "+AngleIni + "Angle: "+angle);
-                        transform.eulerAngles = new Vector3(0,0, angle + AngleOff);
-                        actualitza.Invoke(transform.eulerAngles.z);
+                            transform.eulerAngles = new Vector3(0,0, angle + AngleOff);
+                            actualitza.Invoke(transform.eulerAngles.z);
+                      
                     }
                 }
                 if(Input.GetMouseButtonUp(0)){
