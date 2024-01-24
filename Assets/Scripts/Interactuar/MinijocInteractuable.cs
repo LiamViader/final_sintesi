@@ -23,7 +23,6 @@ public class MinijocInteractuable : Interactuable
     public override void Interact() {
         if (!_interactuant)
         {
-            Debug.Log("asd");
             _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
             GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
             if (_teAparença)
