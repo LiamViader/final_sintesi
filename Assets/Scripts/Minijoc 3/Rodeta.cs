@@ -13,7 +13,7 @@ public class Rodeta : MonoBehaviour
 
     public MyEvent actualitza;
      [SerializeField] 
-    public UnityEvent touch;
+
 
     private Vector3 PuntClic;
     private Collider col;
@@ -69,7 +69,6 @@ public class Rodeta : MonoBehaviour
                         //Debug.Log("Inicial: "+AngleIni + "Angle: "+angle);
                             transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y, angle + AngleOff);
                             actualitza.Invoke(transform.eulerAngles.z);
-                            touch.Invoke();
                       
                     }
                 }
