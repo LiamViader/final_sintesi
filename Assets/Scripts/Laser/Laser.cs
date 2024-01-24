@@ -18,6 +18,7 @@ public class Laser : MonoBehaviour
     private float _width = 1f;
     private bool _finished = false;
     private bool _destruirControlatPerDisparable = true;
+    private bool _startAnimFinished = false;
 
     private float _animCoef = 0;
     private float _animTime = 0.3f;
@@ -52,7 +53,7 @@ public class Laser : MonoBehaviour
                 if (!_finished)
                 {
                     Disparable enc;
-                    if (hit.collider.TryGetComponent<Disparable>(out enc))
+                    if (_startAnimFinished && hit.collider.TryGetComponent<Disparable>(out enc))
                     {
                         if (enc.TocatPelLaser(this,posHit) && _destruirControlatPerDisparable) Finish();
                     }
@@ -122,6 +123,7 @@ public class Laser : MonoBehaviour
             _animCoef = time_elapsed / _animTime;
             yield return null;
         }
+        _startAnimFinished = true;
         _animCoef = 1;
     }
     private IEnumerator EndAnimation()
