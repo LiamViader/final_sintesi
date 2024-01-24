@@ -356,6 +356,54 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8045819108100832641, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.90800005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045819108100832641, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045819108100832641, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045819108100832641, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.93481034
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045819108100832641, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.35514745
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045819108100832641, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 41.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088825132763598280, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_Range
+      value: 3.1834533
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088825132763598280, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_Color.b
+      value: 0.46293163
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088825132763598280, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_Color.g
+      value: 0.79294527
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088825132763598280, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088825132763598280, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088825132763598280, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
+      propertyPath: m_SpotAngle
+      value: 106.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8294828798364822890, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.68404
