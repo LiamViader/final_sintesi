@@ -26,6 +26,7 @@ public class Rodeta : MonoBehaviour
     private Vector3 PosClic;
 
     private bool Acabat = false;
+    private bool aSobre = false;
 
     private float y , a;
 
@@ -66,7 +67,7 @@ public class Rodeta : MonoBehaviour
                         //float 
                         //Debug.Log("Right : "+y+" Mouse : "+a);
                         //Debug.Log("Inicial: "+AngleIni + "Angle: "+angle);
-                            transform.eulerAngles = new Vector3(0,0, angle + AngleOff);
+                            transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y, angle + AngleOff);
                             actualitza.Invoke(transform.eulerAngles.z);
                             touch.Invoke();
                       
