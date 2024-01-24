@@ -2067,6 +2067,30 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580940662075147714, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6862594657708763128, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
     m_RemovedGameObjects: []
