@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.Events;
 
 public class MinijocInteractuable : Interactuable
 {
@@ -14,6 +15,8 @@ public class MinijocInteractuable : Interactuable
     private CameresHabitacio _last_hab;
     private bool _interactuant = false;
     private string _baseInteractText;
+
+    public UnityEvent abilita, desabilita;
 
     void Start()
     {
@@ -34,10 +37,12 @@ public class MinijocInteractuable : Interactuable
             ControlPersonatge._instance.enabled = false;
             _baseInteractText = interactText;
             interactText = "Deixar d'interactuar";
+            abilita.Invoke();
         }
         else
         { // es prem interactuar mentres s'est� interactuant, �s a dir es vol deixar d'interactuar
             AcabarInteractuar();
+            desabilita.Invoke();
         }
 
     }

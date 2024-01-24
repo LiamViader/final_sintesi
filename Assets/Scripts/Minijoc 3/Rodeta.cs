@@ -25,8 +25,10 @@ public class Rodeta : MonoBehaviour
 
     private Vector3 PosClic;
 
-    private bool Acabat = true;
+    private bool Acabat = false;
     private bool aSobre = false;
+
+    public UnityEvent clic;
 
     private float y , a;
 
@@ -56,7 +58,7 @@ public class Rodeta : MonoBehaviour
                         a = Mathf.Atan2(PosClic.y, PosClic.x) * Mathf.Rad2Deg;
                         AngleOff = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(PosClic.y, PosClic.x)) * Mathf.Rad2Deg;
                         //AngleIni = (Mathf.Atan2(transform.right.y, transform.right.x) - Mathf.Atan2(vec3.y, vec3.x)) * Mathf.Rad2Deg ;
-
+                        clic.Invoke();
                     }
                 }
                 if (Input.GetMouseButton(0)){ 
@@ -82,10 +84,6 @@ public class Rodeta : MonoBehaviour
     
     public void OnAcabat(){
         Acabat = true;
-    }
-
-    public void Abilitar(){
-        Acabat = false; 
     }
 
 }

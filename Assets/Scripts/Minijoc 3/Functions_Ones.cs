@@ -29,7 +29,7 @@ public class Functions_Ones : Observer
     {
 
         radio = this.transform.parent.gameObject;
-        Debug.Log(radio.name);
+        //Debug.Log(radio.name);
         Ona = GetComponent<LineRenderer>();
         Ona.widthMultiplier = Width;
 
