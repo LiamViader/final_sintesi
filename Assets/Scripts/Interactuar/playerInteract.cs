@@ -9,13 +9,17 @@ public class playerInteract : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F))
         {
+            HashSet<Interactuable> interactuats = new HashSet<Interactuable>();
             float interactRange = 2f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
                 if (collider.TryGetComponent(out Interactuable meshInteractuable))
                 {
-                    meshInteractuable.Interact();
+                    if (!interactuats.Contains(meshInteractuable)) {
+                        meshInteractuable.Interact();
+                        interactuats.Add(meshInteractuable);
+                    }
                 }
             }
         }

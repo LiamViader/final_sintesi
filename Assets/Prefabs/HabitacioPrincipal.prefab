@@ -3193,7 +3193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7006477841888921844}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04482177, y: 0.56549734, z: -0.030799473, w: 0.8229552}
+  m_LocalRotation: {x: 0.044821765, y: 0.56549734, z: -0.030799478, w: 0.82295513}
   m_LocalPosition: {x: -15.277, y: 9.471, z: -8.617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3208,7 +3208,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7006477841888921844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
@@ -3390,7 +3390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7311069975982939490}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00085631397, y: 0.7044307, z: 0.00084987027, w: 0.70977175}
+  m_LocalRotation: {x: -0.00085631397, y: 0.7044307, z: 0.0008498703, w: 0.70977175}
   m_LocalPosition: {x: -3.07, y: 9.29, z: -2.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4543,11 +4543,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1356860105711978160, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
   m_PrefabInstance: {fileID: 280648039234813562}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &6335737768598025843 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 6055089738506799113, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
-  m_PrefabInstance: {fileID: 280648039234813562}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8140301679224886032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8294828798364822890, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
@@ -4571,9 +4566,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Restaurar senyal
+  "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 7136400984591761208}
-  "_aparen\xE7aMinijocNoObert": {fileID: 6335737768598025843}
-  _minijoc: {fileID: 9147419044986707657}
+  "_aparen\xE7aMinijocNoObert": {fileID: 0}
+  _minijoc: {fileID: 0}
 --- !u!114 &7136400984591761208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4586,7 +4582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb72c5c306cef34790fdb236b92b205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameres: []
+  _cameres:
+  - {fileID: 729192032880315669}
 --- !u!65 &2855798247846713981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11504,6 +11501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Obrir quadre de llums
+  "_teAparen\xE7a": 1
   _cameresMinijoc: {fileID: 194045676775725108}
   "_aparen\xE7aMinijocNoObert": {fileID: 4534918623913503330}
   _minijoc: {fileID: 6144267835017275596}

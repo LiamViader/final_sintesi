@@ -6,6 +6,8 @@ using Cinemachine;
 
 public class MinijocInteractuable : Interactuable
 {
+    
+    [SerializeField] private bool _teAparença;
     [SerializeField] private CameresHabitacio _cameresMinijoc;
     [SerializeField] private MeshRenderer _aparençaMinijocNoObert; 
     [SerializeField] private GameObject _minijoc; 
@@ -21,10 +23,14 @@ public class MinijocInteractuable : Interactuable
     public override void Interact() {
         if (!_interactuant)
         {
+            Debug.Log("asd");
             _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
             GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
-            _aparençaMinijocNoObert.enabled = false;
-            _minijoc.SetActive(true);
+            if (_teAparença)
+            {
+                _aparençaMinijocNoObert.enabled = false;
+                _minijoc.SetActive(true);
+            }
             _interactuant = true;
             ControlPersonatge._instance.enabled = false;
             _baseInteractText = interactText;
@@ -41,8 +47,11 @@ public class MinijocInteractuable : Interactuable
     {
         interactText = _baseInteractText;
         GestorHabsSingleton._instance.CanviarHab(_last_hab, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardIn, 2));
-        _aparençaMinijocNoObert.enabled = true;
-        _minijoc.SetActive(false);
+        if (_teAparença)
+        {
+            _aparençaMinijocNoObert.enabled = true;
+            _minijoc.SetActive(false);
+        }
         _interactuant = false;
         ControlPersonatge._instance.enabled = true;
     }
