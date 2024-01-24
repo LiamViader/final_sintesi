@@ -25,7 +25,7 @@ public class Rodeta : MonoBehaviour
 
     private Vector3 PosClic;
 
-    private bool Acabat = false;
+    private bool Acabat = true;
     private bool aSobre = false;
 
     private float y , a;
@@ -83,6 +83,10 @@ public class Rodeta : MonoBehaviour
     
     public void OnAcabat(){
         Acabat = true;
+    }
+
+    public void Abilitar(){
+        Acabat = false; 
     }
 
 }

@@ -7,7 +7,7 @@ using Cinemachine;
 public class MinijocInteractuable : Interactuable
 {
     [SerializeField] private CameresHabitacio _cameresMinijoc;
-    [SerializeField] private MeshRenderer _aparençaMinijocNoObert; 
+    [SerializeField] private MeshRenderer _aparenÃ§aMinijocNoObert; 
     [SerializeField] private GameObject _minijoc; 
     private CameresHabitacio _last_hab;
     private bool _interactuant = false;
@@ -23,7 +23,7 @@ public class MinijocInteractuable : Interactuable
         {
             _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
             GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
-            _aparençaMinijocNoObert.enabled = false;
+            _aparenÃ§aMinijocNoObert.enabled = false;
             _minijoc.SetActive(true);
             _interactuant = true;
             ControlPersonatge._instance.enabled = false;
@@ -31,7 +31,7 @@ public class MinijocInteractuable : Interactuable
             interactText = "Deixar d'interactuar";
         }
         else
-        { // es prem interactuar mentres s'està interactuant, és a dir es vol deixar d'interactuar
+        { // es prem interactuar mentres s'estï¿½ interactuant, ï¿½s a dir es vol deixar d'interactuar
             AcabarInteractuar();
         }
 
@@ -41,9 +41,13 @@ public class MinijocInteractuable : Interactuable
     {
         interactText = _baseInteractText;
         GestorHabsSingleton._instance.CanviarHab(_last_hab, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardIn, 2));
-        _aparençaMinijocNoObert.enabled = true;
+        _aparenÃ§aMinijocNoObert.enabled = true;
         _minijoc.SetActive(false);
         _interactuant = false;
         ControlPersonatge._instance.enabled = true;
+    }
+
+    public bool getInteractuar(){
+        return _interactuant;
     }
 }
