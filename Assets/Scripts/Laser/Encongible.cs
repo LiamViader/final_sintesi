@@ -95,7 +95,7 @@ public class Encongible : Disparable
 
     private void AfegirEfecteEncongir()
     {
-        if (_aparença.gameObject.TryGetComponent<MeshRenderer>(out MeshRenderer mesh))
+        if (_aparença.gameObject.TryGetComponent<Renderer>(out Renderer mesh))
         {
             List < Material > l= new List<Material>();
             mesh.GetMaterials(l);
@@ -104,14 +104,15 @@ public class Encongible : Disparable
         }
 
 
-        MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        Renderer[] meshRenderers = _aparença.gameObject.GetComponentsInChildren<Renderer>();
 
-        foreach (MeshRenderer meshRenderer in meshRenderers)
+        foreach (Renderer meshRenderer in meshRenderers)
         {
-            List<Material> l = new List<Material>();
-            meshRenderer.GetMaterials(l);
-            l.Add(_materialEfecte);
-            meshRenderer.SetMaterials(l);
+            Debug.Log("asd");
+            List<Material> li = new List<Material>();
+            meshRenderer.GetMaterials(li);
+            li.Add(_materialEfecte);
+            meshRenderer.SetMaterials(li);
         }
     }
 
