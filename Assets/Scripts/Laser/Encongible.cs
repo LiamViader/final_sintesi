@@ -30,6 +30,7 @@ public class Encongible : Disparable
     private float _tempsUltimHit = 0f;
     private float _tempsCanviant = 0f;
     private Vector3 _aparençaInicial;
+    private Dictionary<Renderer, List<Material>> _savedMaterials = new Dictionary<Renderer, List<Material>>();
 
     protected override void Awake()
     {
@@ -78,7 +79,7 @@ public class Encongible : Disparable
         {
             if (!_canviant)
             {
-                AfegirEfecteEncongir();
+                AfegirEfecteEncongirAObjecte();
                 _aparençaInicial = _aparença.localScale;
                 _canviant = true;
                 _tempsCanviant = 0f;
@@ -93,14 +94,32 @@ public class Encongible : Disparable
         return false;
     }
 
-    private void AfegirEfecteEncongir()
+    private void PosarEfecteAMesh(Renderer mesh)
+    {
+        List<Material> l = new List<Material>();
+        mesh.GetMaterials(l);
+        _savedMaterials[mesh] = l;
+        List<Material> newList = new List<Material>();
+        if (mesh is SkinnedMeshRenderer)
+        {
+            for (int i = 0; i < l.Count; i++)
+            {
+                newList.Add(_materialEfecte);
+            }
+        }
+        else
+        {
+            newList.Add(_materialEfecte);
+        }
+        mesh.SetMaterials(newList);
+    }
+
+
+    private void AfegirEfecteEncongirAObjecte()
     {
         if (_aparença.gameObject.TryGetComponent<Renderer>(out Renderer mesh))
         {
-            List < Material > l= new List<Material>();
-            mesh.GetMaterials(l);
-            l.Add(_materialEfecte);
-            mesh.SetMaterials(l);
+            PosarEfecteAMesh(mesh);
         }
 
 
@@ -108,16 +127,35 @@ public class Encongible : Disparable
 
         foreach (Renderer meshRenderer in meshRenderers)
         {
-            Debug.Log("asd");
-            List<Material> li = new List<Material>();
-            meshRenderer.GetMaterials(li);
-            li.Add(_materialEfecte);
-            meshRenderer.SetMaterials(li);
+            PosarEfecteAMesh(meshRenderer);
+        }
+    }
+
+    private void TreureEfecteAMesh(Renderer mesh)
+    {
+        List<Material> l = _savedMaterials[mesh];
+        mesh.SetMaterials(l);
+    }
+
+    private void TreureEfecteEncongirAObjecte()
+    {
+        if (_aparença.gameObject.TryGetComponent<Renderer>(out Renderer mesh))
+        {
+            TreureEfecteAMesh(mesh);
+        }
+
+
+        Renderer[] meshRenderers = _aparença.gameObject.GetComponentsInChildren<Renderer>();
+
+        foreach (Renderer meshRenderer in meshRenderers)
+        {
+            TreureEfecteAMesh(meshRenderer);
         }
     }
 
     private void CanviarTamanyObjecte()
     {
+        TreureEfecteEncongirAObjecte();
         _canviant = false;
         _aparença.localScale = _aparençaInicial;
         if (!_petit) {
@@ -134,6 +172,7 @@ public class Encongible : Disparable
 
     private void ResetCanvi()
     {
+        TreureEfecteEncongirAObjecte();
         _aparença.localScale = _aparençaInicial;
         _canviant = false;
         _tempsCanviant = 0f;
