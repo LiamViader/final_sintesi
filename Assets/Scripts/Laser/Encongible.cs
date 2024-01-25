@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Encongible : Disparable
@@ -117,11 +118,6 @@ public class Encongible : Disparable
 
     private void AfegirEfecteEncongirAObjecte()
     {
-        if (_aparença.gameObject.TryGetComponent<Renderer>(out Renderer mesh))
-        {
-            PosarEfecteAMesh(mesh);
-        }
-
 
         Renderer[] meshRenderers = _aparença.gameObject.GetComponentsInChildren<Renderer>();
 
@@ -139,10 +135,6 @@ public class Encongible : Disparable
 
     private void TreureEfecteEncongirAObjecte()
     {
-        if (_aparença.gameObject.TryGetComponent<Renderer>(out Renderer mesh))
-        {
-            TreureEfecteAMesh(mesh);
-        }
 
 
         Renderer[] meshRenderers = _aparença.gameObject.GetComponentsInChildren<Renderer>();
