@@ -18,6 +18,9 @@ public class Encongible : Disparable
     [Tooltip("Aqui va el transform del objecte que quedarà canviat de tamany un cop el canvi estigui completat")]
     protected Transform _canviReal;
 
+    [SerializeField]
+    protected static Material _materialEfecte = null;
+
 
     private float _tempsCanvi = 1.5f;
     private bool _tocatUltimFrame = false;
@@ -28,7 +31,14 @@ public class Encongible : Disparable
     private float _tempsCanviant = 0f;
     private Vector3 _aparençaInicial;
 
-
+    protected override void Awake()
+    {
+        base.Awake();
+        if (_materialEfecte == null)
+        {
+            _materialEfecte=Resources.Load("EfecteLaser", typeof(Material)) as Material;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +78,7 @@ public class Encongible : Disparable
         {
             if (!_canviant)
             {
+                AfegirEfecteEncongir();
                 _aparençaInicial = _aparença.localScale;
                 _canviant = true;
                 _tempsCanviant = 0f;
@@ -80,6 +91,28 @@ public class Encongible : Disparable
             }
         }
         return false;
+    }
+
+    private void AfegirEfecteEncongir()
+    {
+        if (_aparença.gameObject.TryGetComponent<MeshRenderer>(out MeshRenderer mesh))
+        {
+            List < Material > l= new List<Material>();
+            mesh.GetMaterials(l);
+            l.Add(_materialEfecte);
+            mesh.SetMaterials(l);
+        }
+
+
+        MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
+
+        foreach (MeshRenderer meshRenderer in meshRenderers)
+        {
+            List<Material> l = new List<Material>();
+            meshRenderer.GetMaterials(l);
+            l.Add(_materialEfecte);
+            meshRenderer.SetMaterials(l);
+        }
     }
 
     private void CanviarTamanyObjecte()

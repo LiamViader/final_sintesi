@@ -4365,6 +4365,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5177414301106870393, guid: 55489656333abb749a864446e5879d06, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177414301106870393, guid: 55489656333abb749a864446e5879d06, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b61458ebb19004843af57f63626d7f2a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4697,6 +4705,14 @@ PrefabInstance:
       propertyPath: outlineColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7718184588912126115, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718184588912126115, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c93ed54c98e4dc447b8626d64d810b92, type: 2}
     - target: {fileID: 8159720564819210684, guid: f65b02efa1909d84eab018a2351f4888, type: 3}
       propertyPath: _outline
       value: 

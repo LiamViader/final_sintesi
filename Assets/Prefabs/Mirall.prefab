@@ -118,12 +118,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 7580940662075147714}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.5
-  _outline: {fileID: 7580940662075147714}
-  _hasOutline: 1
   "_aparen\xE7a": {fileID: 3681091290274504506}
   _canviReal: {fileID: 3681091290274504506}
+  _materialEfecte: {fileID: 2100000, guid: c93ed54c98e4dc447b8626d64d810b92, type: 2}
 --- !u!1 &5128982466484168944
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,12 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec792806b14e31446ac3107b924fe790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _petit: 0
-  _coefTamany: 0.5
   _outline: {fileID: 7580940662075147714}
-  _hasOutline: 1
-  "_aparen\xE7a": {fileID: 3681091290274504506}
-  _canviReal: {fileID: 3681091290274504506}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _laserPrefab: {fileID: 2342094905357932928, guid: eb51b42b548b58f4b998c1088bfb19ff, type: 3}
   _name: 
 --- !u!1 &6784729459993901906
