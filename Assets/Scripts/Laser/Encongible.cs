@@ -101,14 +101,8 @@ public class Encongible : Disparable
         mesh.GetMaterials(l);
         _savedMaterials[mesh] = l;
         List<Material> newList = new List<Material>();
-        if (mesh is SkinnedMeshRenderer)
-        {
-            for (int i = 0; i < l.Count; i++)
-            {
-                newList.Add(_materialEfecte);
-            }
-        }
-        else
+
+        for (int i = 0; i < l.Count; i++)
         {
             newList.Add(_materialEfecte);
         }
