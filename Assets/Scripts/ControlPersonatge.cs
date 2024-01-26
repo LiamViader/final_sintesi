@@ -145,18 +145,16 @@ public class ControlPersonatge : MonoBehaviour
         if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity, CameresHabitacio.getIgnoreMask()))
         {
             Disparable target;
-            if (hitInfo.collider.TryGetComponent<Disparable>(out target))
+            if (hitInfo.collider.TryGetComponent<Disparable>(out target) && target.OutlinesOnHover())
             {
                 if (target != _outlined)
                 {
-                    if (target.AddOutline())
+                    if (_outlined != null)
                     {
-                        if (_outlined != null)
-                        {
-                            _outlined.RemoveOutline();
-                        }
-                        _outlined = target;
+                        _outlined.RemoveOutline();
                     }
+                    target.AddOutline();
+                    _outlined = target;
                 }
 
             }
@@ -184,7 +182,7 @@ public class ControlPersonatge : MonoBehaviour
                 Disparable target;
                 if(hitInfo.collider.TryGetComponent<Disparable>(out target))
                 {
-                    if (target.OutlinesOnHover()) _dispositiu?.Shoot(target.AimPoint());
+                    if(target.OutlinesOnHover()) _dispositiu?.Shoot(target.AimPoint());
                 }
             }
         }

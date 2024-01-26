@@ -48,7 +48,7 @@ public abstract class Disparable : MonoBehaviour
 
     public bool OutlinesOnHover()
     {
-        return _outlineOnHover;
+        return _outlineOnHover && _outline;
     }
 
 
