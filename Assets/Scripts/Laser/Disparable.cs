@@ -14,7 +14,7 @@ public abstract class Disparable : MonoBehaviour
     protected Transform _PuntDeAim;
 
 
-    protected void Awake()
+    protected virtual void Awake()
     {
         if (_outline!=null && _outlineOnHover) _outline.enabled = false;
     }

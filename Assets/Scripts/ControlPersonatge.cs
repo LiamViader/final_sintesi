@@ -60,6 +60,7 @@ public class ControlPersonatge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AgafarDispositiu();
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         _Camera=GestorHabsSingleton._instance.Camera().transform;
