@@ -25,11 +25,32 @@ public abstract class Disparable : MonoBehaviour
         
     }
 
-    public Outline GetOutline()
+
+    public virtual bool AddOutline()
     {
-        if (_outlineOnHover) return _outline;
-        else return null;
+        if (_outlineOnHover && _outline)
+        {
+            _outline.enabled = true;
+            return true;
+        }
+        else return false;
     }
+
+    public virtual bool RemoveOutline()
+    {
+        if (_outlineOnHover && _outline)
+        {
+            _outline.enabled = false;
+            return true;
+        }
+        else return false;
+    }
+
+    public bool OutlinesOnHover()
+    {
+        return _outlineOnHover;
+    }
+
 
     public virtual Transform AimPoint()
     {

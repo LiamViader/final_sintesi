@@ -36,7 +36,7 @@ public class ControlPersonatge : MonoBehaviour
 
     [SerializeField]
     private DispositiuLaser _dispositiu;
-    private Outline _outlined=null;
+    private Disparable _outlined=null;
     private bool _teDispositiu = false;
 
     [SerializeField] private AudioSource jumpSoundEffect;
@@ -147,26 +147,28 @@ public class ControlPersonatge : MonoBehaviour
             Disparable target;
             if (hitInfo.collider.TryGetComponent<Disparable>(out target))
             {
-                if (target.GetOutline() != _outlined && target.GetOutline()!=null)
+                if (target != _outlined)
                 {
-                    if (_outlined != null)
+                    if (target.AddOutline())
                     {
-                        _outlined.enabled = false;
+                        if (_outlined != null)
+                        {
+                            _outlined.RemoveOutline();
+                        }
+                        _outlined = target;
                     }
-                    _outlined = target.GetOutline();
-                    _outlined.enabled = true;
                 }
 
             }
-            else if(_outlined!=null)
+            else if (_outlined != null)
             {
-                _outlined.enabled = false;
-                _outlined=null;
+                _outlined.RemoveOutline();
+                _outlined = null;
             }
         }
         else if (_outlined!=null)
         {
-            _outlined.enabled = false;
+            _outlined.RemoveOutline();
             _outlined = null;
         }
     }
@@ -182,7 +184,7 @@ public class ControlPersonatge : MonoBehaviour
                 Disparable target;
                 if(hitInfo.collider.TryGetComponent<Disparable>(out target))
                 {
-                    if (target.GetOutline()!=null) _dispositiu?.Shoot(target.AimPoint());
+                    if (target.OutlinesOnHover()) _dispositiu?.Shoot(target.AimPoint());
                 }
             }
         }

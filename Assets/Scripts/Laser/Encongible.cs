@@ -33,6 +33,7 @@ public class Encongible : Disparable
     private float _tempsCanviant = 0f;
     private Vector3 _aparençaInicial;
     private Dictionary<Renderer, List<Material>> _savedMaterials = new Dictionary<Renderer, List<Material>>();
+    private bool _hasToAddOutlineAfterChange = false;
 
     protected override void Awake()
     {
@@ -81,9 +82,9 @@ public class Encongible : Disparable
         {
             if (!_canviant)
             {
+                _canviant = true;
                 AfegirEfecteEncongirAObjecte();
                 _aparençaInicial = _aparença.localScale;
-                _canviant = true;
                 _tempsCanviant = 0f;
             }
             _tempsUltimHit = 0f;
@@ -114,6 +115,11 @@ public class Encongible : Disparable
 
     private void AfegirEfecteEncongirAObjecte()
     {
+        if (_outline)
+        {
+            _hasToAddOutlineAfterChange = _outline.enabled;
+            _outline.enabled = false;
+        }
 
         Renderer[] meshRenderers = _aparença.gameObject.GetComponentsInChildren<Renderer>();
 
@@ -139,6 +145,10 @@ public class Encongible : Disparable
         foreach (Renderer meshRenderer in meshRenderers)
         {
             TreureEfecteAMesh(meshRenderer);
+        }
+        if (_hasToAddOutlineAfterChange)
+        {
+            _outline.enabled = true;
         }
     }
 
@@ -188,6 +198,32 @@ public class Encongible : Disparable
     {
         if (this._PuntDeAim == null) return this._aparença;
         else return this._PuntDeAim;
+    }
+
+    public override bool RemoveOutline()
+    {
+        if (!Canviant())
+        {
+            return base.RemoveOutline();
+        }
+        else
+        {
+            _hasToAddOutlineAfterChange = false;
+            return true;
+        }
+    }
+
+    public override bool AddOutline()
+    {
+        if (!Canviant())
+        {
+            return base.AddOutline();
+        }
+        else
+        {
+            _hasToAddOutlineAfterChange = true;
+            return true;
+        }
     }
 
 }
