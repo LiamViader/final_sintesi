@@ -14,6 +14,7 @@ public abstract class Disparable : MonoBehaviour
     protected Transform _PuntDeAim;
 
 
+
     protected virtual void Awake()
     {
         if (_outline!=null && _outlineOnHover) _outline.enabled = false;
@@ -28,7 +29,7 @@ public abstract class Disparable : MonoBehaviour
 
     public virtual bool AddOutline()
     {
-        if (_outlineOnHover && _outline)
+        if (_outlineOnHover && _outline && _outline.fence)
         {
             _outline.enabled = true;
             return true;
@@ -38,7 +39,7 @@ public abstract class Disparable : MonoBehaviour
 
     public virtual bool RemoveOutline()
     {
-        if (_outlineOnHover && _outline)
+        if (_outlineOnHover && _outline && _outline.fence)
         {
             _outline.enabled = false;
             return true;

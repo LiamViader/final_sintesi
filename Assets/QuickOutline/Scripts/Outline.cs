@@ -16,6 +16,10 @@ using UnityEngine;
 public class Outline : MonoBehaviour {
   private static HashSet<Mesh> registeredMeshes = new HashSet<Mesh>();
 
+
+
+  public bool fence = true;
+
   public enum Mode {
     OutlineAll,
     OutlineVisible,

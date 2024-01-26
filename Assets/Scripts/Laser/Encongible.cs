@@ -119,6 +119,7 @@ public class Encongible : Disparable
         {
             _hasToAddOutlineAfterChange = _outline.enabled;
             _outline.enabled = false;
+            _outline.fence = false;
         }
 
         Renderer[] meshRenderers = _aparença.gameObject.GetComponentsInChildren<Renderer>();
@@ -150,6 +151,7 @@ public class Encongible : Disparable
         {
             _outline.enabled = true;
         }
+        _outline.fence = true;
     }
 
     private void CanviarTamanyObjecte()
