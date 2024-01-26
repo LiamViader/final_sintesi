@@ -27,8 +27,11 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
+    - _ColorSize: 0
+    - _PercentatgeTransformacio: 0
     m_Colors:
     - _ColorEfecte: {r: 0.8679245, g: 0.04503382, b: 0.08333608, a: 0}
+    - _ColorFinalTransformacio: {r: 0.9098039, g: 1, b: 0.9278865, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3705764252529600625
 MonoBehaviour:
