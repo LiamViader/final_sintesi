@@ -20,8 +20,9 @@ public class Encongible : Disparable
     protected Transform _canviReal;
 
     [SerializeField]
-    protected static Material _materialEfecte = null;
+    protected static Material _materialOriginalEfecte = null;
 
+    protected Material _instanciaMaterialEfecte = null;
 
     private float _tempsCanvi = 1.5f;
     private bool _tocatUltimFrame = false;
@@ -36,9 +37,9 @@ public class Encongible : Disparable
     protected override void Awake()
     {
         base.Awake();
-        if (_materialEfecte == null)
+        if (_materialOriginalEfecte == null)
         {
-            _materialEfecte=Resources.Load("EfecteLaser", typeof(Material)) as Material;
+            _materialOriginalEfecte=Resources.Load("EfecteLaser", typeof(Material)) as Material;
         }
     }
 
@@ -104,7 +105,8 @@ public class Encongible : Disparable
 
         for (int i = 0; i < l.Count; i++)
         {
-            newList.Add(_materialEfecte);
+            _instanciaMaterialEfecte = new Material(_materialOriginalEfecte);
+            newList.Add(_instanciaMaterialEfecte);
         }
         mesh.SetMaterials(newList);
     }
@@ -125,6 +127,7 @@ public class Encongible : Disparable
     {
         List<Material> l = _savedMaterials[mesh];
         mesh.SetMaterials(l);
+        _instanciaMaterialEfecte = null;
     }
 
     private void TreureEfecteEncongirAObjecte()
