@@ -24,6 +24,9 @@ public class DispositiuLaser : MonoBehaviour
     private bool _turning = false;
     private Coroutine _onGoingCoroutine=null;
     private Laser _laser;
+    [SerializeField]
+    private AudioSource _soDisparar;
+
 
 
 
@@ -113,8 +116,11 @@ public class DispositiuLaser : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Vector3 norm = Vector3.Normalize(dir);
         _laser.Init(transform.position, norm, _timeShooting,transform.localScale.magnitude);
+
         _laser.Subscribe(OnLaserDestroy);
         _shooting = true;
+        _soDisparar.time = 0.2f;
+        _soDisparar.Play();
     }
 
     private void OnLaserDestroy(Laser laser)

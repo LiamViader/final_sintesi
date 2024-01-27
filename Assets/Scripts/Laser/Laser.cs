@@ -21,7 +21,7 @@ public class Laser : MonoBehaviour
     private bool _startAnimFinished = false;
 
     private float _animCoef = 0;
-    private float _animTime = 0.3f;
+    private float _animTime = 0.2f;
 
     public event Action<Laser> _OnLaserRemoved;
 
