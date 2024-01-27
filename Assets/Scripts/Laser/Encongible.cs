@@ -151,7 +151,7 @@ public class Encongible : Disparable
         {
             _outline.enabled = true;
         }
-        _outline.fence = true;
+        if(_outline) _outline.fence = true;
     }
 
     private void CanviarTamanyObjecte()

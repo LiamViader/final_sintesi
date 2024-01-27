@@ -1355,10 +1355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outline: {fileID: 0}
+  _outlineOnHover: 1
+  _PuntDeAim: {fileID: 0}
   _petit: 0
   _coefTamany: 0.25
-  _outline: {fileID: 0}
-  _hasOutline: 0
   "_aparen\xE7a": {fileID: 4221800912347577949}
   _canviReal: {fileID: 4221800912347577949}
 --- !u!1 &3610022602048014268
