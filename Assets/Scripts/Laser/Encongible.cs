@@ -35,6 +35,9 @@ public class Encongible : Disparable
     private Dictionary<Renderer, List<Material>> _savedMaterials = new Dictionary<Renderer, List<Material>>();
     private bool _hasToAddOutlineAfterChange = false;
 
+    private static GameObject _audioPrefab =null;
+    private AudioSource _sfxEncongirse;
+
     protected override void Awake()
     {
         base.Awake();
@@ -42,6 +45,12 @@ public class Encongible : Disparable
         {
             _materialOriginalEfecte=Resources.Load("EfecteLaser", typeof(Material)) as Material;
         }
+        if (_audioPrefab == null)
+        {
+            _audioPrefab = Resources.Load<GameObject>("AudioEncongirse");
+        }
+        GameObject o = Instantiate(_audioPrefab);
+       _sfxEncongirse= o.GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -68,7 +77,9 @@ public class Encongible : Disparable
                 {
                     grau = 1 / grau;
                 }
+                _sfxEncongirse.pitch = Mathf.Lerp(0.8f, 1.6f, percentatgeCanvi*percentatgeCanvi);
                 _aparença.localScale = Vector3.Lerp(_aparençaInicial, _aparençaInicial * grau, percentatgeCanvi);
+
             }
         }
         _tocatUltimFrame = false;
@@ -115,6 +126,9 @@ public class Encongible : Disparable
 
     private void AfegirEfecteEncongirAObjecte()
     {
+        _sfxEncongirse.Play();
+        _sfxEncongirse.pitch = 0.8f;
+
         if (_outline)
         {
             _hasToAddOutlineAfterChange = _outline.enabled;
@@ -140,7 +154,7 @@ public class Encongible : Disparable
     private void TreureEfecteEncongirAObjecte()
     {
 
-
+        _sfxEncongirse.Stop();
         Renderer[] meshRenderers = _aparença.gameObject.GetComponentsInChildren<Renderer>();
 
         foreach (Renderer meshRenderer in meshRenderers)
