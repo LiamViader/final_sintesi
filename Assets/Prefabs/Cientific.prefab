@@ -1195,6 +1195,7 @@ GameObject:
   - component: {fileID: 996485382033860974}
   - component: {fileID: 5124295324408792185}
   - component: {fileID: 4556884658578013069}
+  - component: {fileID: 8168954878057663709}
   m_Layer: 6
   m_Name: Cientific
   m_TagString: Untagged
@@ -1362,6 +1363,14 @@ MonoBehaviour:
   _coefTamany: 0.25
   "_aparen\xE7a": {fileID: 4221800912347577949}
   _canviReal: {fileID: 4221800912347577949}
+--- !u!81 &8168954878057663709
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3593038125088498919}
+  m_Enabled: 1
 --- !u!1 &3610022602048014268
 GameObject:
   m_ObjectHideFlags: 0

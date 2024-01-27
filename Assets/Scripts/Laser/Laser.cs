@@ -26,6 +26,18 @@ public class Laser : MonoBehaviour
     public event Action<Laser> _OnLaserRemoved;
 
     // Start is called before the first frame update
+    void Awake()
+    {
+        if(TryGetComponent<AudioSource>(out AudioSource a))
+        {
+            System.Random random = new System.Random();
+
+            // numero entre 0.9 y 1.1
+            float randomPitch = (float)(random.NextDouble() * 0.2f) + 0.9f;
+            a.pitch = randomPitch;
+        }
+    }
+
     void Start()
     {
         
