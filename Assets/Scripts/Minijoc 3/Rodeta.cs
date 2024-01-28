@@ -26,7 +26,6 @@ public class Rodeta : MonoBehaviour
     private Vector3 PosClic;
 
     private bool Acabat = false;
-    private bool aSobre = false;
 
     public UnityEvent clic;
 
@@ -37,6 +36,7 @@ public class Rodeta : MonoBehaviour
     {
         cam = Camera.main;
         col = GetComponent<Collider>();
+        col.enabled = false;
     }
 
     // Update is called once per frame

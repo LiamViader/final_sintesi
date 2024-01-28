@@ -12,6 +12,8 @@ public class MinijocInteractuable : Interactuable
     [SerializeField] private CameresHabitacio _cameresMinijoc;
     [SerializeField] private MeshRenderer _aparençaMinijocNoObert; 
     [SerializeField] private GameObject _minijoc; 
+
+    [SerializeField] public bool _Disponible;
     private CameresHabitacio _last_hab;
     private bool _interactuant = false;
     private string _baseInteractText;
@@ -26,18 +28,25 @@ public class MinijocInteractuable : Interactuable
     public override void Interact() {
         if (!_interactuant)
         {
-            _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
-            GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
-            if (_teAparença)
-            {
-                _aparençaMinijocNoObert.enabled = false;
-                _minijoc.SetActive(true);
+            Debug.Log("disponible" + _Disponible);
+            if (_Disponible){
+                 _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
+                GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
+                if (_teAparença)
+                {
+                    _aparençaMinijocNoObert.enabled = false;
+                    _minijoc.SetActive(true);
+                }
+                _interactuant = true;
+                ControlPersonatge._instance.enabled = false;
+                _baseInteractText = interactText;
+                interactText = "Deixar d'interactuar";
+                abilita.Invoke();
             }
-            _interactuant = true;
-            ControlPersonatge._instance.enabled = false;
-            _baseInteractText = interactText;
-            interactText = "Deixar d'interactuar";
-            abilita.Invoke();
+            else{
+                interactText = unableText;
+            }
+           
         }
         else
         { // es prem interactuar mentres s'est� interactuant, �s a dir es vol deixar d'interactuar
@@ -62,5 +71,9 @@ public class MinijocInteractuable : Interactuable
 
     public bool getInteractuar(){
         return _interactuant;
+    }
+
+    public void Disponible(bool disp){
+        _Disponible = disp;
     }
 }

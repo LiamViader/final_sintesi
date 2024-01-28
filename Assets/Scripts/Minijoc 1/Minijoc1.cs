@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Cinemachine;
+using UnityEngine.Events;
 public class Minijoc1 : MonoBehaviour
 {
     bool Resolt = false;
@@ -16,6 +17,7 @@ public class Minijoc1 : MonoBehaviour
 
     public Porta portaAObrir;
 
+    public UnityEvent finalitzat;
     [SerializeField] private GameObject llumsGameObj;
     [SerializeField] private GameObject llumGameObj;
     [SerializeField] private MinijocInteractuable controladorInteraccio;
@@ -66,6 +68,7 @@ public class Minijoc1 : MonoBehaviour
         }
         if (Resolt1 && Resolt2)
         {
+            finalitzat.Invoke();
             Resolt = true;
             llumsGameObj.SetActive(true);
             llumGameObj.SetActive(false);

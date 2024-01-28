@@ -20,6 +20,7 @@ public class ComprovaButton : MonoBehaviour
         col = GetComponent<Collider>();   
         OnaDin = GameObject.Find("Ona dinamica").GetComponent<Functions_Ones>();     
         OnaEst = GameObject.Find("Ona estatica").GetComponent<Functions_Ones>();    
+        col.enabled =false;
     }
 
     // Update is called once per frame

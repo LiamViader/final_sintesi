@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Interactuable : MonoBehaviour
 {
     [SerializeField] protected string interactText;
+    [SerializeField] protected string unableText;
 
     // Start is called before the first frame update
     void Start()
@@ -24,4 +25,10 @@ public abstract class Interactuable : MonoBehaviour
     {
         return interactText;
     }
+
+     public string returnUnableText()
+    {
+        return unableText;
+    }
+    
 }
