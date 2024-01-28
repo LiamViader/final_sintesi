@@ -21,5 +21,6 @@ public class PlaySound : Interactuable
     public override void Interact()
     {
         if (!_audio.isPlaying) _audio.Play();
+        else UiControllerSingleton._instance._missatge.Mostrar("Ja s'està reproduint", 1.5f);
     }
 }
