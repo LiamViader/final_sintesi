@@ -6,6 +6,7 @@ public abstract class Interactuable : MonoBehaviour
 {
     [SerializeField] protected string interactText;
     public static AudioSource _audioInteract=null;
+    public static AudioSource _audioIncorrecte = null;
 
     private void Awake()
     {
@@ -13,6 +14,11 @@ public abstract class Interactuable : MonoBehaviour
         {
             GameObject objecte= Instantiate(Resources.Load<GameObject>("AudioInteract"),transform);
             _audioInteract = objecte.GetComponent<AudioSource>();
+        }
+        if (_audioIncorrecte == null)
+        {
+            GameObject objecte2 = Instantiate(Resources.Load<GameObject>("AudioInteractIncorrecte"), transform);
+            _audioIncorrecte = objecte2.GetComponent<AudioSource>();
         }
     }
 
@@ -31,6 +37,11 @@ public abstract class Interactuable : MonoBehaviour
     public void PlaySound()
     {
         _audioInteract.Play();
+    }
+
+    public void PlaySoundIncorrecte()
+    {
+        _audioIncorrecte.Play();
     }
 
     public abstract void Interact();

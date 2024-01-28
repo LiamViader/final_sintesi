@@ -23,6 +23,7 @@ public class LaserAgafable : Interactuable
     {
         if (encongible.Petit() && !encongible.Canviant())
         {
+            PlaySound();
             ControlPersonatge._instance.AgafarDispositiu();
             _controlLaser.FinalitzarLaser();
             Destroy(_controlLaser.gameObject);
@@ -30,6 +31,7 @@ public class LaserAgafable : Interactuable
         else
         {
             UiControllerSingleton._instance._missatge.Mostrar("El dispositiu ha de ser més petit per poder agafar-lo", 1.5f);
+            PlaySoundIncorrecte();
         }
     }
 

@@ -17,7 +17,6 @@ public class playerInteract : MonoBehaviour
                 if (collider.TryGetComponent(out Interactuable meshInteractuable))
                 {
                     if (!interactuats.Contains(meshInteractuable) && meshInteractuable.enabled) {
-                        meshInteractuable.PlaySound();
                         meshInteractuable.Interact();
                         interactuats.Add(meshInteractuable);
                     }
