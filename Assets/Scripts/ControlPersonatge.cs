@@ -251,7 +251,7 @@ public class ControlPersonatge : MonoBehaviour
 
     public void ReanudarMoviment()
     {
-        animator.enabled = true;
         this.enabled = true;
+        animator.enabled = true;
     }
 }
