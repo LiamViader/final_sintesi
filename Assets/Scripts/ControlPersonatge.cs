@@ -224,9 +224,10 @@ public class ControlPersonatge : MonoBehaviour
                 Vector3 posGlobal = transform.TransformPoint(pos);
                 Ray ray = new Ray(posGlobal, Vector3.down);
                 RaycastHit hitInfo;
-                if (Physics.Raycast(ray, out hitInfo, 0.05f))
+                if (Physics.Raycast(ray, out hitInfo, 0.1f))
                 { // si esta tocant el terra
-                    animator.SetTrigger("Jump");
+                    animator.applyRootMotion = false;
+                    rb.AddForce(Vector3.up * 5000);
                 }
                 /*if (esPetit)
                 {
