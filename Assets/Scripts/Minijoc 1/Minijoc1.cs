@@ -15,7 +15,6 @@ public class Minijoc1 : MonoBehaviour
     int[] enllaç = new int[] { 0, 1, 2 };
     public Material[] textures;
 
-    public Porta portaAObrir;
 
     [SerializeField] public MinijocInteractuable[] minijocs;
     [SerializeField] public string[] Textminijocs;
@@ -76,7 +75,6 @@ public class Minijoc1 : MonoBehaviour
             llumGameObj.SetActive(false);
             controladorInteraccio.AcabarInteractuar();
             Debug.Log("RESOLT MINIJOC");
-            portaAObrir.Obrir();
             
         }
     }
