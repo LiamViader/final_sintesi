@@ -44,6 +44,8 @@ public class ControlPersonatge : MonoBehaviour
     //Animacions personatge
     Animator animator;
 
+    [SerializeField]
+    private GameObject _menuInGame;
 
     private void Awake()
     {
@@ -195,6 +197,11 @@ public class ControlPersonatge : MonoBehaviour
         GetComponent<RigBuilder>().enabled = true;
     }
 
+    private void Pausar()
+    {
+        _menuInGame.SetActive(true);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -204,6 +211,10 @@ public class ControlPersonatge : MonoBehaviour
         HighLightDisparable();
         DispararLaser();
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pausar();
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height *0.5f, _collider.center.z);
