@@ -29,7 +29,7 @@ public class MinijocInteractuable : Interactuable
             _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
             GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
             _interactuant = true;
-            ControlPersonatge._instance.enabled = false;
+            ControlPersonatge._instance.PararMoviment();
             interactText = "Deixar d'interactuar";
             abilita.Invoke();
            
@@ -47,7 +47,7 @@ public class MinijocInteractuable : Interactuable
         interactText = _baseInteractText;
         GestorHabsSingleton._instance.CanviarHab(_last_hab, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardIn, 2));
         _interactuant = false;
-        ControlPersonatge._instance.enabled = true;
+        ControlPersonatge._instance.ReanudarMoviment();
     }
 
     public bool getInteractuar(){

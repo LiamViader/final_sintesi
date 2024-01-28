@@ -205,36 +205,53 @@ public class ControlPersonatge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // _Camera.LookAt(rb);
-        Control();
-        ControlVelocitat();
-        HighLightDisparable();
-        DispararLaser();
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pausar();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        else
         {
-            Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height *0.5f, _collider.center.z);
-            Vector3 posGlobal = transform.TransformPoint(pos);
-            Ray ray = new Ray(posGlobal, Vector3.down);
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, 0.05f))
-            { // si esta tocant el terra
-                animator.SetTrigger("Jump");
-            }
-            /*if (esPetit)
+            // _Camera.LookAt(rb);
+            Control();
+            ControlVelocitat();
+            HighLightDisparable();
+            DispararLaser();
+
+
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                //salta m�s
-                rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
+                Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f, _collider.center.z);
+                Vector3 posGlobal = transform.TransformPoint(pos);
+                Ray ray = new Ray(posGlobal, Vector3.down);
+                RaycastHit hitInfo;
+                if (Physics.Raycast(ray, out hitInfo, 0.05f))
+                { // si esta tocant el terra
+                    animator.SetTrigger("Jump");
+                }
+                /*if (esPetit)
+                {
+                    //salta m�s
+                    rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
+                }
+                else
+                {
+                    //salta menys
+                    rb.AddForce();
+                }*/
             }
-            else
-            {
-                //salta menys
-                rb.AddForce();
-            }*/
         }
+       
+    }
+
+    public void PararMoviment()
+    {
+        animator.enabled = false;
+        this.enabled = false;
+    }
+
+    public void ReanudarMoviment()
+    {
+        animator.enabled = true;
+        this.enabled = true;
     }
 }
