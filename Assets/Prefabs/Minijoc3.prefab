@@ -750,6 +750,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   PuntClic: {x: 0, y: 0, z: 0}
+  clic:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &7902581434686864996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -942,9 +945,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 457705535714991695}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: e58f225efad2e6742a828a3a784fc20d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   incorrecte:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 457705535714991695}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 32fc337e729aef24cbac779824d3b77d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  clic:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 457705535714991695}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 6eb89777b4885504e8338819aee62c62, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6076877897155586364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1101,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   PuntClic: {x: 0, y: 0, z: 0}
+  clic:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &3516264833059063905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1408,7 +1453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eff140b25d64601aabc6ba32245d099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  funciona: {fileID: 0}
   abilitar:
     m_PersistentCalls:
       m_Calls:

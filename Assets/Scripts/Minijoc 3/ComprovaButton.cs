@@ -14,6 +14,8 @@ public class ComprovaButton : MonoBehaviour
     [SerializeField] 
     public UnityEvent incorrecte;
 
+    public UnityEvent clic;
+
     Functions_Ones OnaDin, OnaEst;
     void Start()
     {
@@ -26,7 +28,7 @@ public class ComprovaButton : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-     
+        clic.Invoke();
         float A = 0;
         float F = 0;
         float A2 = 0;

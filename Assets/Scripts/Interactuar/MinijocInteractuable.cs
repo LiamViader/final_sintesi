@@ -22,7 +22,7 @@ public class MinijocInteractuable : Interactuable
 
     void Start()
     {
-
+        _baseInteractText = interactText;
     }
 
     public override void Interact() {
@@ -39,7 +39,6 @@ public class MinijocInteractuable : Interactuable
                 }
                 _interactuant = true;
                 ControlPersonatge._instance.enabled = false;
-                _baseInteractText = interactText;
                 interactText = "Deixar d'interactuar";
                 abilita.Invoke();
             }
@@ -75,5 +74,11 @@ public class MinijocInteractuable : Interactuable
 
     public void Disponible(bool disp){
         _Disponible = disp;
+        interactText = _baseInteractText;
     }
+
+    public void CanviarUnableText(string mis){
+        unableText=mis;
+    }
+
 }

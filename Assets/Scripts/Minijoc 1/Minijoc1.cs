@@ -17,7 +17,9 @@ public class Minijoc1 : MonoBehaviour
 
     public Porta portaAObrir;
 
-    public UnityEvent finalitzat;
+    [SerializeField] public MinijocInteractuable[] minijocs;
+    [SerializeField] public string[] Textminijocs;
+     [SerializeField] public bool[] Dispminijocs;
     [SerializeField] private GameObject llumsGameObj;
     [SerializeField] private GameObject llumGameObj;
     [SerializeField] private MinijocInteractuable controladorInteraccio;
@@ -68,13 +70,22 @@ public class Minijoc1 : MonoBehaviour
         }
         if (Resolt1 && Resolt2)
         {
-            finalitzat.Invoke();
+            this.Completat();
             Resolt = true;
             llumsGameObj.SetActive(true);
             llumGameObj.SetActive(false);
             controladorInteraccio.AcabarInteractuar();
             Debug.Log("RESOLT MINIJOC");
             portaAObrir.Obrir();
+            
+        }
+    }
+
+    private void Completat(){
+        for (int i =0; i<minijocs.Length; i++){
+            Debug.Log("CANVIAR a: "+Textminijocs[i]);
+            minijocs[i].CanviarUnableText(Textminijocs[i]);
+            minijocs[i].Disponible(Dispminijocs[i]);
         }
     }
 }
