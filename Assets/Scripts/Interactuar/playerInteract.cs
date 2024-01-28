@@ -16,7 +16,7 @@ public class playerInteract : MonoBehaviour
             {
                 if (collider.TryGetComponent(out Interactuable meshInteractuable))
                 {
-                    if (!interactuats.Contains(meshInteractuable)) {
+                    if (!interactuats.Contains(meshInteractuable) && meshInteractuable.enabled) {
                         meshInteractuable.Interact();
                         interactuats.Add(meshInteractuable);
                     }
@@ -32,7 +32,7 @@ public Interactuable GetInteractuableObject(){
         float interactRange = 2f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach(Collider collider in colliderArray){
-                if(collider.TryGetComponent(out Interactuable meshInteractuable)){
+                if(collider.TryGetComponent(out Interactuable meshInteractuable) && meshInteractuable.enabled){
                     meshInteractuableList.Add(meshInteractuable);
                 }
             }

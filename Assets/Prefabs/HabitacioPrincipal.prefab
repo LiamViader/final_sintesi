@@ -1568,7 +1568,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Investigar
-  "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 0}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 0}
@@ -2311,8 +2310,8 @@ GameObject:
   - component: {fileID: 8009049856291964074}
   - component: {fileID: 3896080406338228162}
   - component: {fileID: 9016499727479986657}
-  - component: {fileID: 3904834655587062581}
   - component: {fileID: 5613581082129775820}
+  - component: {fileID: 1784925592907661355}
   m_Layer: 0
   m_Name: Pista Reaccio
   m_TagString: Untagged
@@ -2406,29 +2405,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.999999, y: 10, z: 10.000002}
   m_Center: {x: 0.0000019073486, y: -0.000011444092, z: 0.0000076293945}
---- !u!114 &3904834655587062581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046478981005529757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfc7f8cf6d63da4bac47018446fb448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Investigar
-  "_teAparen\xE7a": 0
-  _cameresMinijoc: {fileID: 5613581082129775820}
-  "_aparen\xE7aMinijocNoObert": {fileID: 0}
-  _minijoc: {fileID: 0}
-  abilita:
-    m_PersistentCalls:
-      m_Calls: []
-  desabilita:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &5613581082129775820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,6 +2419,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameres:
   - {fileID: 2379109317398608657}
+--- !u!114 &1784925592907661355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046478981005529757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Investigar
+  _cameresMinijoc: {fileID: 5613581082129775820}
+  "_aparen\xE7aMinijocNoObert": {fileID: 0}
+  _minijoc: {fileID: 0}
+  abilita:
+    m_PersistentCalls:
+      m_Calls: []
+  desabilita:
+    m_PersistentCalls:
+      m_Calls: []
+  _available: 0
+  _notAvailableMessage: "Est\xE0 massa fosc i no es llegeix res"
 --- !u!1 &4078165944121636477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,7 +2996,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Investigar
-  "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 2622057620662194583}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 0}
@@ -11571,7 +11570,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Interactua
-  "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 2169988689151214644}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 5468093806029426276}
@@ -13773,7 +13771,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Obrir quadre de llums
-  "_teAparen\xE7a": 1
   _cameresMinijoc: {fileID: 194045676775725108}
   "_aparen\xE7aMinijocNoObert": {fileID: 4534918623913503330}
   _minijoc: {fileID: 6144267835017275596}
@@ -14732,7 +14729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Interactua
-  "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 0}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 824556744314364703}
