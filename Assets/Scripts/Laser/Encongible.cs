@@ -49,7 +49,7 @@ public class Encongible : Disparable
         {
             _audioPrefab = Resources.Load<GameObject>("AudioEncongirse");
         }
-        GameObject o = Instantiate(_audioPrefab);
+        GameObject o = Instantiate(_audioPrefab,transform);
        _sfxEncongirse= o.GetComponent<AudioSource>();
     }
 
