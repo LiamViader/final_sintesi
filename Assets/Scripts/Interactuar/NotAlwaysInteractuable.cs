@@ -24,6 +24,7 @@ public class NotAlwaysInteractuable : MinijocInteractuable
     {
         if (!_available)
         {
+            PlaySoundIncorrecte();
             UiControllerSingleton._instance._missatge.Mostrar(_notAvailableMessage, 1.5f);
         }
         else

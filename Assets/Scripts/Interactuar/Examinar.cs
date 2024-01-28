@@ -18,6 +18,7 @@ public class Examinar : Interactuable
 
     public override void Interact()
     {
+        PlaySound();
         UiControllerSingleton._instance._missatge.Mostrar("És massa gran per sortir", 1.5f);
     }
 }

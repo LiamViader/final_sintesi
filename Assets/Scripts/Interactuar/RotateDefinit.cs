@@ -22,6 +22,7 @@ public class RotateDefinit : Interactuable
 
     public override void Interact()
     {
+        PlaySound();
         if (_rotacions.Count > 0) SeguentPos();
     }
 

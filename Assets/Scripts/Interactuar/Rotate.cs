@@ -28,6 +28,7 @@ public class Rotate : Interactuable
 
     public override void Interact()
     {
+        PlaySound();
         Vector3 rotation=new Vector3(_xAxis ? 1 : 0, _yAxis ? 1 : 0, _zAxis ? 1 : 0);
         _objecteQueRota.Rotate(rotation,_amout);
     }
