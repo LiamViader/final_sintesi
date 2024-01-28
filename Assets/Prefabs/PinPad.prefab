@@ -4175,6 +4175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7540701006804649885}
   - component: {fileID: 6076326135030536048}
+  - component: {fileID: 5100495065708976620}
   m_Layer: 0
   m_Name: PinPad
   m_TagString: Untagged
@@ -4222,6 +4223,55 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.3, z: 0.02}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5100495065708976620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8197836112772051220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Introduir Codi
+  "_teAparen\xE7a": 0
+  _cameresMinijoc: {fileID: 0}
+  "_aparen\xE7aMinijocNoObert": {fileID: 0}
+  _minijoc: {fileID: 8197836112772051220}
+  abilita:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5206300413119383007}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  desabilita:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5206300413119383007}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _available: 0
+  _notAvailableMessage: Necessita electricitat per a funcionar
 --- !u!1 &8975448874954914214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4415,5 +4465,10 @@ PrefabInstance:
 --- !u!4 &4831146377474154341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 704580570535150958, guid: 75087ca99ecc4264ab937b89c140d230, type: 3}
+  m_PrefabInstance: {fileID: 5389826078751644171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5206300413119383007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 183799754500841428, guid: 75087ca99ecc4264ab937b89c140d230, type: 3}
   m_PrefabInstance: {fileID: 5389826078751644171}
   m_PrefabAsset: {fileID: 0}

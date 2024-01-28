@@ -787,7 +787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077386168990971231}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.025562352, y: -0.6763879, z: 0.023500664, w: 0.73572665}
+  m_LocalRotation: {x: 0.025562339, y: -0.6763879, z: 0.023500655, w: 0.73572665}
   m_LocalPosition: {x: -13.18, y: 9.44, z: -10.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1568,12 +1568,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Investigar
-  unableText: 
   "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 0}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 0}
-  _Disponible: 0
   abilita:
     m_PersistentCalls:
       m_Calls: []
@@ -1837,7 +1835,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3138488674487354829}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20127077, y: -0.00917955, z: 0.0018862609, w: 0.9794908}
+  m_LocalRotation: {x: 0.20127076, y: -0.009179515, z: 0.0018862538, w: 0.9794908}
   m_LocalPosition: {x: -2.374, y: 1.33, z: 6.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2421,12 +2419,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Investigar
-  unableText: 
   "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 5613581082129775820}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 0}
-  _Disponible: 0
   abilita:
     m_PersistentCalls:
       m_Calls: []
@@ -3000,12 +2996,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Investigar
-  unableText: 
   "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 2622057620662194583}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 0}
-  _Disponible: 0
   abilita:
     m_PersistentCalls:
       m_Calls: []
@@ -4576,7 +4570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6936965025139037412}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00088204624, y: 0.973353, z: -0.2292796, w: -0.003744521}
+  m_LocalRotation: {x: -0.00088205014, y: 0.973353, z: -0.2292796, w: -0.003744538}
   m_LocalPosition: {x: -13.299776, y: 11.869051, z: -10.690322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4917,7 +4911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7311069975982939490}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00085631397, y: 0.7044307, z: 0.0008498703, w: 0.70977175}
+  m_LocalRotation: {x: -0.00085631397, y: 0.7044307, z: 0.00084987027, w: 0.70977175}
   m_LocalPosition: {x: -3.07, y: 9.29, z: -2.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5511,7 +5505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8119084104490506731}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00088204653, y: 0.973353, z: -0.2292796, w: -0.003744522}
+  m_LocalRotation: {x: -0.00088205014, y: 0.973353, z: -0.2292796, w: -0.003744538}
   m_LocalPosition: {x: -5.14, y: 2.1, z: -3.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6299,9 +6293,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9013715852281995443, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8100080750293250691}
-    - targetCorrespondingSourceObject: {fileID: 9013715852281995443, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7136400984591761208}
     - targetCorrespondingSourceObject: {fileID: 9013715852281995443, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
       insertIndex: -1
@@ -6322,31 +6313,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9013715852281995443, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
   m_PrefabInstance: {fileID: 280648039234813562}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8100080750293250691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9147419044986707657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfc7f8cf6d63da4bac47018446fb448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Restaurar senyal
-  unableText: 
-  "_teAparen\xE7a": 0
-  _cameresMinijoc: {fileID: 7136400984591761208}
-  "_aparen\xE7aMinijocNoObert": {fileID: 0}
-  _minijoc: {fileID: 0}
-  _Disponible: 0
-  abilita:
-    m_PersistentCalls:
-      m_Calls: []
-  desabilita:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &7136400984591761208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7662,23 +7628,23 @@ PrefabInstance:
     - target: {fileID: 1342309930150546774, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: minijocs.Array.data[0]
       value: 
-      objectReference: {fileID: 8100080750293250691}
+      objectReference: {fileID: 0}
     - target: {fileID: 1342309930150546774, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: minijocs.Array.data[1]
       value: 
-      objectReference: {fileID: 2962668527871178335}
+      objectReference: {fileID: 0}
     - target: {fileID: 1342309930150546774, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: minijocs.Array.data[2]
       value: 
-      objectReference: {fileID: 1504444217461925418}
+      objectReference: {fileID: 0}
     - target: {fileID: 1342309930150546774, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: minijocs.Array.data[3]
       value: 
-      objectReference: {fileID: 3904834655587062581}
+      objectReference: {fileID: 0}
     - target: {fileID: 1342309930150546774, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 1386850932491390332}
+      objectReference: {fileID: 0}
     - target: {fileID: 1342309930150546774, guid: 7ce9c7293ef01c54ea033142df481e5f, type: 3}
       propertyPath: Dispminijocs.Array.size
       value: 5
@@ -10626,9 +10592,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8197836112772051220, guid: 225b7bae32ac6d94ea71257ba44f511c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2962668527871178335}
-    - targetCorrespondingSourceObject: {fileID: 8197836112772051220, guid: 225b7bae32ac6d94ea71257ba44f511c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7497924216812111313}
   m_SourcePrefab: {fileID: 100100000, guid: 225b7bae32ac6d94ea71257ba44f511c, type: 3}
 --- !u!1 &4892105295085504795 stripped
@@ -10636,31 +10599,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8197836112772051220, guid: 225b7bae32ac6d94ea71257ba44f511c, type: 3}
   m_PrefabInstance: {fileID: 3612079702665377807}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2962668527871178335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4892105295085504795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfc7f8cf6d63da4bac47018446fb448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Introduir Codi
-  unableText: 
-  "_teAparen\xE7a": 0
-  _cameresMinijoc: {fileID: 7497924216812111313}
-  "_aparen\xE7aMinijocNoObert": {fileID: 0}
-  _minijoc: {fileID: 4892105295085504795}
-  _Disponible: 0
-  abilita:
-    m_PersistentCalls:
-      m_Calls: []
-  desabilita:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &7497924216812111313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11633,12 +11571,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Interactua
-  unableText: "Necesito una tarjeta d'acc\xE9s"
   "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 2169988689151214644}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 5468093806029426276}
-  _Disponible: 0
   abilita:
     m_PersistentCalls:
       m_Calls: []
@@ -12774,7 +12710,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Examinar
-  unableText: 
 --- !u!1001 &6291262356122820549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13838,18 +13773,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Obrir quadre de llums
-  unableText: 
   "_teAparen\xE7a": 1
   _cameresMinijoc: {fileID: 194045676775725108}
   "_aparen\xE7aMinijocNoObert": {fileID: 4534918623913503330}
   _minijoc: {fileID: 6144267835017275596}
-  _Disponible: 0
   abilita:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6144267835017275596}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   desabilita:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6144267835017275596}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &194045676775725108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14775,12 +14732,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Interactua
-  unableText: "Necesito una tarjeta d'acc\xE9s"
   "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 0}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 824556744314364703}
-  _Disponible: 0
   abilita:
     m_PersistentCalls:
       m_Calls: []

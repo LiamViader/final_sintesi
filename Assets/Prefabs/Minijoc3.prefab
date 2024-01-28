@@ -1406,7 +1406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8294828798364822890}
-  - component: {fileID: 1138368035004950872}
+  - component: {fileID: 540623315562617423}
   m_Layer: 0
   m_Name: Minijoc3
   m_TagString: Untagged
@@ -1441,7 +1441,7 @@ Transform:
   - {fileID: 8045819108100832641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1138368035004950872
+--- !u!114 &540623315562617423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1450,10 +1450,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 9013715852281995443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eff140b25d64601aabc6ba32245d099, type: 3}
+  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilitar:
+  interactText: Restaurar senyal
+  "_teAparen\xE7a": 0
+  _cameresMinijoc: {fileID: 0}
+  "_aparen\xE7aMinijocNoObert": {fileID: 0}
+  _minijoc: {fileID: 9013715852281995443}
+  abilita:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4384023774670158078}
@@ -1492,7 +1497,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  desabilitar:
+  desabilita:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4384023774670158078}
@@ -1531,3 +1536,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _available: 1
+  _notAvailableMessage: 

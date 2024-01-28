@@ -8,12 +8,10 @@ using UnityEngine.Events;
 public class MinijocInteractuable : Interactuable
 {
     
-    [SerializeField] private bool _teAparença;
     [SerializeField] private CameresHabitacio _cameresMinijoc;
     [SerializeField] private MeshRenderer _aparençaMinijocNoObert; 
     [SerializeField] private GameObject _minijoc; 
 
-    [SerializeField] public bool _Disponible;
     private CameresHabitacio _last_hab;
     private bool _interactuant = false;
     private string _baseInteractText;
@@ -28,23 +26,12 @@ public class MinijocInteractuable : Interactuable
     public override void Interact() {
         if (!_interactuant)
         {
-            Debug.Log("disponible" + _Disponible);
-            if (_Disponible){
-                 _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
-                GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
-                if (_teAparença)
-                {
-                    _aparençaMinijocNoObert.enabled = false;
-                    _minijoc.SetActive(true);
-                }
-                _interactuant = true;
-                ControlPersonatge._instance.enabled = false;
-                interactText = "Deixar d'interactuar";
-                abilita.Invoke();
-            }
-            else{
-                interactText = unableText;
-            }
+            _last_hab = GestorHabsSingleton._instance.ActiveHab();//guardo el gestor de cameres anteriors per a poder tornar
+            GestorHabsSingleton._instance.CanviarHab(_cameresMinijoc, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardOut, 2));
+            _interactuant = true;
+            ControlPersonatge._instance.enabled = false;
+            interactText = "Deixar d'interactuar";
+            abilita.Invoke();
            
         }
         else
@@ -59,11 +46,6 @@ public class MinijocInteractuable : Interactuable
     {
         interactText = _baseInteractText;
         GestorHabsSingleton._instance.CanviarHab(_last_hab, new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.HardIn, 2));
-        if (_teAparença)
-        {
-            _aparençaMinijocNoObert.enabled = true;
-            _minijoc.SetActive(false);
-        }
         _interactuant = false;
         ControlPersonatge._instance.enabled = true;
     }
@@ -72,13 +54,5 @@ public class MinijocInteractuable : Interactuable
         return _interactuant;
     }
 
-    public void Disponible(bool disp){
-        _Disponible = disp;
-        interactText = _baseInteractText;
-    }
-
-    public void CanviarUnableText(string mis){
-        unableText=mis;
-    }
 
 }
