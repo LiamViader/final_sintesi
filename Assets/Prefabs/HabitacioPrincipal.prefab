@@ -1420,8 +1420,8 @@ GameObject:
   - component: {fileID: 3836149350256065963}
   - component: {fileID: 2013570420132484120}
   - component: {fileID: 2790956267375374441}
-  - component: {fileID: 1504444217461925418}
   - component: {fileID: 1409012738867286598}
+  - component: {fileID: 5406515612794734235}
   m_Layer: 0
   m_Name: TaulaPeriodica
   m_TagString: Untagged
@@ -1554,28 +1554,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &1504444217461925418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2298478223365701942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfc7f8cf6d63da4bac47018446fb448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Investigar
-  _cameresMinijoc: {fileID: 1409012738867286598}
-  "_aparen\xE7aMinijocNoObert": {fileID: 0}
-  _minijoc: {fileID: 0}
-  abilita:
-    m_PersistentCalls:
-      m_Calls: []
-  desabilita:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1409012738867286598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,6 +1568,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameres:
   - {fileID: 1736084799983566906}
+--- !u!114 &5406515612794734235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298478223365701942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Investigar
+  _cameresMinijoc: {fileID: 1409012738867286598}
+  "_aparen\xE7aMinijocNoObert": {fileID: 0}
+  _minijoc: {fileID: 0}
+  abilita:
+    m_PersistentCalls:
+      m_Calls: []
+  desabilita:
+    m_PersistentCalls:
+      m_Calls: []
+  _available: 0
+  _notAvailableMessage: "\xC9s massa fosc per veure-ho"
 --- !u!1 &2396618381807267095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,8 +2815,8 @@ GameObject:
   - component: {fileID: 7704671976194283161}
   - component: {fileID: 290521334136247420}
   - component: {fileID: 3587904314174001160}
-  - component: {fileID: 1386850932491390332}
   - component: {fileID: 2622057620662194583}
+  - component: {fileID: 140073770606554826}
   m_Layer: 0
   m_Name: Pista num
   m_TagString: Untagged
@@ -2909,28 +2911,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0.000011444092, y: 0.000015258789, z: 0.000022888184}
---- !u!114 &1386850932491390332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4476926397361696604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfc7f8cf6d63da4bac47018446fb448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Investigar
-  _cameresMinijoc: {fileID: 2622057620662194583}
-  "_aparen\xE7aMinijocNoObert": {fileID: 0}
-  _minijoc: {fileID: 0}
-  abilita:
-    m_PersistentCalls:
-      m_Calls: []
-  desabilita:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2622057620662194583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2945,6 +2925,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameres:
   - {fileID: 232596571779185364}
+--- !u!114 &140073770606554826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4476926397361696604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Investigar
+  _cameresMinijoc: {fileID: 2622057620662194583}
+  "_aparen\xE7aMinijocNoObert": {fileID: 0}
+  _minijoc: {fileID: 0}
+  abilita:
+    m_PersistentCalls:
+      m_Calls: []
+  desabilita:
+    m_PersistentCalls:
+      m_Calls: []
+  _available: 1
+  _notAvailableMessage: 
 --- !u!1 &4506646389696471449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6390,10 +6394,6 @@ PrefabInstance:
       propertyPath: correcte.m_PersistentCalls.m_Calls.Array.data[9].m_Mode
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 6684370231058808845, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
-      propertyPath: correcte.m_PersistentCalls.m_Calls.Array.data[5].m_Target
-      value: 
-      objectReference: {fileID: 1504444217461925418}
     - target: {fileID: 6684370231058808845, guid: 0e2dbfdf54cca8d4d99869c9b7d32a29, type: 3}
       propertyPath: correcte.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
