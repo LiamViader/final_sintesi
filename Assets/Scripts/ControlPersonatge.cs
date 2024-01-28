@@ -47,6 +47,8 @@ public class ControlPersonatge : MonoBehaviour
     [SerializeField]
     private GameObject _menuInGame;
 
+    private bool _saltant=false;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -218,7 +220,7 @@ public class ControlPersonatge : MonoBehaviour
             DispararLaser();
 
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !_saltant)
             {
                 Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f, _collider.center.z);
                 Vector3 posGlobal = transform.TransformPoint(pos);
@@ -228,7 +230,9 @@ public class ControlPersonatge : MonoBehaviour
                 { // si esta tocant el terra
                     animator.applyRootMotion = false;
                     rb.AddForce(Vector3.up * 5000);
+                    _saltant = true;
                 }
+                
                 /*if (esPetit)
                 {
                     //salta m�s
@@ -239,6 +243,18 @@ public class ControlPersonatge : MonoBehaviour
                     //salta menys
                     rb.AddForce();
                 }*/
+            }
+            else if(_saltant)
+            {
+                Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f, _collider.center.z);
+                Vector3 posGlobal = transform.TransformPoint(pos);
+                Ray ray = new Ray(posGlobal, Vector3.down);
+                RaycastHit hitInfo;
+                if (Physics.Raycast(ray, out hitInfo, 0.1f))
+                {
+                    _saltant = false;
+                    animator.applyRootMotion = true;
+                }
             }
         }
        

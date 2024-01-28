@@ -4236,14 +4236,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Introduir Codi
-  "_teAparen\xE7a": 0
   _cameresMinijoc: {fileID: 0}
   "_aparen\xE7aMinijocNoObert": {fileID: 0}
   _minijoc: {fileID: 8197836112772051220}
   abilita:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5206300413119383007}
+      - m_Target: {fileID: 7711942507509288237}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4258,7 +4257,7 @@ MonoBehaviour:
   desabilita:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5206300413119383007}
+      - m_Target: {fileID: 7711942507509288237}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4465,10 +4464,5 @@ PrefabInstance:
 --- !u!4 &4831146377474154341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 704580570535150958, guid: 75087ca99ecc4264ab937b89c140d230, type: 3}
-  m_PrefabInstance: {fileID: 5389826078751644171}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5206300413119383007 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 183799754500841428, guid: 75087ca99ecc4264ab937b89c140d230, type: 3}
   m_PrefabInstance: {fileID: 5389826078751644171}
   m_PrefabAsset: {fileID: 0}
