@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1747180557310619893, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 1.7315079e-16
+      value: -1.7315079e-16
       objectReference: {fileID: 0}
     - target: {fileID: 1747180557310619893, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.y
@@ -770,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1747180557310619893, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.8909586e-16
+      value: -1.8909586e-16
       objectReference: {fileID: 0}
     - target: {fileID: 1747180557310619893, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1382,11 +1382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8722383
+      value: 0.87223834
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.048905037
+      value: 0.04890504
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1394,7 +1394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.027241794
+      value: -0.027241793
       objectReference: {fileID: 0}
     - target: {fileID: 3666932519333215389, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1530,7 +1530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5048061687547355591, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: unableText
-      value: Necesito una clau usb
+      value: Necesito una clau USB
       objectReference: {fileID: 0}
     - target: {fileID: 5048061687547355591, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: _Disponible
@@ -2391,7 +2391,7 @@ PrefabInstance:
     - target: {fileID: 6856352925664738935, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: correcte.m_PersistentCalls.m_Calls.Array.data[12].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 0aee0f473a8798749bcc8f3885eb0e58, type: 3}
     - target: {fileID: 6856352925664738935, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: correcte.m_PersistentCalls.m_Calls.Array.data[12].m_Arguments.m_StringArgument
       value: M'han penjat
