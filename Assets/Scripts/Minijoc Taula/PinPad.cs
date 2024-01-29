@@ -24,7 +24,7 @@ public class PinPad : MonoBehaviour
     void Start()
     {
         if (_Pin == 0){
-            _Pin = 7772;
+            _Pin = 832389;
         }
         _disableInput = false;
         _Text.text = string.Empty;
@@ -59,7 +59,7 @@ public class PinPad : MonoBehaviour
         string inputNum = num.ToString();
         if (!_disableInput){
             clic.Invoke();
-            if (_Text.text.Length < 4)_Text.text += inputNum;
+            if (_Text.text.Length < 6)_Text.text += inputNum;
         }
     }
 

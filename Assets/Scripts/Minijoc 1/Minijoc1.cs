@@ -17,7 +17,6 @@ public class Minijoc1 : MonoBehaviour
 
 
     [SerializeField] public NotAlwaysInteractuable[] minijocs;
-    [SerializeField] public string[] Textminijocs;
      [SerializeField] public bool[] Dispminijocs;
     [SerializeField] private GameObject llumsGameObj;
     [SerializeField] private GameObject llumGameObj;
@@ -81,8 +80,6 @@ public class Minijoc1 : MonoBehaviour
 
     private void Completat(){
         for (int i =0; i<minijocs.Length; i++){
-            Debug.Log("CANVIAR a: "+Textminijocs[i]);
-            minijocs[i].ChangeAvailableText(Textminijocs[i]);
             if (Dispminijocs[i]) minijocs[i].MakeAvailable();
             else minijocs[i].MakeUnavailable();
         }
