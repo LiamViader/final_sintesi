@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class Examinar : Interactuable
 {
     public Encongible encongible;
-    public ControlLaserQuiet _controlLaser;
 
     public UnityEvent PotObrir;
 
@@ -30,9 +29,8 @@ public class Examinar : Interactuable
         {
             PlaySound();
             PotObrir.Invoke();
-            _controlLaser.FinalitzarLaser();
-            
-            
+            Destroy(gameObject);
+                        
         }
         else
         {
