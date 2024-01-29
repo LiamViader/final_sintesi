@@ -34,7 +34,7 @@ public class Examinar : Interactuable
         }
         else
         {
-            UiControllerSingleton._instance._missatge.Mostrar("El dispositiu ha de ser m�s petit per poder agafar-lo", 1.5f);
+            UiControllerSingleton._instance._missatge.Mostrar("Ha de ser mes petit per poder agafar-lo", 1.5f);
             PlaySoundIncorrecte();
         }
     }
