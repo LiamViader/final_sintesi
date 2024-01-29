@@ -37,7 +37,13 @@ public class FoolProofMenu : MonoBehaviour
 
     public void EngegarRadio()
     {
+        ObrirLlums();
         _minijocRadio.correcte.Invoke();
-        SortirMenu();
+    }
+
+    public void ObrirPortaMiralls()
+    {
+        EngegarRadio();
+
     }
 }

@@ -2283,9 +2283,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuInGame, Assembly-CSharp
-        m_MethodName: SortirMenu
+      - m_Target: {fileID: 3358966785366577180}
+        m_TargetAssemblyTypeName: FoolProofMenu, Assembly-CSharp
+        m_MethodName: ObrirPortaMiralls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
