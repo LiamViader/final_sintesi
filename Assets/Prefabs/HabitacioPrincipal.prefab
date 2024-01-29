@@ -12567,9 +12567,6 @@ PrefabInstance:
       addedObject: {fileID: 2641933924050524931}
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5048061687547355591}
-    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2169988689151214644}
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
       insertIndex: -1
@@ -12606,28 +12603,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9169881, y: 2.1345463, z: 1.3978661}
   m_Center: {x: -0.34958303, y: 0.0000038146973, z: 0}
---- !u!114 &5048061687547355591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5468093806029426276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfc7f8cf6d63da4bac47018446fb448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Interactua
-  _cameresMinijoc: {fileID: 2169988689151214644}
-  "_aparen\xE7aMinijocNoObert": {fileID: 0}
-  _minijoc: {fileID: 5468093806029426276}
-  abilita:
-    m_PersistentCalls:
-      m_Calls: []
-  desabilita:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2169988689151214644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12669,7 +12644,7 @@ MonoBehaviour:
           m_StringArgument: glass_door_open
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5048061687547355591}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MinijocInteractuable, Assembly-CSharp
         m_MethodName: Disponible
         m_Mode: 6
