@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FoolProofMenu : MonoBehaviour
 {
-
+    [SerializeField]
+    private Minijoc1 _minijocLlums;
     
 
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class FoolProofMenu : MonoBehaviour
 
     public void ObrirLlums()
     {
-
+        _minijocLlums.Completat();
     }
     public void SortirMenu()
     {

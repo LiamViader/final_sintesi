@@ -70,16 +70,16 @@ public class Minijoc1 : MonoBehaviour
         if (Resolt1 && Resolt2)
         {
             this.Completat();
-            Resolt = true;
-            llumsGameObj.SetActive(true);
-            llumGameObj.SetActive(false);
-            controladorInteraccio.AcabarInteractuar();
-            Debug.Log("RESOLT MINIJOC");
             
         }
     }
 
-    private void Completat(){
+    public void Completat(){
+        Resolt = true;
+        llumsGameObj.SetActive(true);
+        llumGameObj.SetActive(false);
+        controladorInteraccio.AcabarInteractuar();
+        Debug.Log("RESOLT MINIJOC");
         int u = 0;
         for (int i =0; i<minijocs.Length; i++){
             if (Dispminijocs[i]) minijocs[i].MakeAvailable();
