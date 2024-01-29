@@ -13,6 +13,12 @@ public class FoolProofMenu : MonoBehaviour
     [SerializeField]
     private PinPad _contrasenyaMiralls;
 
+    [SerializeField]
+    private Tecla _portaArmari;
+
+    [SerializeField]
+    private Tecla _portaFinal;
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,5 +54,23 @@ public class FoolProofMenu : MonoBehaviour
     {
         EngegarRadio();
         _contrasenyaMiralls.correcte.Invoke();
+    }
+
+    public void AdquirirDispositiu()
+    {
+        ObrirPortaMiralls();
+        ControlPersonatge._instance.AgafarDispositiu();
+    }
+
+    public void ObrirPortaArmari()
+    {
+        AdquirirDispositiu();
+        _portaArmari.OnClic.Invoke();
+    }
+
+    public void ObrirPortaFinal()
+    {
+        ObrirPortaArmari();
+        _portaFinal.OnClic.Invoke();
     }
 }

@@ -362,9 +362,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuInGame, Assembly-CSharp
-        m_MethodName: SortirMenu
+      - m_Target: {fileID: 3358966785366577180}
+        m_TargetAssemblyTypeName: FoolProofMenu, Assembly-CSharp
+        m_MethodName: ObrirPortaFinal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -555,6 +555,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minijocLlums: {fileID: 0}
   _minijocRadio: {fileID: 0}
+  _contrasenyaMiralls: {fileID: 0}
+  _portaArmari: {fileID: 0}
+  _portaFinal: {fileID: 0}
 --- !u!1 &2641223020488429234
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,9 +885,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuInGame, Assembly-CSharp
-        m_MethodName: SortirMenu
+      - m_Target: {fileID: 3358966785366577180}
+        m_TargetAssemblyTypeName: FoolProofMenu, Assembly-CSharp
+        m_MethodName: ObrirPortaArmari
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1562,9 +1565,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuInGame, Assembly-CSharp
-        m_MethodName: SortirMenu
+      - m_Target: {fileID: 3358966785366577180}
+        m_TargetAssemblyTypeName: FoolProofMenu, Assembly-CSharp
+        m_MethodName: AdquirirDispositiu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
