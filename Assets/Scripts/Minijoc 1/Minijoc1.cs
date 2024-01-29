@@ -78,7 +78,7 @@ public class Minijoc1 : MonoBehaviour
         Resolt = true;
         llumsGameObj.SetActive(true);
         llumGameObj.SetActive(false);
-        controladorInteraccio.AcabarInteractuar();
+        if(controladorInteraccio.Interactuant()) controladorInteraccio.AcabarInteractuar();
         Debug.Log("RESOLT MINIJOC");
         int u = 0;
         for (int i =0; i<minijocs.Length; i++){
@@ -90,4 +90,6 @@ public class Minijoc1 : MonoBehaviour
             }
         }
     }
+
+
 }

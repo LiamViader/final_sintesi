@@ -6,7 +6,10 @@ public class FoolProofMenu : MonoBehaviour
 {
     [SerializeField]
     private Minijoc1 _minijocLlums;
-    
+
+    [SerializeField]
+    private ComprovaButton _minijocRadio;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +26,18 @@ public class FoolProofMenu : MonoBehaviour
     public void ObrirLlums()
     {
         _minijocLlums.Completat();
+        SortirMenu();
     }
     public void SortirMenu()
     {
         gameObject.SetActive(false);
         ControlMenu._instance.Tornar();
 
+    }
+
+    public void EngegarRadio()
+    {
+        _minijocRadio.correcte.Invoke();
+        SortirMenu();
     }
 }

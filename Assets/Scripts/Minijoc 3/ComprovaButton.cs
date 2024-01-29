@@ -8,6 +8,7 @@ public class ComprovaButton : MonoBehaviour
 {
     // Start is called before the first frame update
     private Collider col;
+    public MinijocInteractuable controladorInteractuable;
 
     [SerializeField] 
     public UnityEvent correcte;
@@ -39,14 +40,18 @@ public class ComprovaButton : MonoBehaviour
         Debug.Log ("Amplitud 1 ->>"+A + "   Fase1 -->" + F);
         Debug.Log ("Amplitud 2 ->>"+A2 + "   Fase2 -->" + F2);
         if (OnaEst.Igual(A,F)){
-            Debug.Log("IGUAL");
-            correcte.Invoke();
+            Completar();
         }
         else{
             incorrecte.Invoke();
         }
     }
-            
+    
+    public void Completar()
+    {
+        if (controladorInteractuable.Interactuant()) controladorInteractuable.AcabarInteractuar();
+        correcte.Invoke();
+    }
         
         
     

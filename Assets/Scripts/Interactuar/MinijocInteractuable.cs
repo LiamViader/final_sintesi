@@ -18,6 +18,11 @@ public class MinijocInteractuable : Interactuable
 
     public UnityEvent abilita, desabilita;
 
+    public bool Interactuant()
+    {
+        return _interactuant;
+    }
+
     void Start()
     {
         _baseInteractText = interactText;
