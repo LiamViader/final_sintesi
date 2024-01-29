@@ -34,7 +34,7 @@ public class Examinar : Interactuable
         }
         else
         {
-            UiControllerSingleton._instance._missatge.Mostrar("Ha de ser mes petit per poder agafar-lo/a", 1.5f);
+            UiControllerSingleton._instance._missatge.Mostrar("La clau ha de ser més petita per poder agafar-la", 1.5f);
             PlaySoundIncorrecte();
         }
     }

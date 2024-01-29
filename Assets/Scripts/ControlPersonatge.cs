@@ -274,4 +274,9 @@ public class ControlPersonatge : MonoBehaviour
         this.enabled = true;
         animator.enabled = true;
     }
+
+    public bool Petit()
+    {
+        return _tamany.Petit();
+    }
 }
