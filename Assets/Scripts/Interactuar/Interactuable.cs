@@ -36,11 +36,21 @@ public abstract class Interactuable : MonoBehaviour
 
     public void PlaySound()
     {
+        if(_audioInteract == null)
+        {
+            GameObject objecte = Instantiate(Resources.Load<GameObject>("AudioInteract"), transform);
+            _audioInteract = objecte.GetComponent<AudioSource>();
+        }
         _audioInteract.Play();
     }
 
     public void PlaySoundIncorrecte()
     {
+        if (_audioIncorrecte == null)
+        {
+            GameObject objecte2 = Instantiate(Resources.Load<GameObject>("AudioInteractIncorrecte"), transform);
+            _audioIncorrecte = objecte2.GetComponent<AudioSource>();
+        }
         _audioIncorrecte.Play();
     }
 
