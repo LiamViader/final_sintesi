@@ -40,7 +40,7 @@ public class NotAlwaysInteractuable : MinijocInteractuable
 
     public void MakeUnavailable()
     {
-        _available = true;
+        _available = false;
     }
 
     public void ChangeAvailableText(string text)
