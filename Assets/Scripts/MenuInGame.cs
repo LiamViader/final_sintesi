@@ -24,6 +24,6 @@ public class MenuInGame : MonoBehaviour
     public void SortirMenu()
     {
         gameObject.SetActive(false);
-        ControlMenu._instance.enabled = true;
+        ControlMenu._instance.Tornar();
     }
 }

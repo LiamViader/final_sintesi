@@ -32,7 +32,7 @@ public class ControlMenu : MonoBehaviour
         {
             Pausar();
         }
-        else if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl)) && Input.GetKeyDown(KeyCode.K))
+        else if (Input.GetKeyDown(KeyCode.K))
         {
             FoolProofMenu();
         }
@@ -52,8 +52,9 @@ public class ControlMenu : MonoBehaviour
         ControlPersonatge._instance.enabled = false;
     }
 
-    private void OnEnable()
+    public void Tornar()
     {
+        this.enabled = true;
         ControlPersonatge._instance.enabled = playerEnabled;
     }
 }
