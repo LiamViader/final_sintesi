@@ -29,16 +29,99 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8647012528034581310}
+  - {fileID: 2097830714562889881}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2547739585552300707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2097830714562889881}
+  - component: {fileID: 8381978358145132131}
+  - component: {fileID: 4812649417927284709}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2097830714562889881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547739585552300707}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.377, z: 0.002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8647012528034581310}
+  m_Father: {fileID: 641666649023016617}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8381978358145132131
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547739585552300707}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.13189967, y: 0.01, z: 0.08}
+  m_Center: {x: -1.3363735e-14, y: -0.00048151845, z: 0.0000000018628694}
+--- !u!114 &4812649417927284709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547739585552300707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b85bd92f30f0b14d93d80c35a2b2524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Agafar tarjeta
+  PotObrir:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: NotAlwaysInteractuable, Assembly-CSharp
+        m_MethodName: MakeAvailable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &9190410232686701781
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 641666649023016617}
+    m_TransformParent: {fileID: 2097830714562889881}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4c774eacc8336154eb814ed9086f3df7, type: 3}
       propertyPath: m_RootOrder
@@ -50,11 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4c774eacc8336154eb814ed9086f3df7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.377
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4c774eacc8336154eb814ed9086f3df7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4c774eacc8336154eb814ed9086f3df7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -70,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4c774eacc8336154eb814ed9086f3df7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -3.9790388e-13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4c774eacc8336154eb814ed9086f3df7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
