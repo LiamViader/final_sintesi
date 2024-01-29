@@ -534,15 +534,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.00089687505
+      value: 0.0008968559
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00020066428
+      value: 0.00020065998
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.21833895
+      value: -0.21833897
       objectReference: {fileID: 0}
     - target: {fileID: 9050156612459733012, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -691,52 +691,21 @@ PrefabInstance:
       propertyPath: PotObrir.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 453594652}
-    m_RemovedComponents: []
+    - target: {fileID: 4980331621856047633, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
+      propertyPath: PotObrir.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 453594652}
+    m_RemovedComponents:
+    - {fileID: 3704570938350545479, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7637062247971869699, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 221821427}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
 --- !u!4 &221821425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3684367397999303294, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
   m_PrefabInstance: {fileID: 221821424}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &221821426 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7637062247971869699, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
-  m_PrefabInstance: {fileID: 221821424}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &221821427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221821426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b85bd92f30f0b14d93d80c35a2b2524, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Agafar tarjeta
-  PotObrir:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 453594652}
-        m_TargetAssemblyTypeName: NotAlwaysInteractuable, Assembly-CSharp
-        m_MethodName: MakeAvailable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &315620937
 PrefabInstance:
   m_ObjectHideFlags: 0

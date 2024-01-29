@@ -101,6 +101,9 @@ PrefabInstance:
       addedObject: {fileID: 112930809580002328}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c774eacc8336154eb814ed9086f3df7, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6893452093795727254}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c774eacc8336154eb814ed9086f3df7, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 3016990340346064832}
   m_SourcePrefab: {fileID: 100100000, guid: 4c774eacc8336154eb814ed9086f3df7, type: 3}
 --- !u!1 &8307888659775541636 stripped
@@ -129,6 +132,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13189967, y: 0.01, z: 0.08}
   m_Center: {x: -1.3363735e-14, y: -0.00048151845, z: 0.0000000018628694}
+--- !u!114 &6893452093795727254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307888659775541636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b85bd92f30f0b14d93d80c35a2b2524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Agafar tarjeta
+  PotObrir:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: NotAlwaysInteractuable, Assembly-CSharp
+        m_MethodName: MakeAvailable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3016990340346064832
 MonoBehaviour:
   m_ObjectHideFlags: 0
