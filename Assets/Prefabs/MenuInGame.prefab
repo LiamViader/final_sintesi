@@ -1504,7 +1504,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5977731399404646059}
         m_TargetAssemblyTypeName: MenuInGame, Assembly-CSharp
-        m_MethodName: SortirMenu
+        m_MethodName: SortirJoc
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
