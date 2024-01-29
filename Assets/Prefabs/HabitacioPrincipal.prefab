@@ -1418,8 +1418,6 @@ GameObject:
   - component: {fileID: 1216014291842708245}
   - component: {fileID: 5868933153300229061}
   - component: {fileID: 3836149350256065963}
-  - component: {fileID: 2013570420132484120}
-  - component: {fileID: 2790956267375374441}
   - component: {fileID: 1409012738867286598}
   - component: {fileID: 5406515612794734235}
   m_Layer: 0
@@ -1516,44 +1514,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2013570420132484120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2298478223365701942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _outline: {fileID: 2790956267375374441}
-  _outlineOnHover: 1
-  _PuntDeAim: {fileID: 0}
-  _petit: 0
-  _coefTamany: 0.5
-  "_aparen\xE7a": {fileID: 9033628220596591756}
-  _canviReal: {fileID: 9033628220596591756}
---- !u!114 &2790956267375374441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2298478223365701942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fence: 1
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!114 &1409012738867286598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1988,8 +1948,6 @@ GameObject:
   - component: {fileID: 2727971935967578429}
   - component: {fileID: 1699055782455395507}
   - component: {fileID: 1643865472419762678}
-  - component: {fileID: 3687338224854413854}
-  - component: {fileID: 6060353220921760753}
   m_Layer: 0
   m_Name: Pissarra
   m_TagString: Untagged
@@ -2083,44 +2041,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3687338224854413854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635948592620909177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fence: 1
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
---- !u!114 &6060353220921760753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635948592620909177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409677349cc8d674686f98aaab5affd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _outline: {fileID: 3687338224854413854}
-  _outlineOnHover: 1
-  _PuntDeAim: {fileID: 0}
-  _petit: 0
-  _coefTamany: 0.5
-  "_aparen\xE7a": {fileID: 7041873786490632896}
-  _canviReal: {fileID: 7041873786490632896}
 --- !u!1 &3803178626613800477
 GameObject:
   m_ObjectHideFlags: 0
