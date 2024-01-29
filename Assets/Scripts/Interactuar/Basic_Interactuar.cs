@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Examinar : Interactuable
+public class BasicInteractuar : Interactuable
 {
     public UnityEvent PotObrir;
     public override void Interact(){
