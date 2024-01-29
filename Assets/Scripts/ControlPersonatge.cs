@@ -39,6 +39,9 @@ public class ControlPersonatge : MonoBehaviour
     private Disparable _outlined=null;
     private bool _teDispositiu = false;
 
+    [SerializeField]
+    private Encongible _tamany;
+
     [SerializeField] private AudioSource jumpSoundEffect;
 
     //Animacions personatge
@@ -119,6 +122,16 @@ public class ControlPersonatge : MonoBehaviour
     //Actualitzacio independenment del frame-rete per a fisiques
     private void FixedUpdate()
     {
+        if (_tamany.Petit())
+        {
+            velCaminar = 2;
+            velCorrer = 3;
+        }
+        else
+        {
+            velCaminar = 4;
+            velCorrer = 6;
+        }
         Moviment();
     }
 
