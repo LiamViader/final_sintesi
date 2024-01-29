@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Events;
+using UnityEngine.Events;
 
 public class Examinar : Interactuable
 {
