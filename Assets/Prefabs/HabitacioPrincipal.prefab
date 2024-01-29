@@ -3697,6 +3697,37 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 6921601882422149109}
+--- !u!1 &5636424451638815260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 666389355901680441}
+  m_Layer: 0
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &666389355901680441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636424451638815260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.331, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4556945062929448907}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5847348107646772588
 GameObject:
   m_ObjectHideFlags: 0
@@ -7693,17 +7724,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3229117168138947905, guid: 5eb59992ccf63a945806038868d7263a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 666389355901680441}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2854139050350729211, guid: 5eb59992ccf63a945806038868d7263a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8344270985222632357}
     - targetCorrespondingSourceObject: {fileID: 2854139050350729211, guid: 5eb59992ccf63a945806038868d7263a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3032881475994193446}
+      addedObject: {fileID: 8866827951116417940}
     - targetCorrespondingSourceObject: {fileID: 2854139050350729211, guid: 5eb59992ccf63a945806038868d7263a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8866827951116417940}
+      addedObject: {fileID: 3110638131804176143}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb59992ccf63a945806038868d7263a, type: 3}
 --- !u!1 &3780303256892302705 stripped
 GameObject:
@@ -7737,28 +7771,6 @@ MonoBehaviour:
           m_StringArgument: glass_door_open
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3032881475994193446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3780303256892302705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfc7f8cf6d63da4bac47018446fb448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: 
-  _cameresMinijoc: {fileID: 8866827951116417940}
-  "_aparen\xE7aMinijocNoObert": {fileID: 0}
-  _minijoc: {fileID: 3780303256892302705}
-  abilita:
-    m_PersistentCalls:
-      m_Calls: []
-  desabilita:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &8866827951116417940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7773,6 +7785,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameres:
   - {fileID: 8305108966388163936}
+--- !u!114 &3110638131804176143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3780303256892302705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Interactuar amb pantalla
+  _cameresMinijoc: {fileID: 8866827951116417940}
+  "_aparen\xE7aMinijocNoObert": {fileID: 0}
+  _minijoc: {fileID: 3780303256892302705}
+  abilita:
+    m_PersistentCalls:
+      m_Calls: []
+  desabilita:
+    m_PersistentCalls:
+      m_Calls: []
+  _available: 1
+  _notAvailableMessage: Nesita electricitat per funcionar
 --- !u!4 &4556945062929448907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3229117168138947905, guid: 5eb59992ccf63a945806038868d7263a, type: 3}
@@ -12491,6 +12527,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 236807356796505214}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5372404912953200154}
   m_SourcePrefab: {fileID: 100100000, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
 --- !u!4 &4405797057583311879 stripped
 Transform:
@@ -12576,6 +12615,30 @@ MonoBehaviour:
           m_StringArgument: door_2_open
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5372404912953200154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5468093806029426276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Interactuar
+  _cameresMinijoc: {fileID: 0}
+  "_aparen\xE7aMinijocNoObert": {fileID: 0}
+  _minijoc: {fileID: 0}
+  abilita:
+    m_PersistentCalls:
+      m_Calls: []
+  desabilita:
+    m_PersistentCalls:
+      m_Calls: []
+  _available: 1
+  _notAvailableMessage: Necesita electricitat per funcionar
 --- !u!1001 &4285903385422039760
 PrefabInstance:
   m_ObjectHideFlags: 0

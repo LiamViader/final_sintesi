@@ -153,7 +153,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
@@ -161,20 +173,68 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1578577652}
     - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: MakeUnavailable
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ChangeAvailableText
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: NotAlwaysInteractuable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: NotAlwaysInteractuable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: door_2_open
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: "Ja est\xE0 oberta"
+      objectReference: {fileID: 0}
+    - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: portaAObrir
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -195,7 +255,11 @@ PrefabInstance:
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -210,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -230,7 +294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Dispminijocs.Array.data[5]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 294923585002652514, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -552,9 +620,17 @@ PrefabInstance:
       propertyPath: _notAvailableMessage
       value: Necessita electricitat per funcionar
       objectReference: {fileID: 0}
+    - target: {fileID: 397722917789237318, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1794101
+      objectReference: {fileID: 0}
     - target: {fileID: 467119245172083409, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666389355901680441, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.378
       objectReference: {fileID: 0}
     - target: {fileID: 729192032880315669, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LookAt
@@ -601,12 +677,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -627,7 +715,11 @@ PrefabInstance:
     - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -642,7 +734,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -666,7 +758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1095242979506141130, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -764,6 +856,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.14
       objectReference: {fileID: 0}
+    - target: {fileID: 1345846619232053493, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345846619232053493, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1386850932491390332, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: unableText
       value: No puc llegir-ho
@@ -818,7 +918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0008498703
+      value: 0.00084987027
       objectReference: {fileID: 0}
     - target: {fileID: 1610953813789227177, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -973,12 +1073,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -999,7 +1111,11 @@ PrefabInstance:
     - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -1014,7 +1130,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -1038,7 +1154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2613580511588998646, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -1129,12 +1245,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -1155,7 +1283,11 @@ PrefabInstance:
     - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -1170,7 +1302,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -1194,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2794440673423441219, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -1285,12 +1417,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -1311,7 +1455,11 @@ PrefabInstance:
     - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -1326,7 +1474,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -1350,7 +1498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2817858062164526687, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -1536,6 +1684,10 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3110638131804176143, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: _notAvailableMessage
+      value: Necesita electricitat per funcionar
+      objectReference: {fileID: 0}
     - target: {fileID: 3142886074172702484, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.43
@@ -1626,11 +1778,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.87223834
+      value: 0.8722383
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.04890504
+      value: 0.048905037
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1638,7 +1790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.027241793
+      value: -0.027241794
       objectReference: {fileID: 0}
     - target: {fileID: 3666932519333215389, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1997,12 +2149,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -2023,7 +2187,11 @@ PrefabInstance:
     - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -2038,7 +2206,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -2062,7 +2230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5558671942525383358, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -2213,12 +2381,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -2239,7 +2419,11 @@ PrefabInstance:
     - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -2254,7 +2438,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -2278,7 +2462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6479879775523018348, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -2819,7 +3003,7 @@ PrefabInstance:
     - target: {fileID: 7087697144744693002, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 54475640}
+      objectReference: {fileID: 0}
     - target: {fileID: 7087697144744693002, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2953,12 +3137,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -2979,7 +3175,11 @@ PrefabInstance:
     - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -2994,7 +3194,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -3018,7 +3218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8063525159708386263, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -3303,10 +3503,14 @@ PrefabInstance:
     - target: {fileID: 8305108966388163936, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 395527375}
+      objectReference: {fileID: 175547606}
     - target: {fileID: 8305108966388163936, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 40
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8403068128363807795, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LookAt
@@ -3385,12 +3589,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -3411,7 +3627,11 @@ PrefabInstance:
     - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -3426,7 +3646,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -3450,7 +3670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8760788211080537500, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -3562,43 +3782,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.061
+      value: -0.662
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.016
+      value: 11.491
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.383
+      value: -11.141
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.014083648
+      value: 0.0008968559
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0044549787
+      value: 0.00020065998
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.95333254
+      value: 0.9758726
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.30156073
+      value: -0.21833897
       objectReference: {fileID: 0}
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: portaAObrir
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -3619,7 +3851,11 @@ PrefabInstance:
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -3634,7 +3870,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -3658,7 +3894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8940956418017098810, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -3897,12 +4133,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[0]
+      value: Necesito una clau per obrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: Noutext.Array.data[1]
+      value: "Necesito una tarjeta d'acc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[0]
@@ -3923,7 +4171,11 @@ PrefabInstance:
     - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: minijocs.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1131280747}
+    - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: minijocs.Array.data[5]
+      value: 
+      objectReference: {fileID: 395527383}
     - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: textures.Array.data[0]
       value: 
@@ -3938,7 +4190,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c40b7debc68a6234e86580cc243dbf03, type: 2}
     - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.size
@@ -3962,7 +4214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Dispminijocs.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9027061505155517125, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: Textminijocs.Array.data[0]
@@ -4153,26 +4405,24 @@ PrefabInstance:
     - {fileID: 5242779934436958944, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
     - {fileID: 3803178626613800477, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
     - {fileID: 1723325950808417242, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+    - {fileID: 5928634202799900679, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+    - {fileID: 1871569409204348417, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+    - {fileID: 8119084104490506731, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8140301679224886032, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       insertIndex: 10
       addedObject: {fileID: 1342651381}
+    - targetCorrespondingSourceObject: {fileID: 5817416310156382507, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 130116834}
     - targetCorrespondingSourceObject: {fileID: 8170837410177890485, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       insertIndex: 3
       addedObject: {fileID: 324599029}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3780303256892302705, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 395527381}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
 --- !u!4 &54475639 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1238919756633651402, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
-  m_PrefabInstance: {fileID: 54475638}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &54475640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1871569409204348417, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
   m_PrefabInstance: {fileID: 54475638}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &54475641 stripped
@@ -4202,9 +4452,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &130116833
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 658353579}
+    m_Modifications:
+    - target: {fileID: 198422, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_Name
+      value: door_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.590292
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+--- !u!4 &130116834 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+  m_PrefabInstance: {fileID: 130116833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &173243501 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 7948453216354254878, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+  m_PrefabInstance: {fileID: 54475638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &175547606 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 666389355901680441, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
   m_PrefabInstance: {fileID: 54475638}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &221821424
@@ -4452,49 +4769,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &395527374 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3780303256892302705, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
-  m_PrefabInstance: {fileID: 54475638}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &395527375 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4556945062929448907, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
-  m_PrefabInstance: {fileID: 54475638}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &395527380 stripped
+--- !u!114 &395527383 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8866827951116417940, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3110638131804176143, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
   m_PrefabInstance: {fileID: 54475638}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395527374}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fb72c5c306cef34790fdb236b92b205, type: 3}
+  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &395527381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395527374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cfc7f8cf6d63da4bac47018446fb448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: 
-  _cameresMinijoc: {fileID: 395527380}
-  "_aparen\xE7aMinijocNoObert": {fileID: 0}
-  _minijoc: {fileID: 395527374}
-  abilita:
-    m_PersistentCalls:
-      m_Calls: []
-  desabilita:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &448508117
 GameObject:
   m_ObjectHideFlags: 0
@@ -4742,6 +5027,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &658353579 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5817416310156382507, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+  m_PrefabInstance: {fileID: 54475638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &676366372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,8 +5310,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.205, y: 4.9193115, z: 9.082313}
+  m_LocalRotation: {x: -0.34810477, y: 0.2873845, z: 0.11302257, w: 0.88513225}
+  m_LocalPosition: {x: 8.961, y: 4.6363115, z: 8.1363125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5150,6 +5440,17 @@ Transform:
 --- !u!114 &1066876055 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 316837388429517877, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+  m_PrefabInstance: {fileID: 54475638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1131280747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5372404912953200154, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
   m_PrefabInstance: {fileID: 54475638}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
