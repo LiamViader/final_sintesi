@@ -232,7 +232,9 @@ public class ControlPersonatge : MonoBehaviour
             if (Physics.Raycast(ray, out hitInfo, 0.4f*factor))
             { // si esta tocant el terra
                 animator.applyRootMotion = false;
-                rb.AddForce(Vector3.up * 4000);
+                if (_tamany.Petit()) rb.AddForce(Vector3.up * 4000);
+                else rb.AddForce(Vector3.up * 5000);
+
                 _saltant = true;
             }
                 
