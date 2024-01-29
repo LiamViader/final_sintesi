@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuInGame : MonoBehaviour
+public class FoolProofMenu : MonoBehaviour
 {
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +19,10 @@ public class MenuInGame : MonoBehaviour
         
     }
 
-    public void SortirJoc()
+    public void ObrirLlums()
     {
-        Application.Quit();
-    }
 
+    }
     public void SortirMenu()
     {
         gameObject.SetActive(false);

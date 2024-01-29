@@ -1196,6 +1196,7 @@ GameObject:
   - component: {fileID: 5124295324408792185}
   - component: {fileID: 4556884658578013069}
   - component: {fileID: 8168954878057663709}
+  - component: {fileID: 3773756280493569929}
   m_Layer: 6
   m_Name: Cientific
   m_TagString: Untagged
@@ -1371,6 +1372,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3593038125088498919}
   m_Enabled: 1
+--- !u!114 &3773756280493569929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3593038125088498919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d6523123319594f9dfc28b598e5462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuInGame: {fileID: 0}
+  _menuFoolProof: {fileID: 0}
 --- !u!1 &3610022602048014268
 GameObject:
   m_ObjectHideFlags: 0

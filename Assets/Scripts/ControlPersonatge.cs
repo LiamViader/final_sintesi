@@ -44,8 +44,6 @@ public class ControlPersonatge : MonoBehaviour
     //Animacions personatge
     Animator animator;
 
-    [SerializeField]
-    private GameObject _menuInGame;
 
     private bool _saltant=false;
 
@@ -199,62 +197,51 @@ public class ControlPersonatge : MonoBehaviour
         GetComponent<RigBuilder>().enabled = true;
     }
 
-    private void Pausar()
-    {
-        _menuInGame.SetActive(true);
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Pausar();
-        }
-        else
-        {
-            // _Camera.LookAt(rb);
-            Control();
-            ControlVelocitat();
-            HighLightDisparable();
-            DispararLaser();
+        // _Camera.LookAt(rb);
+        Control();
+        ControlVelocitat();
+        HighLightDisparable();
+        DispararLaser();
 
 
-            if (Input.GetKeyDown(KeyCode.Space) && !_saltant)
-            {
-                Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f, _collider.center.z);
-                Vector3 posGlobal = transform.TransformPoint(pos);
-                Ray ray = new Ray(posGlobal, Vector3.down);
-                RaycastHit hitInfo;
-                if (Physics.Raycast(ray, out hitInfo, 0.1f))
-                { // si esta tocant el terra
-                    animator.applyRootMotion = false;
-                    rb.AddForce(Vector3.up * 5000);
-                    _saltant = true;
-                }
-                
-                /*if (esPetit)
-                {
-                    //salta m�s
-                    rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
-                }
-                else
-                {
-                    //salta menys
-                    rb.AddForce();
-                }*/
+        if (Input.GetKeyDown(KeyCode.Space) && !_saltant)
+        {
+            Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f, _collider.center.z);
+            Vector3 posGlobal = transform.TransformPoint(pos);
+            Ray ray = new Ray(posGlobal, Vector3.down);
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo, 0.1f))
+            { // si esta tocant el terra
+                animator.applyRootMotion = false;
+                rb.AddForce(Vector3.up * 5000);
+                _saltant = true;
             }
-            else if(_saltant)
+                
+            /*if (esPetit)
             {
-                Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f, _collider.center.z);
-                Vector3 posGlobal = transform.TransformPoint(pos);
-                Ray ray = new Ray(posGlobal, Vector3.down);
-                RaycastHit hitInfo;
-                if (Physics.Raycast(ray, out hitInfo, 0.1f))
-                {
-                    _saltant = false;
-                    animator.applyRootMotion = true;
-                }
+                //salta m�s
+                rb.AddForce(Vector3.up*forceSaltar, ForceMode.Impulse);
+            }
+            else
+            {
+                //salta menys
+                rb.AddForce();
+            }*/
+        }
+        else if(_saltant)
+        {
+            Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f, _collider.center.z);
+            Vector3 posGlobal = transform.TransformPoint(pos);
+            Ray ray = new Ray(posGlobal, Vector3.down);
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo, 0.1f))
+            {
+                _saltant = false;
+                animator.applyRootMotion = true;
             }
         }
        
