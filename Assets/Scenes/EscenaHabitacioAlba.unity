@@ -228,6 +228,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1435985896553163190, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.0008498703
@@ -318,15 +322,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.87223834
+      value: 0.8722383
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.04890504
+      value: 0.048905037
       objectReference: {fileID: 0}
     - target: {fileID: 3522919385409812623, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.027241793
+      value: -0.027241794
       objectReference: {fileID: 0}
     - target: {fileID: 3562138689550438284, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Material
@@ -561,12 +565,72 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 13400000, guid: 0e1ad903ff4df2a499ff9289388bc6d4, type: 2}
     - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1832591875}
     - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 453594652}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 453594652}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: MakeUnavailable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ChangeAvailableText
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: NotAlwaysInteractuable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: NotAlwaysInteractuable, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: door_3_open
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: door_3_open
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Ja esta oberta
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344270985222632357, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8914356770020855564, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -594,15 +658,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0008968902
+      value: 0.0008968834
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00020066764
+      value: 0.00020066615
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.21833894
+      value: -0.21833895
       objectReference: {fileID: 0}
     - target: {fileID: 9050156612459733012, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1469,8 +1533,8 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 1
-    m_Time: 1
+    m_Style: 5
+    m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
