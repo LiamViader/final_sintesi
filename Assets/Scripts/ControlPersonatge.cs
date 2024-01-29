@@ -223,11 +223,11 @@ public class ControlPersonatge : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !_saltant)
         {
-            Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f, _collider.center.z);
+            Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f +0.1f, _collider.center.z);
             Vector3 posGlobal = transform.TransformPoint(pos);
             Ray ray = new Ray(posGlobal, Vector3.down);
             RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, 0.1f))
+            if (Physics.Raycast(ray, out hitInfo, 0.4f))
             { // si esta tocant el terra
                 animator.applyRootMotion = false;
                 rb.AddForce(Vector3.up * 4000);
@@ -247,11 +247,11 @@ public class ControlPersonatge : MonoBehaviour
         }
         else if(_saltant)
         {
-            Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f, _collider.center.z);
+            Vector3 pos = new Vector3(_collider.center.x, _collider.center.y - _collider.height * 0.5f + 0.1f, _collider.center.z);
             Vector3 posGlobal = transform.TransformPoint(pos);
             Ray ray = new Ray(posGlobal, Vector3.down);
             RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, 0.1f))
+            if (Physics.Raycast(ray, out hitInfo, 0.4f))
             {
                 _saltant = false;
                 animator.applyRootMotion = true;
