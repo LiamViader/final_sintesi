@@ -148,6 +148,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04be71e7dd26a6b43bd34f772e7fbb08, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2720874240547903995}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04be71e7dd26a6b43bd34f772e7fbb08, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9165266560117186577}
   m_SourcePrefab: {fileID: 100100000, guid: 04be71e7dd26a6b43bd34f772e7fbb08, type: 3}
 --- !u!4 &1340657951403524672 stripped
 Transform:
@@ -201,3 +204,18 @@ CapsuleCollider:
   m_Height: 2.1144166
   m_Direction: 1
   m_Center: {x: 0, y: 0.05549836, z: -9.9499054e-17}
+--- !u!114 &9165266560117186577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860314168029452538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e884fed0c05823141b9f3b2b83a14f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Agafar el dispositiu
+  encongible: {fileID: 7931433716341381675}
+  _controlLaser: {fileID: 8876642949862414749}
