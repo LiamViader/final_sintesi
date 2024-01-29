@@ -12523,13 +12523,7 @@ PrefabInstance:
       addedObject: {fileID: 2641933924050524931}
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2169988689151214644}
-    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 236807356796505214}
-    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5372404912953200154}
   m_SourcePrefab: {fileID: 100100000, guid: 74d5c055183a2c145806eb1ec2cbe1fe, type: 3}
 --- !u!4 &4405797057583311879 stripped
 Transform:
@@ -12562,20 +12556,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9169881, y: 2.1345463, z: 1.3978661}
   m_Center: {x: -0.34958303, y: 0.0000038146973, z: 0}
---- !u!114 &2169988689151214644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5468093806029426276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fb72c5c306cef34790fdb236b92b205, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cameres:
-  - {fileID: 8403068128363807795}
 --- !u!114 &236807356796505214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12615,30 +12595,6 @@ MonoBehaviour:
           m_StringArgument: door_2_open
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5372404912953200154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5468093806029426276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee6f11fc94b285648a711f0a62a24d7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Interactuar
-  _cameresMinijoc: {fileID: 0}
-  "_aparen\xE7aMinijocNoObert": {fileID: 0}
-  _minijoc: {fileID: 0}
-  abilita:
-    m_PersistentCalls:
-      m_Calls: []
-  desabilita:
-    m_PersistentCalls:
-      m_Calls: []
-  _available: 1
-  _notAvailableMessage: Necesita electricitat per funcionar
 --- !u!1001 &4285903385422039760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13871,6 +13827,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Examinar
+  encongible: {fileID: 0}
+  _controlLaser: {fileID: 0}
+  PotObrir:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6065677857776130159
 PrefabInstance:
   m_ObjectHideFlags: 0
