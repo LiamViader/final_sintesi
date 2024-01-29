@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Events;
 
 public class Examinar : Interactuable
 {
-    // Start is called before the first frame update
+    public Encongible encongible;
+    public ControlLaserQuiet _controlLaser;
+
+    public UnityEvent PotObrir;
+
     void Start()
     {
         
@@ -18,7 +23,17 @@ public class Examinar : Interactuable
 
     public override void Interact()
     {
-        PlaySound();
-        UiControllerSingleton._instance._missatge.Mostrar("És massa gran per sortir", 1.5f);
+         if (encongible.Petit() && !encongible.Canviant())
+        {
+            PlaySound();
+            PotObrir.Invoke();
+            _controlLaser.FinalitzarLaser();
+            
+        }
+        else
+        {
+            UiControllerSingleton._instance._missatge.Mostrar("El dispositiu ha de ser mï¿½s petit per poder agafar-lo", 1.5f);
+            PlaySoundIncorrecte();
+        }
     }
 }
