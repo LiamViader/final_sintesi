@@ -10,6 +10,9 @@ public class FoolProofMenu : MonoBehaviour
     [SerializeField]
     private ComprovaButton _minijocRadio;
 
+    [SerializeField]
+    private PinPad _contrasenyaMiralls;
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +47,6 @@ public class FoolProofMenu : MonoBehaviour
     public void ObrirPortaMiralls()
     {
         EngegarRadio();
-
+        _contrasenyaMiralls.correcte.Invoke();
     }
 }
