@@ -74,10 +74,6 @@ public class Rodeta : MonoBehaviour
                       
                     }
                 }
-                if(Input.GetMouseButtonUp(0)){
-                    
-                    Debug.Log(transform.eulerAngles.z);
-                }
             }  
         }
     }
