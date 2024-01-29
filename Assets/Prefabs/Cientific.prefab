@@ -1264,6 +1264,7 @@ MonoBehaviour:
   _collider: {fileID: 7917839147370066650}
   TempsSmooth: 0.1
   _dispositiu: {fileID: 97888265943939371}
+  _tamany: {fileID: 4556884658578013069}
   jumpSoundEffect: {fileID: 0}
 --- !u!114 &2586529606454407023
 MonoBehaviour:
