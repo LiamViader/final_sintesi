@@ -21,12 +21,17 @@ public class LaserAgafable : Interactuable
 
     public override void Interact()
     {
-        if (encongible.Petit() && !encongible.Canviant())
+        if (encongible.Petit() && !encongible.Canviant() && !ControlPersonatge._instance.Petit())
         {
             PlaySound();
             ControlPersonatge._instance.AgafarDispositiu();
             _controlLaser.FinalitzarLaser();
             Destroy(_controlLaser.gameObject);
+        }
+        else if (ControlPersonatge._instance.Petit())
+        {
+            UiControllerSingleton._instance._missatge.Mostrar("Has de ser gran per a agafar el dispositiu", 1.5f);
+            PlaySoundIncorrecte();
         }
         else
         {
