@@ -10,8 +10,11 @@ public class Examinar : Interactuable
 
     public UnityEvent PotObrir;
 
+    private Collider col; 
+
     void Start()
     {
+        
         
     }
 
@@ -28,6 +31,7 @@ public class Examinar : Interactuable
             PlaySound();
             PotObrir.Invoke();
             _controlLaser.FinalitzarLaser();
+            
             
         }
         else
