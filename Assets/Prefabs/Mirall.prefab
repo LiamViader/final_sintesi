@@ -125,7 +125,6 @@ MonoBehaviour:
   _coefTamany: 0.5
   "_aparen\xE7a": {fileID: 3681091290274504506}
   _canviReal: {fileID: 3681091290274504506}
-  _materialEfecte: {fileID: 2100000, guid: c93ed54c98e4dc447b8626d64d810b92, type: 2}
 --- !u!1 &5128982466484168944
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,9 +295,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0, b: 0, a: 0.7294118}
-  outlineWidth: 6.22
+  fence: 1
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
