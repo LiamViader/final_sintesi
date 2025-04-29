@@ -88,6 +88,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
+    - _ColorBlend: 0.05
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -101,6 +102,9 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _NoiseDensity: 500
+    - _NoiseStrength: 0.025
+    - _NoiseVelocity: 0.04
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
