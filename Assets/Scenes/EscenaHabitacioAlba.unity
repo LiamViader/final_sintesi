@@ -156,6 +156,18 @@ PrefabInstance:
       propertyPath: m_BounceIntensity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 194045676775725108, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: useSecurityCamShader
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194045676775725108, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: universalRendererData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1dc8ae1c1c4ee144aa0a76fa06af1950, type: 2}
+    - target: {fileID: 194045676775725108, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: securityCamFeaturePassName
+      value: SecurityCamShader
+      objectReference: {fileID: 0}
     - target: {fileID: 236807356796505214, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: OnClic.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -312,13 +324,25 @@ PrefabInstance:
       propertyPath: m_BounceIntensity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1409012738867286598, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: useSecurityCamShader
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409012738867286598, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: universalRendererData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1dc8ae1c1c4ee144aa0a76fa06af1950, type: 2}
+    - target: {fileID: 1409012738867286598, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: securityCamFeaturePassName
+      value: SecurityCamShader
+      objectReference: {fileID: 0}
     - target: {fileID: 1435985896553163190, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00084987027
+      value: 0.0008498703
       objectReference: {fileID: 0}
     - target: {fileID: 1594676049213962736, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_RenderMode
@@ -628,6 +652,18 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5613581082129775820, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: useSecurityCamShader
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613581082129775820, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: universalRendererData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1dc8ae1c1c4ee144aa0a76fa06af1950, type: 2}
+    - target: {fileID: 5613581082129775820, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: securityCamFeaturePassName
+      value: SecurityCamShader
+      objectReference: {fileID: 0}
     - target: {fileID: 5830899523197443610, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_RenderMode
       value: 1
@@ -744,6 +780,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7136400984591761208, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: useSecurityCamShader
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136400984591761208, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: universalRendererData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1dc8ae1c1c4ee144aa0a76fa06af1950, type: 2}
+    - target: {fileID: 7136400984591761208, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: securityCamFeaturePassName
+      value: SecurityCamShader
+      objectReference: {fileID: 0}
+    - target: {fileID: 7497924216812111313, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: useSecurityCamShader
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7497924216812111313, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: universalRendererData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1dc8ae1c1c4ee144aa0a76fa06af1950, type: 2}
+    - target: {fileID: 7497924216812111313, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: securityCamFeaturePassName
+      value: SecurityCamShader
+      objectReference: {fileID: 0}
     - target: {fileID: 7649604247583324057, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Material
       value: 
@@ -780,6 +840,22 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 0e1ad903ff4df2a499ff9289388bc6d4, type: 2}
+    - target: {fileID: 7947845097128833927, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: _cameres.Array.data[0]
+      value: 
+      objectReference: {fileID: 1296015230}
+    - target: {fileID: 7947845097128833927, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: _cameres.Array.data[1]
+      value: 
+      objectReference: {fileID: 972075395}
+    - target: {fileID: 7947845097128833927, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: _cameres.Array.data[2]
+      value: 
+      objectReference: {fileID: 2092549227}
+    - target: {fileID: 7947845097128833927, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: _cameres.Array.data[3]
+      value: 
+      objectReference: {fileID: 572362085}
     - target: {fileID: 7995046350235112141, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Range
       value: 17.37
@@ -906,19 +982,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.00089687505
+      value: 0.00089686824
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00020066428
+      value: 0.00020066272
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.21833895
+      value: -0.21833894
       objectReference: {fileID: 0}
     - target: {fileID: 8939404813450057195, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_RenderMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015731566047033803, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: useSecurityCamShader
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015731566047033803, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: universalRendererData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1dc8ae1c1c4ee144aa0a76fa06af1950, type: 2}
+    - target: {fileID: 9015731566047033803, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+      propertyPath: securityCamFeaturePassName
+      value: SecurityCamShader
       objectReference: {fileID: 0}
     - target: {fileID: 9050156612459733012, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2009,6 +2097,17 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &572362085 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6760489631250533578, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+  m_PrefabInstance: {fileID: 54475638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &594323355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,7 +2916,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 4
+    m_Style: 5
     m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
@@ -2832,6 +2931,17 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &972075395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 849430302946455948, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+  m_PrefabInstance: {fileID: 54475638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &991973419 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2259636286217295525, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
@@ -3214,6 +3324,17 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &1296015230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7598539307594010881, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+  m_PrefabInstance: {fileID: 54475638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1305615853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 317207018221667534, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
@@ -4157,6 +4278,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019708076}
   m_CullTransparentMesh: 1
+--- !u!114 &2092549227 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7256053658666119608, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
+  m_PrefabInstance: {fileID: 54475638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2098033198
 GameObject:
   m_ObjectHideFlags: 0
