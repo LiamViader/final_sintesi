@@ -50,18 +50,18 @@ Material:
     - _CastShadows: 1
     - _Cull: 2
     - _DstBlend: 10
-    - _FresnelPower: 1.39
+    - _FresnelPower: 1.34
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
     - _Surface: 1
-    - _VertexOffset: 0.291
+    - _VertexOffset: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _FresnelColor: {r: 1.9211035, g: 0, b: 0.020116536, a: 1}
-    - _ScanlinesColor: {r: 0.8301887, g: 0.19188325, b: 0.19188325, a: 0}
+    - _FresnelColor: {r: 0.5943396, g: 0, b: 0.048716445, a: 1}
+    - _ScanlinesColor: {r: 0.5471698, g: 0, b: 0.0138522815, a: 0}
     - _ScanlinesSpeed: {r: 0, g: 0.7, b: 0, a: 0}
     - _ScanlinesTiling: {r: 1, g: 13.74, b: 0, a: 0}
   m_BuildTextureStacks: []
