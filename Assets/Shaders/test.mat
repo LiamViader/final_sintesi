@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EfecteLaser
+  m_Name: test
   m_Shader: {fileID: -6465566751694194690, guid: 5972867eb560e55408014e9e3a5d0ba1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
