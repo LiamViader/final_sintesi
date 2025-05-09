@@ -239,7 +239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 415633822985033695, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Range
-      value: 17.37
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 415633822985033695, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Intensity
@@ -295,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 867866123958212710, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Range
-      value: 17.37
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 867866123958212710, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Intensity
@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1507610407147898823, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0008498703
+      value: 0.00084987027
       objectReference: {fileID: 0}
     - target: {fileID: 1594676049213962736, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_RenderMode
@@ -383,7 +383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1632107292094086262, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Range
-      value: 17.37
+      value: 12.27
       objectReference: {fileID: 0}
     - target: {fileID: 1632107292094086262, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Intensity
@@ -455,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1747180557310619893, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.035332
+      value: 0.035332028
       objectReference: {fileID: 0}
     - target: {fileID: 1747180557310619893, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.y
@@ -463,7 +463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1747180557310619893, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.03340548
+      value: 0.0334055
       objectReference: {fileID: 0}
     - target: {fileID: 2011098894377486723, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -727,7 +727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5150723637043234863, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Range
-      value: 17.37
+      value: 7.4
       objectReference: {fileID: 0}
     - target: {fileID: 5150723637043234863, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Intensity
@@ -1039,7 +1039,7 @@ PrefabInstance:
       objectReference: {fileID: 572362085}
     - target: {fileID: 7995046350235112141, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Range
-      value: 17.37
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7995046350235112141, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_Intensity
@@ -1163,15 +1163,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0008968559
+      value: 0.0008968834
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00020065998
+      value: 0.00020066615
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.21833897
+      value: -0.21833895
       objectReference: {fileID: 0}
     - target: {fileID: 8939404813450057195, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_RenderMode
@@ -1746,7 +1746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2760367042844632564, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
       propertyPath: m_Intensity
-      value: 2.76
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2760367042844632564, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
       propertyPath: m_RenderMode
