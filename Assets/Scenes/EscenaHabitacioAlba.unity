@@ -1143,15 +1143,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.00089686824
+      value: 0.0008968559
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00020066272
+      value: 0.00020065998
       objectReference: {fileID: 0}
     - target: {fileID: 8918928652545676837, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.21833894
+      value: -0.21833897
       objectReference: {fileID: 0}
     - target: {fileID: 8939404813450057195, guid: 10dcc376d9325934a9c57e67bd14a2f7, type: 3}
       propertyPath: m_RenderMode
@@ -1726,7 +1726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2760367042844632564, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
       propertyPath: m_Intensity
-      value: 31.27
+      value: 2.76
       objectReference: {fileID: 0}
     - target: {fileID: 2760367042844632564, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
       propertyPath: m_RenderMode
@@ -1792,6 +1792,30 @@ PrefabInstance:
       propertyPath: PotObrir.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 453594652}
+    - target: {fileID: 7113324604971060921, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113324604971060921, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113324604971060921, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113324604971060921, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113324604971060921, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.135
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113324604971060921, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7730005744541455059, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.627
@@ -1804,6 +1828,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -6.739
       objectReference: {fileID: 0}
+    - target: {fileID: 8285699548085974486, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f03c7e4d41ac6c488848a28bd5e4847, type: 2}
     m_RemovedComponents:
     - {fileID: 3704570938350545479, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
     - {fileID: 1956518165508037023, guid: 436172b1ba0917643a23a1b950088d5b, type: 3}
@@ -3904,8 +3932,8 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 1
-    m_Time: 1
+    m_Style: 5
+    m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
